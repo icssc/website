@@ -1,31 +1,89 @@
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 
-export default function Page() {
+export default function Component() {
+    const icsVariants = {
+        initial: {
+            y: 0,
+            transition: { duration: 0.5, ease: "easeInOut" },
+        },
+        hover: {
+            y: "-87.5%",
+            width: "0",
+            transition: { duration: 0.5, ease: "easeInOut" },
+        },
+    };
+
+    const sVariants = {
+        initial: {
+            transition: { duration: 0.5, ease: "easeInOut" },
+        },
+        hover: {
+            transition: { duration: 0.5, ease: "easeInOut" },
+        },
+    };
+
+    const cVariants = {
+        initial: {
+            transition: { duration: 0.5, ease: "easeInOut" },
+        },
+        hover: {
+            transition: { duration: 0.5, delay: 0.5, ease: "easeInOut" },
+        },
+    };
+
+    const wordVariants = {
+        initial: {
+            x: 0,
+            maxWidth: 0,
+            width: 0,
+            opacity: 0,
+            transition: { duration: 0.5, ease: "easeInOut" },
+        },
+        hover: {
+            x: 0,
+            marginLeft: "0.0375em",
+            marginRight: "0.0375em",
+            width: "fit-content",
+            maxWidth: "1000px",
+            opacity: 1,
+            transition: { duration: 0.75, delay: 0.5, ease: "easeInOut" },
+        },
+    };
+
     return (
         <div className="h-[100dvh] w-[100dvw] max-w-[1728px] overflow-hidden bg-white p-[10px]">
-            <div className="flex h-full items-end rounded-lg bg-black p-[10px]">
-                <h1
+            <div className="flex h-full flex-col justify-end rounded-lg bg-black p-[10px]">
+                <motion.h1
                     className={cn(
-                        "text-ic-pink group flex transform flex-row whitespace-nowrap font-semibold leading-[1] tracking-[-0.075em] hover:flex-col",
-                        "[font-size:_clamp(80px,20vw,225px)] md:[font-size:_clamp(100px,14vw,225px)]"
+                        "text-ic-pink flex font-semibold leading-[1] tracking-[-0.075em]",
+                        "w-full [font-size:_clamp(80px,20vw,225px)] md:[font-size:_clamp(100px,14vw,225px)]"
                     )}
+                    initial="initial"
+                    whileHover="hover"
                 >
-                    <p>ICS</p>
-                    <div className="flex flex-col md:flex-row">
-                        <span className="flex whitespace-nowrap">
-                            <span>S</span>
-                            <span className="hidden group-hover:flex">
+                    <motion.span
+                        variants={icsVariants}
+                        className="w-fit max-w-fit"
+                    >
+                        ICS
+                    </motion.span>
+
+                    <motion.div className="flex flex-row whitespace-nowrap">
+                        <div className="flex w-fit max-w-fit whitespace-nowrap">
+                            <motion.span variants={sVariants}>S</motion.span>
+                            <motion.span variants={wordVariants}>
                                 tudent&nbsp;
-                            </span>
-                        </span>
-                        <span className="flex whitespace-nowrap">
-                            <span>C</span>
-                            <span className="hidden group-hover:flex">
+                            </motion.span>
+                        </div>
+                        <div className="flex w-fit max-w-fit whitespace-nowrap">
+                            <motion.span variants={cVariants}>C</motion.span>
+                            <motion.span variants={wordVariants}>
                                 ouncil
-                            </span>
-                        </span>
-                    </div>
-                </h1>
+                            </motion.span>
+                        </div>
+                    </motion.div>
+                </motion.h1>
             </div>
         </div>
     );
