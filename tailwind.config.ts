@@ -50,11 +50,28 @@ const config: Config = {
                     "4": "hsl(var(--chart-4))",
                     "5": "hsl(var(--chart-5))",
                 },
+                ic: {
+                    pink: "#FE87A6",
+                    black: "#000000",
+                    white: "#FFFFFF",
+                    gray: "#C7C7C7",
+                    grey: "#C7C7C7",
+                },
             },
             borderRadius: {
                 lg: "var(--radius)",
                 md: "calc(var(--radius) - 2px)",
                 sm: "calc(var(--radius) - 4px)",
+            },
+            transitionDuration: {
+                5000: "5000ms",
+            },
+            spacing: {
+                "15": "60px",
+                "30": "120px",
+            },
+            fontSize: {
+                xxs: ["10px", "12px"],
             },
         },
     },
