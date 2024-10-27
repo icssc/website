@@ -16,7 +16,6 @@ export function EventCard({ image }: EventCardProps) {
             onHoverStart={() => setShowOverlay(true)}
             onHoverEnd={() => setShowOverlay(false)}
         >
-            {/* Hover overlay */}
             <AnimatePresence>
                 {showOverlay && (
                     <motion.div
@@ -41,7 +40,7 @@ export function EventCard({ image }: EventCardProps) {
                 src={image}
                 alt={image}
                 fill
-                style={{ objectFit: "cover" }}
+                className="object-cover"
             />
         </motion.div>
     );
