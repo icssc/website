@@ -37,7 +37,7 @@ const wordVariants = {
 export function Name() {
     const [animated, setAnimated] = useState(false);
     const [triggered, setTriggered] = useState(false);
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [windowWidth, setWindowWidth] = useState<number>();
 
     const { scrollY } = useScroll();
 
@@ -63,7 +63,7 @@ export function Name() {
             transition: { ...transition, duration: 1 },
         },
         hover: {
-            y: windowWidth >= 768 ? "-100%" : "-50%",
+            y: !windowWidth || windowWidth >= 768 ? "-100%" : "-50%",
             width: 0,
             transition: { ...transition },
         },

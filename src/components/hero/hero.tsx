@@ -10,7 +10,7 @@ const NAV_ITEMS = ["About", "Events", "Projects"];
 export function Hero() {
     return (
         <motion.div
-            className="relative h-[100dvh] max-w-[1728px] overflow-hidden"
+            className="relative h-[100dvh] w-[100dvw] overflow-hidden"
             initial={{ padding: 0, backgroundColor: "black" }}
             animate={{ padding: 10, backgroundColor: "white" }}
             transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
@@ -27,9 +27,12 @@ export function Hero() {
                 }}
                 transition={{ delay: 0.5, duration: 0 }}
             >
-                <div className="absolute left-1/2 top-16 flex translate-x-[-50%] space-x-12">
+                <div className="absolute left-1/2 top-12 flex translate-x-[-50%] space-x-12">
                     {NAV_ITEMS.map((item) => (
-                        <div className="flex-center cursor-pointer flex-col text-lg">
+                        <div
+                            className="flex-center cursor-pointer flex-col"
+                            key={item}
+                        >
                             <p className="peer">{item}</p>
                             <div
                                 className={cn(
