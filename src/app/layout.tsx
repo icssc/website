@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 
 import "./globals.css";
 
 import { ThemeProvider } from "@/components/theme-provider";
-
-const inter = Inter({ subsets: ["latin"], fallback: ["sans-serif"] });
 
 export const metadata: Metadata = {
     title: "Create Next App",
@@ -19,7 +16,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${inter.className} bg-ic-white antialiased`}>
+            <body className={`helvetica bg-ic-white antialiased`}>
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="system"
