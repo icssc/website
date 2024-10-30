@@ -49,9 +49,8 @@ export function AnimatedName({ text }: AnimatedNameProps) {
     return (
         <div
             aria-label={text}
-            role="heading"
             className={cn(
-                "text-ic-pink flex w-full font-semibold leading-[1] tracking-[-0.075em]",
+                "flex w-full font-semibold leading-[1] tracking-tighter text-ic-pink",
                 "text-[25vw] leading-[0.85] md:[font-size:_clamp(1500%,1500%,225px)]"
             )}
         >

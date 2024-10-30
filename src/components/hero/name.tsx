@@ -84,14 +84,11 @@ export function Name() {
     return (
         <motion.h1
             className={cn(
-                "text-ic-pink flex w-full font-semibold leading-[1] tracking-[-0.075em]",
+                "flex w-full font-semibold leading-[1] tracking-tighter text-ic-pink",
                 "text-[25vw] leading-[0.85] md:[font-size:_clamp(1500%,1500%,225px)]"
             )}
             initial="initial"
-            whileHover="hover"
-            whileTap="hover"
             animate={triggered ? "hover" : undefined}
-            onMouseEnter={handleMouseEnter}
         >
             <motion.span
                 variants={icsVariants}
