@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import { ThemeProvider } from "@/components/theme-provider";
+import { ReactLenis } from "@/lib/lenis";
 
 export const metadata: Metadata = {
     title: "Create Next App",
@@ -23,7 +24,7 @@ export default function RootLayout({
                     enableSystem
                     disableTransitionOnChange
                 >
-                    {children}
+                    <ReactLenis root>{children}</ReactLenis>
                 </ThemeProvider>
             </body>
         </html>

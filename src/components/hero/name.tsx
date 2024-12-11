@@ -89,6 +89,7 @@ export function Name() {
             )}
             initial="initial"
             animate={triggered ? "hover" : undefined}
+            onHoverStart={handleMouseEnter}
         >
             <motion.span
                 variants={icsVariants}
