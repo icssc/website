@@ -1,16 +1,14 @@
 import { About } from "@/components/about/about";
 import { Events } from "@/components/events/events";
-import { Hero } from "@/components/hero/hero";
+import { Landing } from "@/components/landing/landing";
 
 export default function Home() {
     return (
-        <main className="overflow-x-hidden">
-            <div className="relative h-[200dvh]">
-                <Hero />
-            </div>
+        <main className="space-y-16">
+            <Landing />
             <About />
 
-            <Events />
+            {/* <Events /> */}
         </main>
     );
 }

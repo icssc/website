@@ -1,10 +1,16 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { About } from "@/components/about/about";
 import { AnimatedName } from "@/components/hero/animated-name";
 import { Name } from "@/components/hero/name";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { cn } from "@/lib/utils";
+import {
+    motion,
+    useMotionValueEvent,
+    useScroll,
+    useTransform,
+} from "motion/react";
 
 const Example = () => {
     return (
@@ -26,7 +32,17 @@ const HorizontalScrollCarousel = () => {
         target: targetRef,
     });
 
-    const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
+    const [triggered, setTriggered] = useState(false);
+
+    useMotionValueEvent(scrollYProgress, "change", (currentY) => {
+        if (triggered) {
+            return;
+        }
+
+        if (currentY === 1) {
+            // setTriggered(true);
+        }
+    });
 
     const padding = useTransform(scrollYProgress, [0, 1], [0, 12]);
     const backgroundColor = useTransform(
@@ -39,20 +55,20 @@ const HorizontalScrollCarousel = () => {
     return (
         <section
             ref={targetRef}
-            className="relative h-[125vh] bg-neutral-900"
+            className={cn("relative h-[125vh] bg-neutral-900")}
         >
             <div className="sticky top-0 flex h-screen items-center overflow-hidden">
                 <motion.div
                     className="relative box-border h-full w-full overflow-hidden"
                     style={{
-                        padding: padding,
-                        backgroundColor: backgroundColor,
+                        padding: triggered ? 12 : padding,
+                        backgroundColor: triggered ? "white" : backgroundColor,
                     }}
                 >
                     <motion.div
                         className="box-border flex h-full grow flex-col justify-end bg-ic-black p-4"
                         style={{
-                            borderRadius: borderRadius,
+                            borderRadius: triggered ? 12 : borderRadius,
                         }}
                     >
                         {/* <motion.div
