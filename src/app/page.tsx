@@ -4,8 +4,10 @@ import { Hero } from "@/components/hero/hero";
 
 export default function Home() {
     return (
-        <main className="scroll overflow-hidden">
-            <Hero />
+        <main className="overflow-x-hidden">
+            <div className="relative h-[200dvh]">
+                <Hero />
+            </div>
             <About />
 
             <Events />
