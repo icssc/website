@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
 
 interface ScreenFitTextProps {
@@ -10,23 +10,23 @@ interface ScreenFitTextProps {
 
 export const ScreenFitText = ({ className, children }: ScreenFitTextProps) => {
     const containerRef = useRef<HTMLDivElement | null>(null);
-    const textRef = useRef<HTMLDivElement | null>(null);
+    const textRef = useRef<HTMLSpanElement | null>(null);
 
-    const resizeText = () => {
+    const resizeText = useCallback(() => {
         const container = containerRef.current;
-        const text = textRef?.current;
+        const text = textRef.current;
 
         if (!container || !text) {
             return;
         }
 
-        const containerWidth = container.offsetWidth - 24;
+        const containerWidth = container.offsetWidth - 24; // Padding adjustment
         let min = 1;
         let max = 2500;
 
         while (min <= max) {
             const mid = Math.floor((min + max) / 2);
-            text.style.fontSize = mid + "px";
+            text.style.fontSize = `${mid}px`;
 
             if (text.offsetWidth <= containerWidth) {
                 min = mid + 1;
@@ -35,22 +35,17 @@ export const ScreenFitText = ({ className, children }: ScreenFitTextProps) => {
             }
         }
 
-        text.style.fontSize = max + "px";
-    };
+        text.style.fontSize = `${max}px`;
+    }, []);
 
     useEffect(() => {
         resizeText();
 
         window.addEventListener("resize", resizeText);
-
         return () => {
             window.removeEventListener("resize", resizeText);
         };
-    }, []);
-
-    if (!window) {
-        return null;
-    }
+    }, [resizeText]);
 
     return (
         <div
