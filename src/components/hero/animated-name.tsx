@@ -51,7 +51,7 @@ export function AnimatedName({ text, fontSize }: AnimatedNameProps) {
         <div
             aria-label={text}
             className={cn(
-                "flex w-full font-semibold leading-[1] tracking-tighter text-ic-pink"
+                "flex w-full font-semibold leading-[0.85] tracking-tighter text-ic-pink"
             )}
             style={{ fontSize }}
         >
@@ -65,7 +65,7 @@ export function AnimatedName({ text, fontSize }: AnimatedNameProps) {
                         animate={ctrls}
                         variants={wordAnimation}
                         transition={{
-                            delayChildren: index * 0.5 + 1,
+                            delayChildren: index * 0.25 + 1,
                             staggerChildren: 0.1,
                         }}
                         className="inline-block whitespace-nowrap"

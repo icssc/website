@@ -4,7 +4,7 @@ import { MutableRefObject, useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
 
 interface ScreenFitTextProps {
-    textRef: MutableRefObject<HTMLSpanElement | null>;
+    textRef?: MutableRefObject<HTMLSpanElement | null>;
     setFoo?: any;
     children: React.ReactNode;
 }
@@ -28,7 +28,7 @@ export const ScreenFitText = ({
 
     const resizeText = () => {
         const container = containerRef.current;
-        const text = textRef.current;
+        const text = textRef?.current;
 
         if (!container || !text) {
             return;
@@ -60,7 +60,7 @@ export const ScreenFitText = ({
 
     return (
         <div
-            className="flex h-screen w-full items-end overflow-hidden"
+            className="flex h-full w-full items-end overflow-hidden"
             ref={containerRef}
         >
             <span

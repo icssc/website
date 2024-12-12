@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { AnimatedName } from "@/components/hero/animated-name";
-import { Name } from "@/components/hero/name";
+// import { Name } from "@/components/hero/name";
 import { ScreenFitText } from "@/components/playground/screen-fit-text";
 // import { useTextWidth } from "@/hooks/useTextWidth";
 import { cn } from "@/lib/utils";
@@ -58,7 +58,7 @@ const icsVariants = {
     },
 };
 
-export function Landing() {
+export default function Page() {
     const targetRef = useRef<HTMLDivElement | null>(null);
     const { scrollYProgress } = useScroll({
         target: targetRef,
@@ -131,78 +131,34 @@ export function Landing() {
                             padding: inversePadding,
                         }}
                     >
-                        <div className="h-0">
+                        <div className="">
                             <ScreenFitText
                                 textRef={textRef}
                                 setFoo={setFoo}
                             >
                                 <div className="flex flex-col p-2 text-left">
-                                    <div>ICS</div>
+                                    <AnimatedName text="ICS" />
+                                    {/* <div>ICS</div> */}
+
                                     <div className="flex flex-col md:flex-row">
-                                        <span>Student</span>
-                                        <span className="hidden h-0 md:flex">
+                                        <div className="hidden md:flex">
+                                            <AnimatedName text="Student&nbsp;Council" />
+                                        </div>
+
+                                        <div className="flex flex-col md:hidden">
+                                            <AnimatedName text="Student" />
+                                            <AnimatedName text="Council" />
+                                        </div>
+
+                                        {/* <span>Student</span> */}
+                                        {/* <span className="hidden h-0 md:flex">
                                             &nbsp;
                                         </span>
-                                        <span>Council</span>
+                                        <span>Council</span> */}
                                     </div>
                                 </div>
                             </ScreenFitText>
                         </div>
-
-                        <motion.div
-                            style={{ display: animate ? "none" : display }}
-                            initial="initial"
-                            animate={animate}
-                        >
-                            <AnimatedName
-                                text="ICSSC"
-                                fontSize={foo}
-                            />
-                        </motion.div>
-
-                        <motion.div
-                            className="font-semibold leading-[0.85] tracking-tighter text-ic-pink"
-                            style={{ height: animate ? "" : 0 }}
-                        >
-                            <motion.span
-                                variants={icsVariants}
-                                initial="initial"
-                                animate={animate ? "animate" : undefined}
-                                className="w-fit max-w-fit"
-                                style={{
-                                    fontSize: fontSize,
-                                }}
-                            >
-                                ICS
-                            </motion.span>
-                            <motion.div
-                                className={cn(
-                                    "flex whitespace-nowrap tracking-tighter md:flex-row"
-                                )}
-                                style={{
-                                    fontSize: fontSize,
-                                }}
-                                initial="initial"
-                                animate={animate ? "animate" : undefined}
-                            >
-                                <div className="flex w-fit max-w-fit whitespace-nowrap">
-                                    <motion.span variants={letterVariants}>
-                                        S
-                                    </motion.span>
-                                    <motion.span variants={wordVariants}>
-                                        tudent&nbsp;
-                                    </motion.span>
-                                </div>
-                                <div className="flex w-fit max-w-fit whitespace-nowrap">
-                                    <motion.span variants={letterVariants}>
-                                        C
-                                    </motion.span>
-                                    <motion.span variants={wordVariants}>
-                                        ouncil
-                                    </motion.span>
-                                </div>
-                            </motion.div>
-                        </motion.div>
                     </motion.div>
                 </motion.div>
             </div>

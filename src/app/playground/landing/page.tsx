@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { AnimatedName } from "@/components/hero/animated-name";
-import { Name } from "@/components/hero/name";
+// import { AnimatedName } from "@/components/hero/animated-name";
+// import { Name } from "@/components/hero/name";
 import { ScreenFitText } from "@/components/playground/screen-fit-text";
 // import { useTextWidth } from "@/hooks/useTextWidth";
 import { cn } from "@/lib/utils";
@@ -58,7 +58,7 @@ const icsVariants = {
     },
 };
 
-export function Landing() {
+export default function Page() {
     const targetRef = useRef<HTMLDivElement | null>(null);
     const { scrollYProgress } = useScroll({
         target: targetRef,
@@ -92,6 +92,12 @@ export function Landing() {
         ["", 0]
     );
 
+    const imageMovement = useTransform(
+        scrollYProgress,
+        [0, 0.2, PERCENTAGE],
+        ["100%", "100%", "0%"]
+    );
+
     const [animate, setAnimate] = useState(false);
     useMotionValueEvent(padding, "change", (p) => {
         if (animate) {
@@ -114,24 +120,49 @@ export function Landing() {
     return (
         <section
             ref={targetRef}
-            className={cn("relative h-[200vh]")}
+            className={cn("relative h-[250vh]")}
         >
-            <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+            <div className="sticky top-0 flex h-screen flex-col items-center overflow-hidden">
                 <motion.div
-                    className="relative box-border h-full w-full overflow-hidden"
+                    className="relative box-border flex h-full w-full flex-col overflow-hidden"
                     style={{
                         padding: padding,
-                        backgroundColor: backgroundColor,
+                        // backgroundColor: backgroundColor,
                     }}
                 >
                     <motion.div
-                        className="relative box-border flex h-full flex-col justify-end bg-ic-black"
+                        className="relative box-border flex h-full w-full flex-col justify-end bg-ic-black"
                         style={{
                             borderRadius: borderRadius,
-                            padding: inversePadding,
+                            // padding: inversePadding,
                         }}
                     >
-                        <div className="h-0">
+                        <motion.div
+                            className="box-border max-h-full w-full rounded-md bg-red-200"
+                            style={{
+                                padding: padding,
+                                borderRadius: borderRadius,
+                                y: imageMovement,
+                            }}
+                        >
+                            <ScreenFitText
+                                textRef={textRef}
+                                setFoo={setFoo}
+                            >
+                                <div className="flex flex-col p-2 text-left">
+                                    <div>ICS</div>
+                                    <div className="flex flex-col md:flex-row">
+                                        <span>Student</span>
+                                        <span className="hidden h-0 md:flex">
+                                            &nbsp;
+                                        </span>
+                                        <span>Council</span>
+                                    </div>
+                                </div>
+                            </ScreenFitText>
+                        </motion.div>
+
+                        {/* <div className="h-0">
                             <ScreenFitText
                                 textRef={textRef}
                                 setFoo={setFoo}
@@ -202,9 +233,13 @@ export function Landing() {
                                     </motion.span>
                                 </div>
                             </motion.div>
-                        </motion.div>
+                        </motion.div> */}
                     </motion.div>
                 </motion.div>
+
+                <h1 className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-9xl font-semibold tracking-tighter text-ic-pink">
+                    ICSSC
+                </h1>
             </div>
         </section>
     );
