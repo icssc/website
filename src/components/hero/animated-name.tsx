@@ -1,16 +1,15 @@
-"use client";
-
-import { useEffect } from "react";
+import { Dispatch, SetStateAction, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 interface AnimatedNameProps {
     text: string;
-    fontSize?: number;
+    animated: boolean;
+    setAnimated?: Dispatch<SetStateAction<boolean>>;
 }
 
-export function AnimatedName({ text, fontSize }: AnimatedNameProps) {
+export function AnimatedName({ text }: AnimatedNameProps) {
     const ctrls = useAnimation();
 
     const { ref, inView } = useInView({
@@ -45,6 +44,10 @@ export function AnimatedName({ text, fontSize }: AnimatedNameProps) {
                 ease: [0.2, 0.65, 0.3, 0.9],
             },
         },
+        animated: {
+            opacity: 1,
+            y: 0,
+        },
     };
 
     return (
@@ -53,7 +56,6 @@ export function AnimatedName({ text, fontSize }: AnimatedNameProps) {
             className={cn(
                 "flex w-full font-semibold leading-[0.85] tracking-tighter text-ic-pink"
             )}
-            style={{ fontSize }}
         >
             {text.split(" ").map((word, index) => {
                 return (

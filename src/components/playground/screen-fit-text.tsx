@@ -1,20 +1,15 @@
 "use client";
 
-import { MutableRefObject, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
 
 interface ScreenFitTextProps {
-    textRef?: MutableRefObject<HTMLSpanElement | null>;
-    setFoo?: any;
     children: React.ReactNode;
 }
 
-export const ScreenFitText = ({
-    textRef,
-    setFoo,
-    children,
-}: ScreenFitTextProps) => {
+export const ScreenFitText = ({ children }: ScreenFitTextProps) => {
     const containerRef = useRef<HTMLDivElement | null>(null);
+    const textRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
         resizeText();
@@ -49,8 +44,7 @@ export const ScreenFitText = ({
             }
         }
 
-        console.log(max);
-        setFoo(max);
+        // setFontSize(max);
         text.style.fontSize = max + "px";
     };
 
