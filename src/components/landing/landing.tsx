@@ -1,6 +1,8 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef } from "react";
+import { Name } from "@/components/hero/name";
+import { ScreenFitText } from "@/components/playground/screen-fit-text";
 import { cn } from "@/lib/utils";
 import { motion, useScroll, useTransform } from "motion/react";
 
@@ -13,6 +15,11 @@ export function Landing() {
     });
 
     const padding = useTransform(scrollYProgress, [0, PERCENTAGE], [0, 12]);
+    const inversePadding = useTransform(
+        scrollYProgress,
+        [0, PERCENTAGE],
+        [12, 0]
+    );
     const backgroundColor = useTransform(
         scrollYProgress,
         [0, PERCENTAGE],
@@ -38,24 +45,24 @@ export function Landing() {
                     }}
                 >
                     <motion.div
-                        className="box-border flex h-full grow flex-col justify-end bg-ic-black p-4"
+                        className="relative box-border flex h-full flex-col justify-end bg-ic-black"
                         style={{
                             borderRadius: borderRadius,
+                            padding: inversePadding,
                         }}
                     >
-                        {/* <motion.div
-                            animate={{ display: "none" }}
-                            transition={{ delay: 3.5, duration: 0 }}
-                        >
-                            <AnimatedName text="ICSSC" />
-                        </motion.div>
-                        <motion.div
-                            initial={{ display: "none" }}
-                            animate={{ display: "flex" }}
-                            transition={{ delay: 3.5 }}
-                        >
-                            <Name />
-                        </motion.div> */}
+                        <ScreenFitText>
+                            <div className="flex flex-col p-2 text-left">
+                                <div>ICS</div>
+                                <div className="flex flex-col md:flex-row">
+                                    <span>Student</span>
+                                    <span className="hidden h-0 md:flex">
+                                        &nbsp;
+                                    </span>
+                                    <span>Council</span>
+                                </div>
+                            </div>
+                        </ScreenFitText>
                     </motion.div>
                 </motion.div>
             </div>

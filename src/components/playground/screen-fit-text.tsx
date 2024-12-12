@@ -29,7 +29,7 @@ export const ScreenFitText = ({ children }: ScreenFitTextProps) => {
             return;
         }
 
-        const containerWidth = container.offsetWidth;
+        const containerWidth = container.offsetWidth - 24;
         let min = 1;
         let max = 2500;
 
@@ -53,13 +53,13 @@ export const ScreenFitText = ({ children }: ScreenFitTextProps) => {
 
     return (
         <div
-            className="flex overflow-hidden"
+            className="flex h-screen w-full items-end overflow-hidden"
             ref={containerRef}
         >
             <span
                 className={cn(
                     "absolute mx-auto whitespace-nowrap text-center",
-                    "font-semibold leading-[0.85] tracking-[-0.075em] text-ic-pink"
+                    "font-semibold leading-[0.85] tracking-tighter text-ic-pink"
                 )}
                 ref={textRef}
             >
