@@ -32,11 +32,6 @@ export function Landing() {
         [0, PERCENTAGE],
         [0, 12]
     );
-    const grayscale = useTransform(
-        scrollYProgress,
-        [0, 0.5, PERCENTAGE],
-        [20, 20, 0]
-    );
 
     const [animated, setAnimated] = useState(false);
     useMotionValueEvent(scrollYProgress, "change", (p) => {
@@ -48,16 +43,6 @@ export function Landing() {
             setAnimated(true);
         }
     });
-    const [grayscaleValue, setGrayscaleValue] = useState<number>(20);
-    useMotionValueEvent(grayscale, "change", (g) => {
-        if (animated) {
-            return;
-        }
-
-        setGrayscaleValue(g);
-    });
-
-    console.log(grayscaleValue);
 
     return (
         <section
@@ -93,44 +78,20 @@ export function Landing() {
                                 className={cn(
                                     "h-full rounded-md bg-cover object-cover"
                                 )}
-                                style={{
-                                    filter: `grayscale(${grayscaleValue})`,
-                                }}
                             />
-                            <div className="absolute h-full w-full bg-neutral-800 bg-opacity-50" />
+                            <div className="absolute h-full w-full rounded-md bg-neutral-800 bg-opacity-60" />
                         </motion.div>
 
                         <ScreenFitText className="flex items-end justify-center">
                             <div className="flex flex-col justify-center p-2 text-left">
                                 <div className="hidden flex-col md:flex">
-                                    <AnimatedText
-                                        text="ICS"
-                                        className={cn(
-                                            grayscaleValue
-                                                ? "text-neutral-300"
-                                                : "text-ic-pink"
-                                        )}
-                                    />
+                                    <AnimatedText text="ICS" />
 
-                                    <AnimatedText
-                                        text="Student&nbsp;Council"
-                                        className={cn(
-                                            grayscaleValue
-                                                ? "text-neutral-300"
-                                                : "text-ic-pink"
-                                        )}
-                                    />
+                                    <AnimatedText text="Student&nbsp;Council" />
                                 </div>
 
                                 <div className="md:hidden">
-                                    <AnimatedText
-                                        text="ICSSC"
-                                        className={cn(
-                                            grayscaleValue
-                                                ? "text-neutral-300"
-                                                : "text-ic-pink"
-                                        )}
-                                    />
+                                    <AnimatedText text="ICSSC" />
                                 </div>
                             </div>
                         </ScreenFitText>
