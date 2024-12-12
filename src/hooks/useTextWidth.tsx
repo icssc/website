@@ -1,34 +1,18 @@
-"use client";
-
-import { MutableRefObject, useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
-interface ScreenFitTextProps {
-    textRef: MutableRefObject<HTMLSpanElement | null>;
-    setFoo?: any;
-    children: React.ReactNode;
-}
-
-export const ScreenFitText = ({
-    textRef,
-    setFoo,
-    children,
-}: ScreenFitTextProps) => {
+export function useTextWidth() {
     const containerRef = useRef<HTMLDivElement | null>(null);
+    const textRef = useRef<HTMLSpanElement | null>(null);
 
-    useEffect(() => {
-        resizeText();
-
-        window.addEventListener("resize", resizeText);
-
-        return () => {
-            window.removeEventListener("resize", resizeText);
-        };
-    }, []);
+    const [screenFitTextPx, setScreenFitTextPx] = useState(0);
 
     const resizeText = () => {
         const container = containerRef.current;
         const text = textRef.current;
+
+        console.log(container);
+        console.log(text);
 
         if (!container || !text) {
             return;
@@ -49,16 +33,22 @@ export const ScreenFitText = ({
             }
         }
 
-        console.log(max);
-        setFoo(max);
         text.style.fontSize = max + "px";
+
+        setScreenFitTextPx(max);
     };
 
-    if (!window) {
-        return null;
-    }
+    useEffect(() => {
+        resizeText();
 
-    return (
+        window.addEventListener("resize", resizeText);
+
+        return () => {
+            window.removeEventListener("resize", resizeText);
+        };
+    }, []);
+
+    const text = (
         <div
             className="flex h-screen w-full items-end overflow-hidden"
             ref={containerRef}
@@ -70,8 +60,17 @@ export const ScreenFitText = ({
                 )}
                 ref={textRef}
             >
-                {children}
+                <div className="flex flex-col p-2 text-left">
+                    <div>ICS</div>
+                    <div className="flex flex-col md:flex-row">
+                        <span>Student</span>
+                        <span className="hidden h-0 md:flex">&nbsp;</span>
+                        <span>Council</span>
+                    </div>
+                </div>
             </span>
         </div>
     );
-};
+
+    return { text, screenFitTextPx };
+}

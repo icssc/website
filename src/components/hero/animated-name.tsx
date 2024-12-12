@@ -7,9 +7,10 @@ import { useInView } from "react-intersection-observer";
 
 interface AnimatedNameProps {
     text: string;
+    fontSize?: number;
 }
 
-export function AnimatedName({ text }: AnimatedNameProps) {
+export function AnimatedName({ text, fontSize }: AnimatedNameProps) {
     const ctrls = useAnimation();
 
     const { ref, inView } = useInView({
@@ -50,9 +51,9 @@ export function AnimatedName({ text }: AnimatedNameProps) {
         <div
             aria-label={text}
             className={cn(
-                "flex w-full font-semibold leading-[1] tracking-tighter text-ic-pink",
-                "text-[25vw] leading-[0.85] md:[font-size:_clamp(1500%,1500%,225px)]"
+                "flex w-full font-semibold leading-[1] tracking-tighter text-ic-pink"
             )}
+            style={{ fontSize }}
         >
             {text.split(" ").map((word, index) => {
                 return (
