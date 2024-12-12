@@ -1,8 +1,8 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { AnimatedName } from "@/components/hero/animated-name";
-import { ScreenFitText } from "@/components/playground/screen-fit-text";
+import { AnimatedText } from "@/components/landing/animated-text";
+import { ScreenFitText } from "@/components/landing/screen-fit-text";
 import { cn } from "@/lib/utils";
 import {
     motion,
@@ -66,34 +66,16 @@ export function Landing() {
                         <ScreenFitText>
                             <div className="flex flex-col p-2 text-left">
                                 <div className="hidden flex-col md:flex">
-                                    <AnimatedName
-                                        text="ICS"
-                                        animated={animated}
-                                    />
+                                    <AnimatedText text="ICS" />
 
-                                    <AnimatedName
-                                        text="Student&nbsp;Council"
-                                        animated={animated}
-                                        setAnimated={setAnimated}
-                                    />
+                                    <AnimatedText text="Student&nbsp;Council" />
                                 </div>
 
                                 <div className="flex flex-col md:hidden">
-                                    <AnimatedName
-                                        text="ICS"
-                                        animated={animated}
-                                    />
+                                    <AnimatedText text="ICS" />
                                     <div className="flex flex-col">
-                                        <AnimatedName
-                                            text="Student "
-                                            animated={animated}
-                                            setAnimated={setAnimated}
-                                        />
-                                        <AnimatedName
-                                            text="Council"
-                                            animated={animated}
-                                            setAnimated={setAnimated}
-                                        />
+                                        <AnimatedText text="Student " />
+                                        <AnimatedText text="Council" />
                                     </div>
                                 </div>
                             </div>

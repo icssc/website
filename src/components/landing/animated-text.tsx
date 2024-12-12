@@ -1,15 +1,13 @@
-import { Dispatch, SetStateAction, useEffect } from "react";
+import { useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 interface AnimatedNameProps {
     text: string;
-    animated: boolean;
-    setAnimated?: Dispatch<SetStateAction<boolean>>;
 }
 
-export function AnimatedName({ text }: AnimatedNameProps) {
+export function AnimatedText({ text }: AnimatedNameProps) {
     const ctrls = useAnimation();
 
     const { ref, inView } = useInView({
@@ -40,7 +38,7 @@ export function AnimatedName({ text }: AnimatedNameProps) {
             opacity: 1,
             y: 0,
             transition: {
-                duration: 1,
+                duration: 0.75,
                 ease: [0.2, 0.65, 0.3, 0.9],
             },
         },
