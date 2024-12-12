@@ -38,7 +38,7 @@ export function AnimatedText({ text }: AnimatedNameProps) {
             opacity: 1,
             y: 0,
             transition: {
-                duration: 0.75,
+                duration: 0.5,
                 ease: [0.2, 0.65, 0.3, 0.9],
             },
         },

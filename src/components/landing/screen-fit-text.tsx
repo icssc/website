@@ -4,22 +4,13 @@ import { useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
 
 interface ScreenFitTextProps {
+    className?: string;
     children: React.ReactNode;
 }
 
-export const ScreenFitText = ({ children }: ScreenFitTextProps) => {
+export const ScreenFitText = ({ className, children }: ScreenFitTextProps) => {
     const containerRef = useRef<HTMLDivElement | null>(null);
     const textRef = useRef<HTMLDivElement | null>(null);
-
-    useEffect(() => {
-        resizeText();
-
-        window.addEventListener("resize", resizeText);
-
-        return () => {
-            window.removeEventListener("resize", resizeText);
-        };
-    }, []);
 
     const resizeText = () => {
         const container = containerRef.current;
@@ -44,9 +35,18 @@ export const ScreenFitText = ({ children }: ScreenFitTextProps) => {
             }
         }
 
-        // setFontSize(max);
         text.style.fontSize = max + "px";
     };
+
+    useEffect(() => {
+        resizeText();
+
+        window.addEventListener("resize", resizeText);
+
+        return () => {
+            window.removeEventListener("resize", resizeText);
+        };
+    }, []);
 
     if (!window) {
         return null;
@@ -54,7 +54,7 @@ export const ScreenFitText = ({ children }: ScreenFitTextProps) => {
 
     return (
         <div
-            className="flex h-full w-full items-end overflow-hidden"
+            className={cn("h-full w-full overflow-hidden", className)}
             ref={containerRef}
         >
             <span

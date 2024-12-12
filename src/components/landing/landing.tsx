@@ -63,20 +63,16 @@ export function Landing() {
                             padding: inversePadding,
                         }}
                     >
-                        <ScreenFitText>
-                            <div className="flex flex-col p-2 text-left">
+                        <ScreenFitText className="flex items-end justify-center">
+                            <div className="flex flex-col justify-center p-2 text-left">
                                 <div className="hidden flex-col md:flex">
                                     <AnimatedText text="ICS" />
 
                                     <AnimatedText text="Student&nbsp;Council" />
                                 </div>
 
-                                <div className="flex flex-col md:hidden">
-                                    <AnimatedText text="ICS" />
-                                    <div className="flex flex-col">
-                                        <AnimatedText text="Student " />
-                                        <AnimatedText text="Council" />
-                                    </div>
+                                <div className="md:hidden">
+                                    <AnimatedText text="ICSSC" />
                                 </div>
                             </div>
                         </ScreenFitText>
