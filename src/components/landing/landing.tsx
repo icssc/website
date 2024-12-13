@@ -49,7 +49,7 @@ export function Landing() {
             ref={targetRef}
             className={cn("relative h-[200vh]")}
         >
-            <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+            <div className="sticky top-0 flex h-[100dvh] items-center overflow-hidden">
                 <motion.div
                     className="relative box-border h-full w-full overflow-hidden"
                     style={{
