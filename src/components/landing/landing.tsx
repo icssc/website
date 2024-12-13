@@ -21,11 +21,11 @@ export function Landing() {
         target: targetRef,
     });
 
-    const padding = useTransform(scrollYProgress, [0, PERCENTAGE], [0, 12]);
+    const padding = useTransform(scrollYProgress, [0, PERCENTAGE], [0, 16]);
     const inversePadding = useTransform(
         scrollYProgress,
         [0, PERCENTAGE],
-        [12, 0]
+        [16, 0]
     );
     const borderRadius = useTransform(
         scrollYProgress,
@@ -64,7 +64,7 @@ export function Landing() {
                         }}
                     >
                         <motion.div
-                            className="relative box-border flex h-full min-h-full"
+                            className="relative box-border flex h-full min-h-full max-w-full"
                             style={{
                                 borderRadius: borderRadius,
                                 padding: inversePadding,
@@ -79,7 +79,14 @@ export function Landing() {
                                     "h-full rounded-md bg-cover object-cover"
                                 )}
                             />
-                            <div className="absolute h-full w-full rounded-md bg-neutral-800 bg-opacity-60" />
+                            <motion.div
+                                className={cn(
+                                    "absolute inset-0 w-full rounded-md border-ic-black bg-neutral-800 bg-opacity-60"
+                                )}
+                                style={{
+                                    borderWidth: inversePadding,
+                                }}
+                            />
                         </motion.div>
 
                         <ScreenFitText className="flex items-end justify-center">

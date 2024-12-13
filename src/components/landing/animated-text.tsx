@@ -67,7 +67,7 @@ export function AnimatedText({ text, className }: AnimatedNameProps) {
                         animate={ctrls}
                         variants={wordAnimation}
                         transition={{
-                            delayChildren: index * 0.25 + 1,
+                            delayChildren: index * 0.25 + 0,
                             staggerChildren: 0.1,
                         }}
                         className="inline-block whitespace-nowrap"
