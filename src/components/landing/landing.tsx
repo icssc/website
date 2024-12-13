@@ -21,11 +21,11 @@ export function Landing() {
         target: targetRef,
     });
 
-    const padding = useTransform(scrollYProgress, [0, PERCENTAGE], [0, 16]);
+    const padding = useTransform(scrollYProgress, [0, PERCENTAGE], [0, 12]);
     const inversePadding = useTransform(
         scrollYProgress,
         [0, PERCENTAGE],
-        [16, 0]
+        [12, 0]
     );
     const borderRadius = useTransform(
         scrollYProgress,
