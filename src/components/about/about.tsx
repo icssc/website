@@ -2,17 +2,19 @@ import { Button } from "@/components/ui/button";
 
 export function About() {
     return (
-        <div className="flex w-full items-start justify-between space-x-64 px-16">
-            <div className="min-w-fit space-y-10">
-                <div className="w-[500px] space-y-8 px-2 text-ic-black">
-                    <h2 className="text-8xl font-medium leading-none tracking-tighter">
+        <div className="flex w-full items-start justify-between space-x-64 px-3">
+            <div className="min-w-fit space-y-4">
+                <div className="space-y-4 text-ic-black md:space-y-8">
+                    <h2 className="text-5xl font-medium leading-none tracking-tighter md:text-8xl">
                         Your ICS Community
                     </h2>
-                    <p className="text-lg">
-                        Non sit veniam nisi velit duis consectetur sit mollit.
-                        Voluptate aliquip eu culpa excepteur ullamco voluptate
-                        sint exercitation sunt. Eu ipsum culpa eu dolor. Do
-                        fugiat amet velit sint commodo tempor esse sit quis.
+                    <p className="text-pretty text-base md:text-lg">
+                        ICS Student Council, founded in 2010, is a student-run
+                        organization that serves ICS students. Our mission is to
+                        deepen students&apos; connections with the Donald Bren
+                        School of Information and Computer Sciences & UCI Alumni
+                        and support students professionally, socially, and
+                        academically.
                     </p>
                 </div>
 
@@ -21,7 +23,7 @@ export function About() {
                 </Button>
             </div>
 
-            <div className="h-[750px] w-full bg-ic-pink/50" />
+            {/* <div className="h-[750px] w-full bg-ic-pink/50" /> */}
         </div>
     );
 }
