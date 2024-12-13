@@ -19,9 +19,9 @@ const IMAGES = [
 export function Events() {
     return (
         <div>
-            <div className="text-9xl text-black">Our Events</div>
+            <div className="text-9xl text-white">Our Events</div>
 
-            <div className="flex flex-col space-y-4">
+            {/* <div className="flex flex-col space-y-4">
                 <EventCardRow
                     images={IMAGES.slice(0, IMAGES.length / 2)}
                     direction="left"
@@ -30,7 +30,7 @@ export function Events() {
                     images={IMAGES.slice(IMAGES.length / 2, IMAGES.length)}
                     direction="right"
                 />
-            </div>
+            </div> */}
         </div>
     );
 }

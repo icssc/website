@@ -8,7 +8,7 @@ export default function Home() {
             <Landing />
             <About />
 
-            {/* <Events /> */}
+            <Events />
         </main>
     );
 }
