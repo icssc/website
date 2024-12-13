@@ -46,14 +46,14 @@ export function Landing() {
                     }}
                 >
                     <motion.div
-                        className="relative flex h-full min-h-full flex-col justify-end bg-ic-black"
+                        className="relative flex h-full min-h-full w-full flex-col justify-end bg-ic-black"
                         style={{
                             borderRadius: borderRadius,
                             padding: inversePadding,
                         }}
                     >
                         <motion.div
-                            className="relative flex h-full min-h-full max-w-full"
+                            className="relative flex h-full min-h-full w-full max-w-full"
                             style={{
                                 borderRadius: borderRadius,
                             }}
@@ -64,7 +64,7 @@ export function Landing() {
                                 width={2000}
                                 height={1000}
                                 className={cn(
-                                    "h-full rounded-md bg-cover object-cover"
+                                    "h-full w-full rounded-md bg-cover object-cover"
                                 )}
                             />
                             <div

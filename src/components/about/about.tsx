@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 export function About() {
     return (
         <div className="grid w-full grid-cols-11 grid-rows-2 px-10 lg:grid-rows-1">
-            <div className="col-span-full min-w-fit space-y-4 lg:col-span-5">
+            <div className="col-span-full min-w-fit space-y-4 lg:col-span-3 xl:col-span-4">
                 <div className="space-y-4 text-ic-black md:space-y-8">
                     <h2 className="text-5xl font-medium leading-none tracking-tighter md:text-8xl">
                         Your ICS Community
@@ -24,7 +24,7 @@ export function About() {
                 </Button>
             </div>
 
-            <div className="col-span-full row-start-2 w-full bg-ic-pink/50 lg:col-span-5 lg:col-start-7 lg:row-start-1">
+            <div className="col-span-full row-start-2 w-full bg-ic-pink/50 lg:col-span-8 lg:col-start-6 lg:row-start-1">
                 <Image
                     src={"/landing/general.jpg"}
                     alt="general meeting"
