@@ -52,10 +52,7 @@ export function AnimatedText({ text, className }: AnimatedNameProps) {
     return (
         <div
             aria-label={text}
-            className={cn(
-                "flex w-full font-semibold leading-[0.85] tracking-tighter",
-                className
-            )}
+            className={cn(className)}
         >
             {text.split(" ").map((word, index) => {
                 return (

@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 import { motion, useScroll, useTransform } from "motion/react";
 
 const PERCENTAGE = 0.75;
-const PADDING = 8;
+const PADDING = 12;
 
 export function Landing() {
     const targetRef = useRef<HTMLDivElement | null>(null);
@@ -74,7 +74,7 @@ export function Landing() {
                             />
                         </motion.div>
 
-                        <ScreenFitText className="flex items-end justify-center text-ic-pink">
+                        <ScreenFitText className="flex w-full items-end justify-center font-bold leading-[0.85] text-ic-pink">
                             <div className="flex flex-col justify-center p-2 pb-4 text-left">
                                 <div className="hidden flex-col md:flex">
                                     <AnimatedText text="ICS" />
