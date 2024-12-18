@@ -36,9 +36,9 @@ export function Landing() {
     return (
         <section
             ref={targetRef}
-            className={cn("relative h-[150dvh]")}
+            className={cn("relative h-[150svh]")}
         >
-            <div className="sticky top-0 flex h-[100dvh] items-center overflow-hidden">
+            <div className="sticky top-0 flex h-[100svh] items-center overflow-hidden">
                 <motion.div
                     className="relative h-full w-full overflow-hidden"
                     style={{
