@@ -22,7 +22,7 @@ export const ScreenFitText = ({ className, children }: ScreenFitTextProps) => {
 
         const containerWidth = container.offsetWidth - 24; // Padding adjustment
         let min = 1;
-        let max = 2500;
+        let max = 240;
 
         while (min <= max) {
             const mid = Math.floor((min + max) / 2);
@@ -55,7 +55,7 @@ export const ScreenFitText = ({ className, children }: ScreenFitTextProps) => {
             <span
                 className={cn(
                     "absolute mx-auto whitespace-nowrap text-center",
-                    "font-semibold leading-[0.85] tracking-tighter text-ic-pink"
+                    "font-semibold leading-[0.85] tracking-tighter"
                 )}
                 ref={textRef}
             >

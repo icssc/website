@@ -69,6 +69,7 @@ const config: Config = {
             spacing: {
                 "15": "60px",
                 "30": "120px",
+                "screen-3xl": "1728px",
             },
             fontSize: {
                 xxs: ["10px", "12px"],

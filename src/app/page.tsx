@@ -6,9 +6,10 @@ export default function Home() {
     return (
         <main className="space-y-16 overflow-clip">
             <Landing />
-            <About />
-
-            <Events />
+            <div className="max-w-screen-3xl mx-auto">
+                <About />
+                <Events />
+            </div>
         </main>
     );
 }

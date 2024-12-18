@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 import { motion, useScroll, useTransform } from "motion/react";
 
 const PERCENTAGE = 0.75;
-const PADDING = 16;
+const PADDING = 8;
 
 export function Landing() {
     const targetRef = useRef<HTMLDivElement | null>(null);
@@ -36,7 +36,7 @@ export function Landing() {
     return (
         <section
             ref={targetRef}
-            className={cn("relative h-[150svh]")}
+            className={cn("relative h-[125svh]")}
         >
             <div className="sticky top-0 flex h-[100svh] items-center overflow-hidden">
                 <motion.div
@@ -74,7 +74,7 @@ export function Landing() {
                             />
                         </motion.div>
 
-                        <ScreenFitText className="flex items-end justify-center">
+                        <ScreenFitText className="flex items-end justify-center text-ic-pink">
                             <div className="flex flex-col justify-center p-2 pb-4 text-left">
                                 <div className="hidden flex-col md:flex">
                                     <AnimatedText text="ICS" />
