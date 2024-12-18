@@ -5,8 +5,8 @@ import { HandshakeIcon, LibraryBigIcon, SunIcon } from "lucide-react";
 
 export function About() {
     return (
-        <div className="flex w-full flex-col items-start gap-y-8 px-8 lg:flex-row lg:space-x-[10%] lg:px-16">
-            <div className="space-y-4">
+        <div className="grid-row-2 grid w-full grid-cols-10 gap-y-8 px-8 lg:grid-rows-1 lg:flex-row lg:px-16">
+            <div className="col-span-full space-y-4 lg:col-span-4">
                 <div className="space-y-4">
                     <h2 className="text-4xl font-semibold leading-none lg:text-6xl">
                         Your ICS Community
@@ -53,13 +53,13 @@ export function About() {
                 </Button>
             </div>
 
-            <div className="flex h-full">
+            <div className="col-span-full row-start-2 flex max-h-[clamp(250px,40vw,350px)] rounded-md drop-shadow-md lg:col-span-5 lg:col-start-6 lg:row-start-1 lg:max-h-[500px]">
                 <Image
                     src={"/landing/general.jpg"}
                     alt="general meeting"
                     width={800}
                     height={2000}
-                    className="h-full min-w-full rounded-md object-cover lg:min-w-[50%]"
+                    className="w-full rounded-md object-cover"
                 />
             </div>
         </div>
