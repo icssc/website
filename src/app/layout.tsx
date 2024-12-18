@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import { Open_Sans } from "next/font/google";
+import { Footer } from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ReactLenis } from "@/lib/lenis";
 import { cn } from "@/lib/utils";
@@ -28,7 +29,10 @@ export default function RootLayout({
                     enableSystem
                     disableTransitionOnChange
                 >
-                    <ReactLenis root>{children}</ReactLenis>
+                    <ReactLenis root>
+                        {children}
+                        <Footer />
+                    </ReactLenis>
                 </ThemeProvider>
             </body>
         </html>

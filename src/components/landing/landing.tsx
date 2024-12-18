@@ -46,7 +46,7 @@ export function Landing() {
                     }}
                 >
                     <motion.div
-                        className="relative flex h-full min-h-full w-full flex-col justify-end bg-ic-black"
+                        className="relative flex h-full min-h-full w-full flex-col justify-end bg-black"
                         style={{
                             borderRadius: borderRadius,
                             padding: inversePadding,
@@ -69,7 +69,7 @@ export function Landing() {
                             />
                             <div
                                 className={cn(
-                                    "absolute inset-0 w-full rounded-md border-ic-black bg-neutral-800 bg-opacity-60"
+                                    "absolute inset-0 w-full rounded-md border-black bg-neutral-800 bg-opacity-60"
                                 )}
                             />
                         </motion.div>
