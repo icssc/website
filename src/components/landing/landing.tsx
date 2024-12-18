@@ -64,7 +64,7 @@ export function Landing() {
                                 width={2000}
                                 height={1000}
                                 className={cn(
-                                    "h-full w-full rounded-md bg-cover object-cover"
+                                    "h-full w-full rounded-md object-cover"
                                 )}
                             />
                             <div
