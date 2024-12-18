@@ -4,7 +4,7 @@ import { Landing } from "@/components/landing/landing";
 
 export default function Home() {
     return (
-        <main className="space-y-16">
+        <main className="space-y-16 overflow-clip">
             <Landing />
             <About />
 
