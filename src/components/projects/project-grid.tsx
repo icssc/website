@@ -15,7 +15,7 @@ export function ProjectGrid() {
                     Open Source Projects
                 </h2>
 
-                <p className="text-pretty text-2xl text-neutral-400">
+                <p className="text-pretty text-lg leading-tight text-neutral-400 lg:text-2xl">
                     Proudly open source. Used by tens of thousands. Designed and
                     developed by students.
                 </p>

@@ -1,7 +1,8 @@
 import { About } from "@/components/about/about";
-import { Events } from "@/components/events/events";
+import { EventTimeline } from "@/components/events/event-timeline";
 import { Landing } from "@/components/landing/landing";
 import { ProjectGrid } from "@/components/projects/project-grid";
+import { Sponsors } from "@/components/sponsors/sponsors";
 
 export default function Home() {
     return (
@@ -10,8 +11,9 @@ export default function Home() {
 
             <div className="max-w-screen-3xl mx-auto space-y-16 lg:space-y-32">
                 <About />
-                <Events />
+                {/* <EventTimeline /> */}
                 <ProjectGrid />
+                <Sponsors />
             </div>
         </main>
     );
