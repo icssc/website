@@ -74,7 +74,7 @@ export function Landing() {
                             />
                         </motion.div>
 
-                        <ScreenFitText className="flex w-full items-end justify-center font-bold leading-[0.85] text-ic-pink">
+                        <ScreenFitText className="font-inter flex w-full items-end justify-center font-bold leading-[0.85] text-ic-pink">
                             <div className="flex flex-col justify-center p-2 pb-4 text-left">
                                 <div className="hidden flex-col md:flex">
                                     <AnimatedText text="ICS" />

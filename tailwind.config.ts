@@ -74,6 +74,10 @@ const config: Config = {
             fontSize: {
                 xxs: ["10px", "12px"],
             },
+            fontFamily: {
+                sans: ["var(--font-geist-sans)"],
+                inter: ["var(--font-inter)"],
+            },
         },
     },
     plugins: [require("tailwindcss-animate")],
