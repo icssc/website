@@ -71,6 +71,9 @@
     body {
         @apply bg-background text-foreground text-ic-black;
     }
+    a {
+        @apply underline underline-offset-2;
+    }
 }
 
 @layer utilities {

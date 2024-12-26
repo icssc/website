@@ -54,6 +54,7 @@ const config: Config = {
                     pink: "#FE87A6",
                     black: "#262626",
                     white: "#FFFFFF",
+                    muted: "#737373",
                     gray: "#C7C7C7",
                     grey: "#C7C7C7",
                 },

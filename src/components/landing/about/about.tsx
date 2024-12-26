@@ -5,7 +5,7 @@ import { HandshakeIcon, LibraryBigIcon, SunIcon } from "lucide-react";
 
 export function About() {
     return (
-        <div className="grid-row-2 grid w-full grid-cols-10 gap-y-8 px-8 lg:grid-rows-1 lg:flex-row lg:px-16">
+        <div className="grid-row-2 grid w-full grid-cols-10 gap-y-8 lg:grid-rows-1 lg:flex-row">
             <div className="col-span-full space-y-4 lg:col-span-4">
                 <div className="space-y-4">
                     <h2 className="text-4xl font-semibold leading-none lg:text-6xl">

@@ -8,7 +8,7 @@ export default function Home() {
         <main className="space-y-16 overflow-clip lg:space-y-32">
             <Landing />
 
-            <div className="max-w-screen-3xl mx-auto space-y-16 lg:space-y-32">
+            <div className="max-w-screen-3xl mx-auto space-y-16 px-8 lg:space-y-32 lg:px-16">
                 <About />
                 <ProjectGrid />
                 <Sponsors />
