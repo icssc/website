@@ -21,7 +21,7 @@ export function About() {
 
                     <div className="grid grid-cols-1 grid-rows-3 space-y-0 text-pretty text-lg">
                         <div>
-                            <Separator />
+                            <Separator className="bg-ic-black/40" />
                             <div className="my-2 flex space-x-4">
                                 <HandshakeIcon className="stroke-[1.5]" />
                                 <p className="text-semibold">
@@ -30,14 +30,14 @@ export function About() {
                             </div>
                         </div>
                         <div>
-                            <Separator />
+                            <Separator className="bg-ic-black/40" />
                             <div className="my-2 flex space-x-4">
                                 <SunIcon className="stroke-[1.5]" />
                                 <p className="text-semibold">Social Events</p>
                             </div>
                         </div>
                         <div>
-                            <Separator />
+                            <Separator className="bg-ic-black/40" />
                             <div className="my-2 flex space-x-4">
                                 <LibraryBigIcon className="stroke-[1.5]" />
                                 <p className="text-semibold">
