@@ -10,9 +10,9 @@ export function Footer() {
             <div className="max-w-screen-3xl flex h-full w-full flex-col items-center justify-center gap-y-2 bg-ic-black px-16 lg:flex-row lg:justify-between">
                 <div>&#169; 2024 ICSSC. All Rights Reserved.</div>
                 <div className="flex space-x-4">
-                    <SiFacebook />
-                    <SiDiscord />
-                    <SiInstagram />
+                    <SiFacebook className="size-5" />
+                    <SiDiscord className="size-5" />
+                    <SiInstagram className="size-5" />
                 </div>
             </div>
         </div>
