@@ -1,5 +1,5 @@
 import { BentoGrid, BentoGridItem } from "@/components/aceternity/bento-grid";
-import { PROJECT_DATA } from "@/components/projects/project-data";
+import { PROJECT_DATA } from "@/components/landing/projects/project-data";
 import { cn } from "@/lib/utils";
 
 export function ProjectGrid() {

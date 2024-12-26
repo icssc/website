@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { SPONSORS } from "@/components/sponsors/sponsors-data";
+import { SPONSORS } from "@/components/landing/sponsors/sponsors-data";
 import { cn } from "@/lib/utils";
 
 export function Sponsors() {

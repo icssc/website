@@ -1,6 +1,6 @@
 "use client";
 
-import { EventCard } from "@/components/events/event-card";
+import { EventCard } from "@/components/landing/events/event-card";
 import { cn } from "@/lib/utils";
 import { animate, motion, useMotionValue } from "framer-motion";
 import useMeasure from "react-use-measure";

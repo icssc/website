@@ -2,8 +2,8 @@
 
 import { useRef } from "react";
 import Image from "next/image";
-import { AnimatedText } from "@/components/landing/animated-text";
-import { ScreenFitText } from "@/components/landing/screen-fit-text";
+import { AnimatedText } from "@/components/landing/landing/animated-text";
+import { ScreenFitText } from "@/components/landing/landing/screen-fit-text";
 import { cn } from "@/lib/utils";
 import { motion, useScroll, useTransform } from "motion/react";
 
