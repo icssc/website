@@ -23,9 +23,9 @@ export function About() {
                         <div>
                             <Separator className="bg-ic-muted/50" />
                             <div className="my-2 flex space-x-4">
-                                <HandshakeIcon className="stroke-[1.5]" />
+                                <LibraryBigIcon className="stroke-[1.5]" />
                                 <p className="text-semibold">
-                                    Professional Development
+                                    Academic Support
                                 </p>
                             </div>
                         </div>
@@ -39,9 +39,9 @@ export function About() {
                         <div>
                             <Separator className="bg-ic-muted/50" />
                             <div className="my-2 flex space-x-4">
-                                <LibraryBigIcon className="stroke-[1.5]" />
+                                <HandshakeIcon className="stroke-[1.5]" />
                                 <p className="text-semibold">
-                                    Academic Support
+                                    Professional Development
                                 </p>
                             </div>
                         </div>

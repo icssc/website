@@ -1,16 +1,26 @@
 import Image from "next/image";
 import Link from "next/link";
 import { AFFILIATED_CLUBS } from "@/components/about/affliated-clubs/affiliated-clubs-data";
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { cn } from "@/lib/utils";
 
 export function AffiliatedClubs() {
     return (
-        <ScrollArea className="flex w-full">
-            <div className="flex w-full flex-row items-center space-x-8 overflow-auto whitespace-nowrap">
+        <div className="space-y-16 bg-ic-black px-8 py-16 text-ic-white lg:px-16">
+            <div className="space-y-2">
+                <h2 className="text-4xl font-semibold leading-none lg:text-6xl">
+                    Affiliated Clubs
+                </h2>
+
+                <p className="text-pretty text-lg leading-tight text-neutral-300 md:max-w-[90%] lg:text-xl">
+                    ICS Affiliated Clubs provide additional opportunities to
+                    connect with the school of ICS and fellow peers
+                </p>
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-x-16 gap-y-8">
                 {AFFILIATED_CLUBS.map((club) => (
                     <div
-                        className="flex aspect-square w-40 items-center"
+                        className="flex aspect-square w-20 items-center lg:w-40"
                         key={club.name}
                     >
                         <Link
@@ -32,12 +42,6 @@ export function AffiliatedClubs() {
                     </div>
                 ))}
             </div>
-
-            <ScrollBar
-                orientation="horizontal"
-                className="bg-transparent"
-                thumbClassName="bg-ic-pink/80"
-            />
-        </ScrollArea>
+        </div>
     );
 }

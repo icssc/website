@@ -76,6 +76,9 @@ const config: Config = {
             fontSize: {
                 xxs: ["10px", "12px"],
             },
+            lineHeight: {
+                tightest: "0.85",
+            },
             fontFamily: {
                 sans: ["var(--font-geist-sans)"],
                 inter: ["var(--font-inter)"],
