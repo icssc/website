@@ -53,7 +53,7 @@ const config: Config = {
                 ic: {
                     pink: "#FE87A6",
                     black: "#262626",
-                    white: "#FFFFFF",
+                    white: "#FAFAFA",
                     muted: "#737373",
                     gray: "#C7C7C7",
                     grey: "#C7C7C7",

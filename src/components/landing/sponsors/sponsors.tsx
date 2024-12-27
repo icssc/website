@@ -12,7 +12,7 @@ export function Sponsors() {
 
                 <span className="text-ic-muted mx-auto text-pretty text-center text-lg leading-tight lg:w-3/4 lg:text-2xl">
                     Our sponsors enable ICSSC to support students and create
-                    exception opportunities at the
+                    exceptional opportunities at the
                     University&nbsp;of&nbsp;California,&nbsp;Irvine.
                 </span>
             </div>
