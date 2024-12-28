@@ -4,7 +4,7 @@ import "./globals.css";
 
 import { Inter } from "next/font/google";
 import { Footer } from "@/components/footer";
-import { ThemeProvider } from "@/components/theme-provider";
+import { Header } from "@/components/header";
 import { ReactLenis } from "@/lib/lenis";
 import { cn } from "@/lib/utils";
 import { GeistSans } from "geist/font/sans";
@@ -27,20 +27,14 @@ export default function RootLayout({
                 className={cn(
                     GeistSans.variable,
                     font.variable,
-                    `font-inter bg-ic-white antialiased`
+                    `bg-ic-white font-inter antialiased`
                 )}
             >
-                <ThemeProvider
-                    attribute="class"
-                    defaultTheme="system"
-                    enableSystem
-                    disableTransitionOnChange
-                >
-                    <ReactLenis root>
-                        {children}
-                        <Footer />
-                    </ReactLenis>
-                </ThemeProvider>
+                <ReactLenis root>
+                    <Header />
+                    {children}
+                    <Footer />
+                </ReactLenis>
             </body>
         </html>
     );

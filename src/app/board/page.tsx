@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { BOARD_INFO } from "@/components/about/affliated-clubs/board/board-info";
-import { PAST_BOARD_INFO } from "@/components/about/affliated-clubs/board/past-board-info";
+import { BOARD_INFO } from "@/components/board/board-info";
+import { PAST_BOARD_INFO } from "@/components/board/past-board-info";
 import { PageHeading } from "@/components/shared/page-heading";
 import { SectionHeading } from "@/components/shared/section-heading";
 import {
@@ -29,15 +29,17 @@ export default function Page() {
                             alt="foo"
                             width={240}
                             height={240}
-                            className="aspect-square rounded-md object-cover shadow-md"
+                            className="aspect-square rounded-md object-cover shadow-xl"
                         />
 
                         <div className="space-y-2 text-center">
-                            <p className="text-pretty text-lg font-semibold leading-none">
+                            <p className="text-pretty font-medium leading-none text-ic-pink">
                                 {position}
                             </p>
 
-                            <p className="leading-none">{name}</p>
+                            <p className="text-lg font-semibold leading-none text-ic-black">
+                                {name}
+                            </p>
                         </div>
                     </div>
                 ))}

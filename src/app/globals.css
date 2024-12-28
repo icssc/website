@@ -74,6 +74,9 @@
     a {
         @apply underline underline-offset-2;
     }
+    img {
+        @apply pointer-events-none;
+    }
 }
 
 @layer utilities {
