@@ -36,7 +36,7 @@ export function AffiliatedClubs() {
                                 alt={club.name}
                                 width={200}
                                 height={200}
-                                className="rounded-sm object-contain"
+                                className="rounded-sm object-cover"
                             />
                         </Link>
                     </div>

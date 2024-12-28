@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 export default function Page() {
     return (
-        <div className="max-w-screen-3xl mx-auto space-y-16 lg:space-y-32">
+        <div className="mx-auto max-w-screen-3xl space-y-16 lg:space-y-32">
             <div className="flex h-[100svh] max-h-[800px] flex-col items-end overflow-hidden rounded-md p-3">
                 <div className="relative h-full min-h-full w-full min-w-full">
                     <Image
@@ -35,14 +35,45 @@ export default function Page() {
                 <div>Our M</div>
                 <AffiliatedClubs />
 
-                <div className="space-y-8">
+                <div className="space-y-16 px-8 lg:px-16">
                     <h2 className="text-4xl font-semibold leading-none lg:text-6xl">
                         Awards & Recognitions
                     </h2>
-                    <div className="grid grid-cols-2 gap-4">
-                        <div className="te">
-                            <p>Most Outstanding Social/Support Organization</p>
-                            <p>Anteater Awards 2011</p>
+
+                    <div className="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 2xl:grid-cols-4">
+                        <div className="space-y-1 rounded-md px-8 text-center">
+                            <p className="text-balance text-xl font-semibold">
+                                Most Outstanding Social/Support Organization
+                            </p>
+                            <p className="text-balance text-lg">
+                                Anteater Awards 2011
+                            </p>
+                        </div>
+                        <div className="space-y-1 rounded-md px-8 text-center">
+                            <p className="text-balance text-xl font-semibold">
+                                Student Alumni Engagement Sponsorship
+                            </p>
+                            <p className="text-balance text-lg">
+                                Student Alumni Association
+                            </p>
+                        </div>
+                        <div className="space-y-1 rounded-md px-8 text-center">
+                            <p className="text-balance text-xl font-semibold">
+                                Third Place
+                            </p>
+                            <p className="text-balance text-lg">
+                                Winter UCI Alumni Association Club Affiliates
+                                Challenge 2020
+                            </p>
+                        </div>
+                        <div className="space-y-1 rounded-md px-8 text-center">
+                            <p className="text-balance text-xl font-semibold">
+                                Second Place
+                            </p>
+                            <p className="text-balance text-lg">
+                                UCI Campus Organizations & Volunteer Programs |
+                                Love My Org Contest 2020
+                            </p>
                         </div>
                     </div>
                 </div>
