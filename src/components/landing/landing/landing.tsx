@@ -36,21 +36,22 @@ export function Landing() {
     return (
         <section
             ref={targetRef}
-            className={cn("relative h-[125svh]")}
+            // className={cn("relative h-[125svh]")}
         >
-            <div className="sticky top-0 flex h-[100svh] items-center overflow-hidden">
+            {/* <div className="sticky top-0 flex h-[100svh] items-center overflow-hidden"> */}
+            <div className="flex h-[100svh] items-center overflow-hidden">
                 <motion.div
                     className="relative h-full w-full overflow-hidden"
-                    style={{
-                        padding: padding,
-                    }}
+                    // style={{
+                    //     padding: padding,
+                    // }}
                 >
                     <motion.div
                         className="relative flex h-full min-h-full w-full flex-col justify-end bg-black"
-                        style={{
-                            borderRadius: borderRadius,
-                            padding: inversePadding,
-                        }}
+                        // style={{
+                        //     borderRadius: borderRadius,
+                        //     padding: inversePadding,
+                        // }}
                     >
                         <motion.div
                             className="relative flex h-full min-h-full w-full max-w-full"
@@ -74,8 +75,8 @@ export function Landing() {
                             />
                         </motion.div>
 
-                        <ScreenFitText className="font-inter flex w-full items-end justify-center font-bold leading-[0.85] text-ic-pink">
-                            <div className="flex flex-col justify-center p-2 pb-4 text-left">
+                        <ScreenFitText className="flex w-full items-end justify-center font-inter font-bold leading-[0.85] text-ic-pink">
+                            <div className="flex flex-col justify-center px-10 pb-4 text-left">
                                 <div className="hidden flex-col md:flex">
                                     <AnimatedText text="ICS" />
 
