@@ -17,7 +17,7 @@ export function Header() {
     const { scrollY, scrollYProgress } = useScroll();
 
     const [visible, setVisible] = useState(false);
-    const [fixed, setFixed] = useState(() => scrollY.get() <= 96);
+    const [absolute, setAbsolute] = useState(() => scrollY.get() <= 96);
 
     useMotionValueEvent(scrollYProgress, "change", (current) => {
         // Check if current is not undefined and is a number
@@ -26,9 +26,9 @@ export function Header() {
 
             if (scrollY.get() <= 96) {
                 setVisible(false);
-                setFixed(true);
+                setAbsolute(true);
             } else {
-                setFixed(false);
+                setAbsolute(false);
 
                 if (direction < 0) {
                     setVisible(true);
@@ -40,7 +40,7 @@ export function Header() {
     });
 
     return (
-        <div className="h-0">
+        <div className="h">
             <AnimatePresence mode="wait">
                 <motion.div
                     initial={{
@@ -90,8 +90,10 @@ export function Header() {
 
             <div
                 className={cn(
-                    "z-[5000] mx-auto flex w-full items-center justify-between border border-transparent bg-transparent px-16 pb-4 pt-10",
-                    fixed ? "absolute top-0 text-ic-white" : "text-ic-black"
+                    "z-[5000] mx-auto flex w-full items-center justify-between border border-transparent bg-transparent px-16 pt-10",
+                    (pathname === "/" || pathname === "/about") && absolute
+                        ? "absolute top-0 text-ic-white"
+                        : "text-ic-black"
                 )}
             >
                 <Link href={"/"}>

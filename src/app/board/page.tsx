@@ -12,7 +12,7 @@ import {
 
 export default function Page() {
     return (
-        <div className="mx-auto max-w-screen-3xl space-y-16 px-8 py-16 lg:px-16">
+        <div className="mx-auto max-w-screen-3xl space-y-16 px-8 py-8 lg:px-16">
             <PageHeading
                 title="Our Board"
                 subtitle="ICSSC board members help make ICSSC's events and projects possible. This page recognizes board members past and present."
