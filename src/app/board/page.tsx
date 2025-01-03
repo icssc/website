@@ -27,8 +27,8 @@ export default function Page() {
                         <Image
                             src={image}
                             alt="foo"
-                            width={240}
-                            height={240}
+                            width={500}
+                            height={500}
                             className="aspect-square rounded-md object-cover shadow-xl"
                         />
 
