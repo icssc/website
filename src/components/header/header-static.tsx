@@ -15,6 +15,7 @@ export function HeaderStatic() {
         <div
             className={cn(
                 "z-[5000] w-full bg-transparent px-8 pt-10 lg:px-16",
+                "max-w-screen-3xl",
                 largeHero ? "absolute top-0 text-ic-white" : "text-ic-black"
             )}
         >

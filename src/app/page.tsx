@@ -6,8 +6,9 @@ import { PageContainer } from "@/components/shared/page-container";
 
 export default function Home() {
     return (
-        <PageContainer className="px-0 py-0 lg:px-0">
+        <PageContainer className="max-w-full px-0 py-0 lg:px-0">
             <Landing />
+
             <div className="mx-auto max-w-screen-3xl space-y-16 px-8 lg:space-y-32 lg:px-16">
                 <About />
                 <ProjectGrid />
