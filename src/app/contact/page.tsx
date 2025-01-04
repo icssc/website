@@ -17,7 +17,7 @@ export default function Page() {
                     referrerPolicy="no-referrer"
                     className="no-underline"
                 >
-                    <div className="mx-auto flex h-12 w-fit items-center justify-center rounded-full bg-ic-pink px-8 text-2xl font-medium text-ic-white shadow-md transition hover:bg-ic-pink/90">
+                    <div className="hover:bg-ic-pink-hover mx-auto flex h-12 w-fit items-center justify-center rounded-full bg-ic-pink px-8 text-2xl font-medium text-ic-white shadow-md transition">
                         <p>iccsc@uci.edu</p>
                     </div>
                 </Link>
@@ -31,7 +31,7 @@ export default function Page() {
                             className="group no-underline"
                         >
                             <Icon
-                                className="size-12 transition duration-300 hover:text-ic-pink/90"
+                                className="hover:text-ic-pink-hover size-12 transition duration-300"
                                 aria-label={label}
                             />
                         </Link>

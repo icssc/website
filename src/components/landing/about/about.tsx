@@ -48,7 +48,7 @@ export function About() {
                     </div>
                 </div>
 
-                <Button className="bg-ic-pink px-6 py-2 text-base hover:bg-ic-pink/80">
+                <Button className="hover:bg-ic-pink-hover bg-ic-pink px-6 py-2 text-base">
                     Learn More
                 </Button>
             </div>
