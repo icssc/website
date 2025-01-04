@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { CONTACT_DATA } from "@/components/contact/contact-data";
+import { PageContainer } from "@/components/shared/page-container";
 import { PageHeading } from "@/components/shared/page-heading";
 
 export default function Page() {
     return (
-        <div className="max-w-screen-3xl space-y-16 px-8 py-8 lg:px-16">
+        <PageContainer>
             <PageHeading
                 title="Contact Us"
                 subtitle="Interested in collaborating? Have a question or feedback? Don't hesitate to reach out!"
@@ -38,6 +39,6 @@ export default function Page() {
                     ))}
                 </div>
             </div>
-        </div>
+        </PageContainer>
     );
 }

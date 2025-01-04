@@ -3,11 +3,12 @@
 import Link from "next/link";
 import { ProjectsGrid } from "@/components/projects/projects-grid";
 import { ProjectsInfo } from "@/components/projects/projects-info";
+import { PageContainer } from "@/components/shared/page-container";
 import { PageHeading } from "@/components/shared/page-heading";
 
 export default function Page() {
     return (
-        <div className="mx-auto max-w-screen-3xl space-y-16 px-8 py-16 lg:px-16">
+        <PageContainer>
             <PageHeading
                 title="Projects"
                 subtitle={<Subtitle />}
@@ -16,7 +17,7 @@ export default function Page() {
             <ProjectsInfo />
 
             <ProjectsGrid />
-        </div>
+        </PageContainer>
     );
 }
 

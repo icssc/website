@@ -1,10 +1,11 @@
 import Image from "next/image";
 import { AffiliatedClubs } from "@/components/about/affliated-clubs/affiliated-clubs";
+import { PageContainer } from "@/components/shared/page-container";
 import { cn } from "@/lib/utils";
 
 export default function Page() {
     return (
-        <div className="mx-auto max-w-screen-3xl space-y-16 lg:space-y-32">
+        <PageContainer className="px-0 py-0 lg:px-0">
             <div className="flex h-[100svh] max-h-[800px] flex-col items-end overflow-hidden rounded-md p-3">
                 <div className="relative h-full min-h-full w-full min-w-full">
                     <Image
@@ -78,6 +79,6 @@ export default function Page() {
                     </div>
                 </div>
             </div>
-        </div>
+        </PageContainer>
     );
 }

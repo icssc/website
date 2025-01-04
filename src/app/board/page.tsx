@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { BOARD_INFO } from "@/components/board/board-info";
 import { PAST_BOARD_INFO } from "@/components/board/past-board-info";
+import { PageContainer } from "@/components/shared/page-container";
 import { PageHeading } from "@/components/shared/page-heading";
 import { SectionHeading } from "@/components/shared/section-heading";
 import {
@@ -12,7 +13,7 @@ import {
 
 export default function Page() {
     return (
-        <div className="mx-auto max-w-screen-3xl space-y-16 px-8 py-8 lg:px-16">
+        <PageContainer>
             <PageHeading
                 title="Our Board"
                 subtitle="ICSSC board members help make ICSSC's events and projects possible. This page recognizes board members past and present."
@@ -79,6 +80,6 @@ export default function Page() {
                     ))}
                 </Accordion>
             </div>
-        </div>
+        </PageContainer>
     );
 }
