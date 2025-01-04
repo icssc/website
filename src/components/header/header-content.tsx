@@ -17,6 +17,7 @@ export function HeaderContent() {
                     className="aspect-square object-cover"
                 />
             </Link>
+
             <div className="flex flex-row space-x-8">
                 {NAV_ITEMS.map((item) => (
                     <Link

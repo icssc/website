@@ -31,9 +31,11 @@ export default function RootLayout({
                 )}
             >
                 <ReactLenis root>
-                    <Header />
-                    {children}
-                    <Footer />
+                    <div className="flex min-h-[100svh] flex-col">
+                        <Header />
+                        <div className="mb-16">{children}</div>
+                        <Footer />
+                    </div>
                 </ReactLenis>
             </body>
         </html>
