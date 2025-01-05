@@ -43,7 +43,7 @@ export function MobileNav() {
             onOpenChange={handleClick}
         >
             <DialogTrigger
-                className="flex lg:hidden"
+                className="flex md:hidden"
                 asChild
             >
                 <Button
@@ -62,6 +62,10 @@ export function MobileNav() {
                 className="fixed flex h-full w-full min-w-full items-center overflow-y-auto rounded-none border-none bg-ic-black sm:rounded-none"
                 xClassname="size-8 stroke-ic-pink"
             >
+                <DialogHeader className="hidden">
+                    <DialogTitle>Mobile Nav</DialogTitle>
+                    <DialogDescription>Navigate</DialogDescription>
+                </DialogHeader>
                 <div className="flex w-full flex-col items-center gap-y-4">
                     {NAV_DATA.map((item) => (
                         <Link

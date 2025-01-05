@@ -20,7 +20,7 @@ export function HeaderContent() {
                 />
             </Link>
 
-            <div className="hidden flex-row space-x-8 lg:flex">
+            <div className="hidden flex-row space-x-8 md:flex">
                 {NAV_DATA.map((item) => (
                     <Link
                         key={item.link}
