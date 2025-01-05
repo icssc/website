@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { AffiliatedClubs } from "@/components/about/affliated-clubs/affiliated-clubs";
 import { Awards } from "@/components/about/awards/awards";
+import { Committees } from "@/components/about/committees/committees";
 import { PageContainer } from "@/components/shared/page-container";
 import { cn } from "@/lib/utils";
 
@@ -34,8 +35,7 @@ export default function Page() {
             </div>
 
             <div className="space-y-16">
-                <div>Our M</div>
-
+                <Committees />
                 <AffiliatedClubs />
                 <Awards />
             </div>
