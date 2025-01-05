@@ -45,7 +45,7 @@ export function HeaderAnimated() {
                 }}
                 className={cn(
                     "fixed inset-x-0 z-[5000] bg-ic-black px-8 py-4 text-ic-white shadow-xl lg:px-16",
-                    "mx-auto max-w-screen-3xl"
+                    "mx-auto"
                 )}
             >
                 <HeaderContent />

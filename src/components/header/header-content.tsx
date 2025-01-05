@@ -1,13 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { MobileNav } from "@/components/header/mobile-nav";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { MenuIcon } from "lucide-react";
 
 export function HeaderContent() {
     const pathname = usePathname();
 
     return (
-        <div className="mx-auto flex min-w-full items-center justify-between">
+        <div className="mx-auto flex max-w-screen-3xl items-center justify-between">
             <Link href={"/"}>
                 <Image
                     src={"/brand/logo.svg"}
@@ -18,7 +21,7 @@ export function HeaderContent() {
                 />
             </Link>
 
-            <div className="flex flex-row space-x-8">
+            <div className="hidden flex-row space-x-8 lg:flex">
                 {NAV_ITEMS.map((item) => (
                     <Link
                         key={item.link}
@@ -35,6 +38,8 @@ export function HeaderContent() {
                     </Link>
                 ))}
             </div>
+
+            <MobileNav />
         </div>
     );
 }
