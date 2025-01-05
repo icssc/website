@@ -8,7 +8,7 @@ import foo from "@/public/landing/bonfire.jpeg";
 
 export function Landing() {
     return (
-        <div className="mx-auto flex h-[100svh] w-[100svw] max-w-[100svw] items-center overflow-hidden">
+        <div className="mx-auto flex h-[100svh] w-full items-center overflow-hidden">
             <div className="relative h-full w-full overflow-hidden p-3">
                 <div className="relative flex h-full min-h-full w-full flex-col justify-end rounded-md bg-black">
                     <div className="relative flex h-full min-h-full w-full max-w-full">
