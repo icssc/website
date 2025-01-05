@@ -5,7 +5,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header/header";
-import { ReactLenis } from "@/lib/lenis";
+import { ReactLenisProvider } from "@/lib/lenis";
 import { cn } from "@/lib/utils";
 import { GeistSans } from "geist/font/sans";
 
@@ -30,13 +30,13 @@ export default function RootLayout({
                     `bg-ic-white font-inter antialiased`
                 )}
             >
-                <ReactLenis root>
+                <ReactLenisProvider>
                     <div className="flex min-h-[100svh] flex-col">
                         <Header />
                         <div className="mb-16">{children}</div>
                         <Footer />
                     </div>
-                </ReactLenis>
+                </ReactLenisProvider>
             </body>
         </html>
     );

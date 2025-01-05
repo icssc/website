@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { MobileNav } from "@/components/header/mobile-nav";
+import { NAV_DATA } from "@/components/header/nav-data";
 import { cn } from "@/lib/utils";
 
 export function HeaderContent() {
@@ -20,7 +21,7 @@ export function HeaderContent() {
             </Link>
 
             <div className="hidden flex-row space-x-8 lg:flex">
-                {NAV_ITEMS.map((item) => (
+                {NAV_DATA.map((item) => (
                     <Link
                         key={item.link}
                         href={item.link}
@@ -41,26 +42,3 @@ export function HeaderContent() {
         </div>
     );
 }
-
-const NAV_ITEMS = [
-    {
-        link: "/about",
-        name: "About",
-    },
-    {
-        link: "/board",
-        name: "Board",
-    },
-    {
-        link: "/events",
-        name: "Events",
-    },
-    {
-        link: "/projects",
-        name: "Projects",
-    },
-    {
-        link: "/contact",
-        name: "Contact",
-    },
-];
