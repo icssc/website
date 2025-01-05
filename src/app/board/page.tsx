@@ -3,6 +3,7 @@ import { BOARD_INFO } from "@/components/board/board-info";
 import { PAST_BOARD_INFO } from "@/components/board/past-board-info";
 import { PageContainer } from "@/components/shared/page-container";
 import { PageHeading } from "@/components/shared/page-heading";
+import { SectionContainer } from "@/components/shared/section-container";
 import { SectionHeading } from "@/components/shared/section-heading";
 import {
     Accordion,
@@ -16,7 +17,7 @@ export default function Page() {
         <PageContainer>
             <PageHeading
                 title="Our Board"
-                subtitle="ICSSC board members help make ICSSC's events and projects possible. This page recognizes board members past and present."
+                subtitle="ICSSC board members help make our events and initiatives possible. This page recognizes board members past and present."
             />
 
             <div className="flex flex-wrap justify-center gap-4 lg:gap-8">
@@ -46,40 +47,42 @@ export default function Page() {
                 ))}
             </div>
 
-            <SectionHeading title="Past Board" />
+            <SectionContainer className="space-y-8">
+                <SectionHeading title="Past Board" />
 
-            <div>
-                <Accordion
-                    type="single"
-                    collapsible
-                >
-                    {PAST_BOARD_INFO.map(({ year, positions }) => (
-                        <AccordionItem
-                            value={year}
-                            key={year}
-                        >
-                            <AccordionTrigger className="text-2xl">
-                                {year}
-                            </AccordionTrigger>
-                            <AccordionContent className="flex flex-wrap justify-center gap-8">
-                                {positions.map((item) => (
-                                    <div
-                                        key={item.name + item.title}
-                                        className="flex w-40 flex-col items-center space-y-2 text-center"
-                                    >
-                                        <p className="font-medium leading-none">
-                                            {item.title}
-                                        </p>
-                                        <p className="text-lg font-semibold leading-none">
-                                            {item.name}
-                                        </p>
-                                    </div>
-                                ))}
-                            </AccordionContent>
-                        </AccordionItem>
-                    ))}
-                </Accordion>
-            </div>
+                <div>
+                    <Accordion
+                        type="single"
+                        collapsible
+                    >
+                        {PAST_BOARD_INFO.map(({ year, positions }) => (
+                            <AccordionItem
+                                value={year}
+                                key={year}
+                            >
+                                <AccordionTrigger className="text-2xl">
+                                    {year}
+                                </AccordionTrigger>
+                                <AccordionContent className="flex flex-wrap justify-center gap-8">
+                                    {positions.map((item) => (
+                                        <div
+                                            key={item.name + item.title}
+                                            className="flex w-40 flex-col items-center space-y-2 text-center"
+                                        >
+                                            <p className="font-medium leading-none">
+                                                {item.title}
+                                            </p>
+                                            <p className="text-lg font-semibold leading-none">
+                                                {item.name}
+                                            </p>
+                                        </div>
+                                    ))}
+                                </AccordionContent>
+                            </AccordionItem>
+                        ))}
+                    </Accordion>
+                </div>
+            </SectionContainer>
         </PageContainer>
     );
 }

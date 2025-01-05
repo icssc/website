@@ -1,21 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import { AFFILIATED_CLUBS } from "@/components/about/affliated-clubs/affiliated-clubs-data";
+import { SectionContainer } from "@/components/shared/section-container";
+import { SectionHeading } from "@/components/shared/section-heading";
 import { cn } from "@/lib/utils";
 
 export function AffiliatedClubs() {
     return (
-        <div className="space-y-16 bg-ic-black px-8 py-16 text-ic-white lg:px-16">
-            <div className="space-y-2">
-                <h2 className="text-4xl font-semibold leading-none lg:text-6xl">
-                    Affiliated Clubs
-                </h2>
-
-                <p className="text-pretty text-lg leading-tight text-neutral-300 md:max-w-[90%] lg:text-xl">
-                    ICS Affiliated Clubs provide additional opportunities to
-                    connect with the school of ICS and fellow peers
-                </p>
-            </div>
+        <SectionContainer className="bg-ic-black py-16 text-ic-white">
+            <SectionHeading
+                title="Affiliated Clubs"
+                subtitle=" ICS Affiliated Clubs provide additional opportunities to
+                    connect with the school of ICS and fellow peers"
+                subtitleClassName="text-neutral-300"
+            />
 
             <div className="flex flex-wrap justify-center gap-x-16 gap-y-8">
                 {AFFILIATED_CLUBS.map((club) => (
@@ -25,6 +23,8 @@ export function AffiliatedClubs() {
                     >
                         <Link
                             href={club.website ?? ""}
+                            target="_blank"
+                            referrerPolicy="no-referrer"
                             className={cn(
                                 club.website
                                     ? "cursor-pointer"
@@ -42,6 +42,6 @@ export function AffiliatedClubs() {
                     </div>
                 ))}
             </div>
-        </div>
+        </SectionContainer>
     );
 }

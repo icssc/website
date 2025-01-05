@@ -5,12 +5,14 @@ interface SectionHeadingProps {
     title: string | React.ReactNode;
     subtitle?: string | React.ReactNode;
     containerClassName?: string;
+    subtitleClassName?: string;
 }
 
 export function SectionHeading({
     title,
     subtitle,
     containerClassName,
+    subtitleClassName,
 }: SectionHeadingProps) {
     return (
         <div className={cn("space-y-2", containerClassName)}>
@@ -18,7 +20,12 @@ export function SectionHeading({
                 {title}
             </h2>
 
-            <p className="text-pretty text-lg leading-tight text-ic-muted lg:text-xl">
+            <p
+                className={cn(
+                    "text-pretty text-lg leading-tight text-ic-muted lg:text-xl",
+                    subtitleClassName
+                )}
+            >
                 {subtitle}
             </p>
         </div>
