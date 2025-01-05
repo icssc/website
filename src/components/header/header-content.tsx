@@ -2,9 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { MobileNav } from "@/components/header/mobile-nav";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { MenuIcon } from "lucide-react";
 
 export function HeaderContent() {
     const pathname = usePathname();

@@ -1,7 +1,6 @@
 import {
     SiDiscord,
     SiFacebook,
-    SiGmail,
     SiInstagram,
     type IconType,
 } from "@icons-pack/react-simple-icons";
@@ -28,9 +27,6 @@ export const CONTACT_DATA: Contact[] = [
         href: "https://discord.gg/c4t5dGcM9S",
         icon: SiDiscord,
     },
-    // {
-    //     label: "Email",
-    //     href: "mailto:icssc@uci.edu",
-    //     icon: SiGmail,
-    // },
 ];
+
+export const CONTACT_EMAIL = "icssc@uci.edu";
