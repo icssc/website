@@ -12,7 +12,7 @@ export default function Page() {
                 subtitle="ICSSC board members help make our events and initiatives possible. This page recognizes board members past and present."
             />
 
-            <div className="flex flex-wrap justify-center gap-4 lg:gap-8">
+            <div className="flex flex-wrap justify-center gap-12">
                 {BOARD_INFO.map(({ name, position, image }) => (
                     <div
                         className="w-50 flex flex-col items-center space-y-4 lg:w-60"

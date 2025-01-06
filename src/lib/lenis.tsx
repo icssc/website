@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import { cancelFrame, frame, type frameData } from "framer-motion";
 import { ReactLenis, type LenisRef } from "lenis/react";
 
@@ -11,6 +12,13 @@ type ReactLenisProviderProps = {
 
 const ReactLenisProvider = ({ children }: ReactLenisProviderProps) => {
     const lenisRef = useRef<LenisRef | null>(null);
+    const pathname = usePathname();
+
+    useEffect(() => {
+        if (lenisRef.current) {
+            lenisRef.current.lenis?.scrollTo(0, { immediate: true });
+        }
+    }, [pathname]);
 
     useEffect(() => {
         function update(time: typeof frameData) {
