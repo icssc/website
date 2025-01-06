@@ -4,7 +4,7 @@ import Image from "next/image";
 import { AnimatedText } from "@/components/landing/landing/animated-text";
 import { ScreenFitText } from "@/components/landing/landing/screen-fit-text";
 import { cn } from "@/lib/utils";
-import foo from "@/public/landing/bonfire.jpeg";
+import bonfireImage from "@/public/landing/bonfire.jpeg";
 
 export function Landing() {
     return (
@@ -13,7 +13,7 @@ export function Landing() {
                 <div className="relative flex h-full min-h-full w-full flex-col justify-end rounded-md bg-black">
                     <div className="relative flex h-full min-h-full w-full max-w-full">
                         <Image
-                            src={foo}
+                            src={bonfireImage}
                             alt="bonfire"
                             width={2000}
                             height={1000}
@@ -21,6 +21,7 @@ export function Landing() {
                                 "h-full w-full rounded-md object-cover"
                             )}
                             placeholder="blur"
+                            priority
                         />
                         <div
                             className={cn(

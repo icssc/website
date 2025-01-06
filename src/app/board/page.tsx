@@ -1,16 +1,8 @@
 import Image from "next/image";
 import { BOARD_INFO } from "@/components/board/board-info";
-import { PAST_BOARD_INFO } from "@/components/board/past-board-info";
+import { PastBoard } from "@/components/board/past-board";
 import { PageContainer } from "@/components/shared/page-container";
 import { PageHeading } from "@/components/shared/page-heading";
-import { SectionContainer } from "@/components/shared/section-container";
-import { SectionHeading } from "@/components/shared/section-heading";
-import {
-    Accordion,
-    AccordionContent,
-    AccordionItem,
-    AccordionTrigger,
-} from "@/components/ui/accordion";
 
 export default function Page() {
     return (
@@ -34,7 +26,7 @@ export default function Page() {
                             className="aspect-square rounded-md object-cover shadow-xl"
                         />
 
-                        <div className="space-y-2 text-center">
+                        <div className="space-y-1 text-center">
                             <p className="text-pretty font-medium leading-none text-ic-pink">
                                 {position}
                             </p>
@@ -47,42 +39,7 @@ export default function Page() {
                 ))}
             </div>
 
-            <SectionContainer className="space-y-8">
-                <SectionHeading title="Past Board" />
-
-                <div>
-                    <Accordion
-                        type="single"
-                        collapsible
-                    >
-                        {PAST_BOARD_INFO.map(({ year, positions }) => (
-                            <AccordionItem
-                                value={year}
-                                key={year}
-                            >
-                                <AccordionTrigger className="text-2xl">
-                                    {year}
-                                </AccordionTrigger>
-                                <AccordionContent className="flex flex-wrap justify-center gap-8">
-                                    {positions.map((item) => (
-                                        <div
-                                            key={item.name + item.title}
-                                            className="flex w-40 flex-col items-center space-y-2 text-center"
-                                        >
-                                            <p className="font-medium leading-none">
-                                                {item.title}
-                                            </p>
-                                            <p className="text-lg font-semibold leading-none">
-                                                {item.name}
-                                            </p>
-                                        </div>
-                                    ))}
-                                </AccordionContent>
-                            </AccordionItem>
-                        ))}
-                    </Accordion>
-                </div>
-            </SectionContainer>
+            <PastBoard />
         </PageContainer>
     );
 }

@@ -4,6 +4,7 @@ import { Awards } from "@/components/about/awards/awards";
 import { Committees } from "@/components/about/committees/committees";
 import { PageContainer } from "@/components/shared/page-container";
 import { cn } from "@/lib/utils";
+import generalImage from "@/public/landing/general.jpg";
 
 export default function Page() {
     return (
@@ -11,11 +12,13 @@ export default function Page() {
             <div className="flex h-[100svh] max-h-[800px] flex-col items-end overflow-hidden rounded-md p-3">
                 <div className="relative h-full min-h-full w-full min-w-full">
                     <Image
-                        src={"/landing/general.jpg"}
-                        alt="foo"
+                        src={generalImage}
+                        alt="foo" // TODO
                         width={2000}
                         height={800}
                         className="h-full rounded-md object-cover blur-sm"
+                        priority
+                        placeholder="blur"
                     />
 
                     <div
