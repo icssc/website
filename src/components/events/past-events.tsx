@@ -30,12 +30,9 @@ export function PastEvents() {
                     (item) => Date.now() > new Date(item.time).getTime()
                 ).map((item) => {
                     return (
-                        <Dialog>
+                        <Dialog key={item.title + item.time}>
                             <DialogTrigger asChild>
-                                <div
-                                    key={item.title + item.time}
-                                    className="mb-auto cursor-pointer space-y-2 rounded-md border p-4 text-start shadow-md"
-                                >
+                                <div className="mb-auto cursor-pointer space-y-2 rounded-md border p-4 text-start shadow-md">
                                     <div className="space-y-1">
                                         <p className="text-xl font-semibold">
                                             {item.title}
