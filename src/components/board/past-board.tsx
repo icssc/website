@@ -10,7 +10,7 @@ import {
 
 export function PastBoard() {
     return (
-        <SectionContainer className="space-y-8">
+        <SectionContainer className="space-y-8 px-0 lg:px-0">
             <SectionHeading title="Past Board" />
 
             <div>

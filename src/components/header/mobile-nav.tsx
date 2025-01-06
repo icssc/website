@@ -51,9 +51,9 @@ export function MobileNav() {
                     variant={"ghost"}
                 >
                     {open ? (
-                        <XIcon className="aspect-square size-8 stroke-ic-pink" />
+                        <XIcon className="aspect-square min-h-8 min-w-8 stroke-ic-pink" />
                     ) : (
-                        <MenuIcon className="aspect-square size-8 stroke-ic-pink" />
+                        <MenuIcon className="aspect-square min-h-8 min-w-8 stroke-ic-pink" />
                     )}
                 </Button>
             </DialogTrigger>
