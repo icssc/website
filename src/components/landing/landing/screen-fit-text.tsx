@@ -20,7 +20,7 @@ export const ScreenFitText = ({ className, children }: ScreenFitTextProps) => {
             return;
         }
 
-        const containerWidth = container.offsetWidth - 24; // Padding adjustment
+        const containerWidth = container.offsetWidth - 24; // padding adjustment
         let min = 1;
         let max = 260;
 

@@ -1,69 +1,44 @@
-"use client";
-
-import { useRef, useState } from "react";
+import Image from "next/image";
 import { COMMITTEE_DATA } from "@/components/about/committees/committee-data";
 import { SectionContainer } from "@/components/shared/section-container";
 import { SectionHeading } from "@/components/shared/section-heading";
-import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
-} from "@/components/ui/carousel";
 
 export function Committees() {
-    const [autoplay, setAutoplay] = useState(true);
-    const [autoplayInterval, setAutoplayInterval] = useState(5000);
-    const timeoutRef = useRef<NodeJS.Timeout>();
-
-    const handleClick = () => {
-        if (timeoutRef.current) {
-            clearTimeout(timeoutRef.current);
-        }
-
-        setAutoplay(false);
-
-        timeoutRef.current = setTimeout(() => {
-            setAutoplay(true);
-        }, 15000);
-    };
-
     return (
-        <SectionContainer>
-            <SectionHeading title="Committees" />
+        <SectionContainer className="space-y-8">
+            <SectionHeading
+                title="Committees"
+                subtitle="ICS Student Council has six committees to provide different ways for students to build experience and contribute to the community.
+"
+            />
 
-            <Carousel
-                opts={{
-                    loop: true,
-                }}
-                autoplay={autoplay}
-                autoplayInterval={autoplayInterval}
-            >
-                <CarouselContent>
-                    {COMMITTEE_DATA.map(({ name, description, members }) => (
-                        <CarouselItem
-                            key={name}
-                            className="max-w-full basis-1/2"
-                        >
-                            <div className="m-2 space-y-4 rounded-md p-4 shadow-md">
-                                <div className="space-y-1 text-center">
-                                    <p className="text-3xl font-semibold">
-                                        {name} Committee
-                                    </p>
-                                    <p className="text-balance leading-tight text-ic-muted">
-                                        {description}
-                                    </p>
-                                </div>
-
-                                <div>{members}</div>
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+                {COMMITTEE_DATA.map(({ name, description }) => (
+                    <div
+                        key={name}
+                        className="flex flex-col justify-between gap-x-16 gap-y-4"
+                    >
+                        <div className="max-w-[600px] space-y-4">
+                            <div className="space-y-1">
+                                <p className="text-2xl font-semibold lg:text-3xl">
+                                    {name}
+                                </p>
+                                <p className="text-pretty leading-tight text-ic-muted">
+                                    {description}
+                                </p>
                             </div>
-                        </CarouselItem>
-                    ))}
-                </CarouselContent>
-                <CarouselPrevious handleClick={handleClick} />
-                <CarouselNext handleClick={handleClick} />
-            </Carousel>
+                        </div>
+
+                        <Image
+                            className="aspect-video max-h-56 w-full rounded-md bg-ic-black object-cover shadow-md"
+                            src={"/landing/general.jpg"}
+                            width={800}
+                            height={250}
+                            alt={`Image of the ${name} committee`}
+                        />
+                    </div>
+                ))}
+            </div>
         </SectionContainer>
     );
 }

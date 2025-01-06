@@ -1,4 +1,4 @@
-type Committee = {
+export type Committee = {
     name: string;
     description: string;
     members: string[];
@@ -6,24 +6,43 @@ type Committee = {
 
 export const COMMITTEE_DATA: Committee[] = [
     {
-        name: "Public Relations",
+        name: "Alumni and Academic Affairs",
         description:
-            "The Public Relations committee keeps the ICS community informed on what's going on with ICS Student Council. PR makes sure our social media is up to date with the latest news on events, workshops, and socials.",
+            "Alumni and Academic Affairs builds relationships with UCI faculty, bridges the Student Council with Donald Bren School alumni, and creates opportunities to further students' academic development.",
+
         members: [
-            "Adhiti Chandramohan",
-            "Jeremiah Soe",
-            "John Daniel Norombaba",
-            "Pranavi Gollanapalli",
-            "Jasmine Marwaha",
-            "Andrew Kim",
-            "Mitali Mittal",
+            "Clara Chen",
+            "Darren Huynh",
+            "Marcel Tcheng",
+            "Riya Sri Rallabandi",
+            "Ashley Zhou",
+            "Roger Chen",
+            "Julia Nguyen",
+            "Dante Dam",
+            "Himal Malik",
+        ],
+    },
+    {
+        name: "Corporate Outreach",
+        description:
+            "Corporate Outreach establishes and maintains professional and financial relationships with corporate supporters and alumni. These relationships enable ICS events, informational workshops, and student recruiting.",
+        members: [
+            "Rish Sharma",
+            "Aaditya Borse",
+            "Luis Lopez",
+            "Paris Haraguchi",
+            "Kaylee Doliente",
+            "Valerie Huynh",
+            "Noah Tizon",
+            "Jasen Mark",
+            "Joshua Ji",
+            "Avery Horton",
         ],
     },
     {
         name: "Events",
         description:
-            "The Events Committee coordinates and hosts a variety of different events designed for the ICS student body. From encouraging new and old ICS students socially through things like the ICS Bonfire or our longer event Brain Games, to improving skills technically and professionally like with our WebJam competition. The Events Committee is here to help the students of ICS however they need.",
-
+            "The Events committee coordinates and hosts a variety of different events designed for the ICS student body. Through our yearly ICS Bonfire, Brain Games, and WebJam competition, Events creates opportunities for ICS students to engage with our community.",
         members: [
             "Arnav Nigam",
             "Calvin Nguyen",
@@ -45,10 +64,23 @@ export const COMMITTEE_DATA: Committee[] = [
         ],
     },
     {
+        name: "Graphics",
+        description:
+            "The Graphics Committee creates graphics for all aspects of ICSSC, from event advertisement graphics to website/project assets, stickers, promotional material, and even merch!",
+        members: [
+            "Michelle Huang",
+            "Alaina Klaes",
+            "Karena Tran",
+            "Xavier Chung",
+            "Mae King",
+            "Nico Hartman",
+            "Audrey Chen",
+        ],
+    },
+    {
         name: "Projects",
         description:
-            "Bring your passion in software engineering to the ICSSC Project committee and build technical skills by working on real development projects for the UCI community. Experience different roles in software development such as front-end, back-end, full-stack, UI/UX design, etc. Learn how to use version control and software development methodology while working in a real development team to prepare you for your career.",
-
+            "Projects builds real development projects for the UCI community, serving thousands of users. Experience different roles in software development like frontend, backend, and UI/UX. Work in a real development team with version control to prepare you for your career.",
         members: [
             "Alex Espejo",
             "Dalton Adcock",
@@ -113,51 +145,17 @@ export const COMMITTEE_DATA: Committee[] = [
         ],
     },
     {
-        name: "Corporate Outreach",
+        name: "Public Relations",
         description:
-            "The Corporate Outreach Committee for ICSSC is responsible for establishing and maintaining professional and financial relationships with corporate supporters and alumni in the computer science industry. These relationships are crucial for receiving financial sponsorship for ICS events, for hosting informational workshops held for UCI students, and for student recruiting purposes. Our job is to network with alumni and company representatives to remind them that the School of ICS has national prestige, and to help them find something at UCI that appeals to their outreach and funding interests.",
+            "The Public Relations committee keeps the ICS community informed on what's going on with ICS Student Council. PR makes sure our social media is up to date with the latest news on events, workshops, and socials.",
         members: [
-            "Rish Sharma",
-            "Aaditya Borse",
-            "Luis Lopez",
-            "Paris Haraguchi",
-            "Kaylee Doliente",
-            "Valerie Huynh",
-            "Noah Tizon",
-            "Jasen Mark",
-            "Joshua Ji",
-            "Avery Horton",
-        ],
-    },
-    {
-        name: "Alumni and Academic Affairs",
-        description:
-            "Alumni and Academic Affairs Committee’s mission is to reach out and build relationships with UCI faculty, address the concerns of the ICS student body and to further them into academic and administrative cohesion & collaboration with the ICS student body. The committee will also be in charge of bridging the Student Council with the Bren School alumni.",
-
-        members: [
-            "Clara Chen",
-            "Darren Huynh",
-            "Marcel Tcheng",
-            "Riya Sri Rallabandi",
-            "Ashley Zhou",
-            "Roger Chen",
-            "Julia Nguyen",
-            "Dante Dam",
-            "Himal Malik",
-        ],
-    },
-    {
-        name: "Graphics",
-        description:
-            "The Graphics Committee creates graphics for all aspects of ICSSC, from event advertisement graphics to website/project assets, stickers, promotional material, and even merch! Our team is continuing to make creative and exciting artworks for current club events, while also getting started on reworking the graphics of some of ICSSC’s ongoing projects.",
-        members: [
-            "Michelle Huang",
-            "Alaina Klaes",
-            "Karena Tran",
-            "Xavier Chung",
-            "Mae King",
-            "Nico Hartman",
-            "Audrey Chen",
+            "Adhiti Chandramohan",
+            "Jeremiah Soe",
+            "John Daniel Norombaba",
+            "Pranavi Gollanapalli",
+            "Jasmine Marwaha",
+            "Andrew Kim",
+            "Mitali Mittal",
         ],
     },
 ];
