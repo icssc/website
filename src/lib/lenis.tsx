@@ -51,7 +51,7 @@ const ReactLenisProvider = ({ children }: ReactLenisProviderProps) => {
             options={{
                 autoRaf: false,
                 duration: 1.5,
-                lerp: 0.1,
+                lerp: 0.15,
                 orientation: "vertical",
                 gestureOrientation: "vertical",
             }}

@@ -1,21 +1,18 @@
 import Image from "next/image";
 import { SPONSORS } from "@/components/landing/sponsors/sponsors-data";
-import { cn } from "@/lib/utils";
+import { SectionContainer } from "@/components/shared/section-container";
+import { SectionHeading } from "@/components/shared/section-heading";
 
-export function Sponsors() {
+export function LandingSponsors() {
     return (
-        <div className={cn("flex w-full flex-col items-start gap-y-8")}>
-            <div className="flex w-full flex-col gap-y-2">
-                <h2 className="w-full text-center text-4xl font-semibold leading-none lg:text-6xl">
-                    Our Sponsors
-                </h2>
-
-                <span className="text-ic-muted mx-auto text-pretty text-center text-lg leading-tight lg:w-3/4 lg:text-2xl">
-                    Our sponsors enable ICSSC to support students and create
+        <SectionContainer>
+            <SectionHeading
+                title="Our Sponsors"
+                subtitle="    Our sponsors enable ICSSC to support students and create
                     exceptional opportunities at the
-                    University&nbsp;of&nbsp;California,&nbsp;Irvine.
-                </span>
-            </div>
+                    University&nbsp;of&nbsp;California,&nbsp;Irvine."
+                containerClassName="text-center"
+            />
 
             <div className="flex w-full flex-wrap justify-center gap-8 lg:gap-16">
                 {SPONSORS.map((sponsor) => (
@@ -32,6 +29,6 @@ export function Sponsors() {
                     </div>
                 ))}
             </div>
-        </div>
+        </SectionContainer>
     );
 }

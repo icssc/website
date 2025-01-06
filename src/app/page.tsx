@@ -1,7 +1,7 @@
 import { LandingAbout } from "@/components/landing/about/landing-about";
 import { Landing } from "@/components/landing/landing/landing";
 import { LandingProjectsGrid } from "@/components/landing/projects/landing-projects-grid";
-import { Sponsors } from "@/components/landing/sponsors/sponsors";
+import { LandingSponsors } from "@/components/landing/sponsors/sponsors";
 import { PageContainer } from "@/components/shared/page-container";
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
             <div className="max-w-screen-3xl space-y-16">
                 <LandingAbout />
                 <LandingProjectsGrid />
-                <Sponsors />
+                <LandingSponsors />
             </div>
         </PageContainer>
     );
