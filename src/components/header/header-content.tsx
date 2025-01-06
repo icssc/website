@@ -9,7 +9,7 @@ export function HeaderContent() {
     const pathname = usePathname();
 
     return (
-        <div className="mx-auto flex max-w-screen-3xl items-center justify-between">
+        <div className="mx-auto flex max-w-screen-3xl items-center justify-between px-8 lg:px-16">
             <Link href={"/"}>
                 <Image
                     src={"/brand/logo.svg"}
