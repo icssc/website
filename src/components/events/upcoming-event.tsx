@@ -4,7 +4,7 @@ import { SectionHeading } from "@/components/shared/section-heading";
 
 export function UpcomingEvent() {
     return (
-        <SectionContainer className="px-0">
+        <SectionContainer className="space-y-8 px-0">
             <SectionHeading
                 title="Upcoming Events"
                 containerClassName="text-center"

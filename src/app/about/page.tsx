@@ -10,15 +10,15 @@ import generalImage from "@/public/landing/general.jpg";
 
 export default function Page() {
     return (
-        <PageContainer className="px-0 py-0 lg:px-0">
-            <div className="flex h-[100svh] max-h-[800px] flex-col items-end overflow-hidden rounded-md p-3">
+        <PageContainer className="max-w-full px-0 py-0 lg:px-0">
+            <div className="mx-auto flex h-[100svh] max-h-[800px] w-full flex-col items-end overflow-hidden rounded-md p-3">
                 <div className="relative h-full min-h-full w-full min-w-full">
                     <Image
                         src={generalImage}
                         alt="foo" // TODO
                         width={2000}
                         height={800}
-                        className="h-full rounded-md object-cover blur-sm"
+                        className="h-full w-full rounded-md object-cover blur-sm"
                         priority
                         placeholder="blur"
                     />
@@ -29,7 +29,7 @@ export default function Page() {
                         )}
                     />
 
-                    <div className="absolute bottom-0 flex h-fit w-full p-8">
+                    <div className="absolute bottom-0 left-1/2 flex h-fit w-full max-w-screen-3xl -translate-x-1/2 p-8">
                         {/* // TODO: Update Copy */}
                         <h1 className="text-balance text-[clamp(3rem,7vw,5rem)] font-semibold leading-none text-ic-white">
                             ICSSC connects the ICS student body with academic,
@@ -39,7 +39,7 @@ export default function Page() {
                 </div>
             </div>
 
-            <div className="space-y-16">
+            <div className="mx-auto max-w-screen-3xl space-y-24">
                 <Committees />
                 <BitsAndBytes />
                 <AboutBoard />

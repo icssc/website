@@ -14,10 +14,10 @@ export function LandingSponsors() {
                 containerClassName="text-center"
             />
 
-            <div className="flex w-full flex-wrap justify-center gap-8 lg:gap-16">
+            <div className="flex w-full flex-wrap justify-center gap-16">
                 {SPONSORS.map((sponsor) => (
                     <div
-                        className="flex w-1/3 max-w-80 items-center justify-center"
+                        className="flex w-3/4 max-w-80 items-center justify-center lg:w-1/3"
                         key={sponsor.title}
                     >
                         <Image
