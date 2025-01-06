@@ -10,7 +10,7 @@ export function AffiliatedClubs() {
         <SectionContainer className="bg-ic-black py-16 text-ic-white">
             <SectionHeading
                 title="Affiliated Clubs"
-                subtitle=" ICS Affiliated Clubs provide additional opportunities to
+                subtitle="ICS Affiliated Clubs provide additional opportunities to
                     connect with the school of ICS and fellow peers"
                 subtitleClassName="text-neutral-300"
             />
