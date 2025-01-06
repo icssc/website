@@ -7,9 +7,8 @@ import { HandshakeIcon, LibraryBigIcon, SunIcon } from "lucide-react";
 
 export function LandingAbout() {
     return (
-        // <div className="grid-row-2 grid w-full grid-cols-10 gap-y-8 lg:grid-rows-1 lg:flex-row">
-        <SectionContainer className="grid w-full grid-cols-10 grid-rows-2 gap-y-8 space-y-0 xl:grid-rows-1">
-            <div className="col-span-full space-y-4 lg:col-span-4">
+        <SectionContainer className="flex flex-col justify-between gap-x-16 gap-y-8 space-y-0 lg:flex-row">
+            <div className="space-y-4">
                 <div className="space-y-4">
                     <SectionHeading
                         title="Your ICS Community"
@@ -47,12 +46,13 @@ export function LandingAbout() {
                         </div>
                     </div>
                 </div>
+
                 <Button className="hover:bg-ic-pink-hover bg-ic-pink px-6 py-2 text-base">
                     Learn More
                 </Button>
             </div>
 
-            <div className="col-span-full row-start-2 flex max-h-[clamp(250px,40vw,350px)] rounded-md drop-shadow-md lg:col-span-5 lg:col-start-6 lg:max-h-[500px] xl:row-start-1">
+            <div className="flex max-h-60 w-full shrink-0 rounded-md shadow-md lg:max-h-[500px] lg:max-w-[50%]">
                 <Image
                     src={"/landing/general.jpg"}
                     alt="general meeting"
