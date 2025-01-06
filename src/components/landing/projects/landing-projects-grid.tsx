@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { LANDING_PROJECTS_DATA } from "@/components/landing/projects/landing-projects-data";
 import { PROJECTS_DATA } from "@/components/projects/projects-data";
 import { SectionContainer } from "@/components/shared/section-container";
 import { SectionHeading } from "@/components/shared/section-heading";
@@ -72,18 +71,6 @@ export function LandingProjectsGrid() {
                     );
                 })}
             </div>
-
-            {/* <BentoGrid className="w-full gap-2">
-                {PROJECT_DATA.map((item, i) => (
-                    <BentoGridItem
-                        key={i}
-                        title={item.title}
-                        description={item.description}
-                        header={item.header}
-                        className={item.className}
-                    />
-                ))}
-            </BentoGrid> */}
         </SectionContainer>
     );
 }
