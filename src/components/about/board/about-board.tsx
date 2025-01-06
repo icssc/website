@@ -13,10 +13,10 @@ export function AboutBoard() {
             />
 
             <div className="text-lg">
-                Elections for ICSSC's executive board are democratically held in
-                each Spring quarter. Candidates will submit declarations,
-                campaign, and give a short speech about their qualifications as
-                described in Article III, Section D of{" "}
+                Elections for ICSSC&apos;s executive board are democratically
+                held in each Spring quarter. Candidates will submit
+                declarations, campaign, and give a short speech about their
+                qualifications as described in Article III, Section D of{" "}
                 <Link
                     href={
                         "https://docs.google.com/document/d/e/2PACX-1vRyMWoGcQdoROu6-NhLiUrv4oAc1Bj-ixiVfBYGGRax6U4XGaAsePzQ4tXyiVoxBFITMM5Na_DeA_74/pub"
@@ -32,7 +32,7 @@ export function AboutBoard() {
                 <br />
                 <span className="italic">
                     Running for President, Internal VP, or External VP, requires
-                    that you have already been a full-member for Fall, Winter,
+                    that you have already been a full member for Fall, Winter,
                     and Spring Quarter.
                 </span>
             </div>
