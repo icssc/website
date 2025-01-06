@@ -8,8 +8,9 @@ export function Committees() {
         <SectionContainer className="space-y-8">
             <SectionHeading
                 title="Committees"
-                subtitle="ICS Student Council has six committees to provide different ways for students to build experience and contribute to the community.
-"
+                subtitle="ICS Student Council has six committees to provide different ways for students to build experience and contribute to the community."
+                details="Applications are currently closed. Check back in the Fall for application details."
+                detailsClassName="text-center"
             />
 
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2">

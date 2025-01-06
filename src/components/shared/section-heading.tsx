@@ -1,18 +1,23 @@
 import React from "react";
+import { SectionApplicationDetails } from "@/components/shared/section-application-details";
 import { cn } from "@/lib/utils";
 
 interface SectionHeadingProps {
     title: string | React.ReactNode;
     subtitle?: string | React.ReactNode;
+    details?: string | React.ReactNode;
     containerClassName?: string;
     subtitleClassName?: string;
+    detailsClassName?: string;
 }
 
 export function SectionHeading({
     title,
     subtitle,
+    details,
     containerClassName,
     subtitleClassName,
+    detailsClassName,
 }: SectionHeadingProps) {
     return (
         <div className={cn("space-y-2", containerClassName)}>
@@ -28,6 +33,11 @@ export function SectionHeading({
             >
                 {subtitle}
             </p>
+
+            <SectionApplicationDetails
+                details={details}
+                className={detailsClassName}
+            />
         </div>
     );
 }
