@@ -16,7 +16,7 @@ export function LandingProjectsGrid() {
 
             <div
                 className={cn(
-                    "grid gap-6",
+                    "grid gap-x-6 gap-y-12",
                     "grid-cols-1 sm:grid-cols-2 xl:grid-cols-3"
                 )}
             >

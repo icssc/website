@@ -9,7 +9,7 @@ export function ProjectsGrid() {
     return (
         <motion.div
             className={cn(
-                "grid gap-6",
+                "grid gap-x-6 gap-y-12",
                 "grid-cols-1 sm:grid-cols-2 xl:grid-cols-3"
             )}
             initial="hidden"
@@ -85,7 +85,7 @@ export function ProjectsGrid() {
                             </div>
                             <div
                                 className={cn(
-                                    "text-ic-muted text-pretty text-base leading-tight"
+                                    "text-pretty text-base leading-tight text-ic-muted"
                                 )}
                             >
                                 {project.description}

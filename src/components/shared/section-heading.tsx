@@ -34,10 +34,10 @@ export function SectionHeading({
                 {subtitle}
             </p>
 
-            <SectionApplicationDetails
+            {/* <SectionApplicationDetails
                 details={details}
                 className={detailsClassName}
-            />
+            /> */}
         </div>
     );
 }
