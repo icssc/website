@@ -10,12 +10,7 @@ export function SectionContainer({
     children,
 }: SectionContainerProps) {
     return (
-        <div
-            className={cn(
-                "mx-auto max-w-screen-3xl space-y-16 px-8 lg:px-16",
-                className
-            )}
-        >
+        <div className={cn("space-y-16 px-8 lg:px-16", className)}>
             {children}
         </div>
     );
