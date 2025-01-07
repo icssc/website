@@ -7,7 +7,7 @@ export function EventsPastEvents() {
         <SectionContainer className="flex flex-col bg-ic-black py-16 text-ic-white md:items-center md:text-center">
             <SectionHeading title="Past Events" />
 
-            <div className="flex max-w-full flex-col items-start gap-y-8">
+            {/* <div className="flex max-w-full flex-col items-start gap-y-8">
                 {EVENTS_DATA.filter(
                     (item) => Date.now() > new Date(item.time).getTime()
                 )
@@ -26,6 +26,30 @@ export function EventsPastEvents() {
                                     {item.description}
                                 </p>
                             </div>
+
+                            <p className="text-ic-muted-dark font-medium">
+                                {formatRelativeTime(new Date(item.time))}
+                            </p>
+                        </div>
+                    ))}
+            </div> */}
+
+            <div className="flex max-w-full flex-col items-start gap-y-8">
+                {EVENTS_DATA.filter(
+                    (item) => Date.now() > new Date(item.time).getTime()
+                )
+                    .slice(0, 4)
+                    .map((item) => (
+                        <div className="w-[1200px] max-w-full space-y-4 rounded-md border p-8 text-start shadow-md">
+                            <div className="space-y-4">
+                                <p className="text-3xl font-semibold leading-none">
+                                    {item.title}
+                                </p>
+                            </div>
+
+                            <p className="line-clamp-6 max-w-fit text-pretty leading-snug text-ic-muted md:text-lg md:leading-snug">
+                                {item.description}
+                            </p>
 
                             <p className="text-ic-muted-dark font-medium">
                                 {formatRelativeTime(new Date(item.time))}

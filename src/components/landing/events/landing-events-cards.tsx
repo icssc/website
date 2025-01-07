@@ -102,7 +102,7 @@ export const LandingEventsCards = ({
                         alt=""
                         width={450}
                         height={300}
-                        className="aspect-video w-[350px] object-cover lg:w-[450px]"
+                        className="aspect-video w-[350px] rounded-md object-cover lg:w-[450px]"
                     />
                 ))}
             </ul>
