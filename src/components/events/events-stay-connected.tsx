@@ -7,7 +7,7 @@ export function EventsStayConnected() {
         <SectionContainer>
             <SectionHeading
                 title="Stay Connected"
-                subtitle="We host events every week spanning academics, professional development, and social community. All of our events are posted on social media."
+                subtitle="ICSSC host events every week with topics spanning academics, professional development, and social community. All of our events are posted on social media."
             />
 
             <ContactIcons className="gap-x-12" />

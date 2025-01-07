@@ -44,7 +44,7 @@ export function HeaderAnimated() {
                     duration: 0.2,
                 }}
                 className={cn(
-                    "fixed inset-x-0 z-10 bg-ic-black py-4 text-ic-white shadow-xl",
+                    "fixed inset-x-0 z-50 bg-ic-black py-4 text-ic-white shadow-xl",
                     "mx-auto"
                 )}
             >

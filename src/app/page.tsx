@@ -1,4 +1,5 @@
 import { LandingAbout } from "@/components/landing/about/landing-about";
+import { LandingEvents } from "@/components/landing/events/landing-events";
 import { Landing } from "@/components/landing/landing/landing";
 import { LandingProjectsGrid } from "@/components/landing/projects/landing-projects-grid";
 import { LandingSponsors } from "@/components/landing/sponsors/sponsors";
@@ -11,6 +12,7 @@ export default function Home() {
 
             <div className="mx-auto max-w-screen-3xl space-y-24">
                 <LandingAbout />
+                <LandingEvents />
                 <LandingProjectsGrid />
                 <LandingSponsors />
             </div>
