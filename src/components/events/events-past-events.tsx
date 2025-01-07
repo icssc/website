@@ -4,7 +4,7 @@ import { SectionHeading } from "@/components/shared/section-heading";
 
 export function EventsPastEvents() {
     return (
-        <SectionContainer className="flex min-w-[100vw] flex-col bg-ic-black py-16 text-ic-white md:items-center md:text-center">
+        <SectionContainer className="flex flex-col bg-ic-black py-16 text-ic-white md:items-center md:text-center">
             <SectionHeading title="Past Events" />
 
             {/* <div className="flex max-w-full flex-col items-start gap-y-8">
@@ -34,7 +34,7 @@ export function EventsPastEvents() {
                     ))}
             </div> */}
 
-            <div className="flex max-w-full flex-col items-start gap-y-8">
+            <div className="flex flex-col items-start gap-y-8">
                 {EVENTS_DATA.filter(
                     (item) => Date.now() > new Date(item.time).getTime()
                 )
