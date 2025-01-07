@@ -4,7 +4,7 @@ import { SectionHeading } from "@/components/shared/section-heading";
 
 export function EventsPastEvents() {
     return (
-        <SectionContainer className="flex flex-col bg-ic-black py-16 text-ic-white md:items-center md:text-center">
+        <SectionContainer className="flex min-w-[100vw] flex-col bg-ic-black py-16 text-ic-white md:items-center md:text-center">
             <SectionHeading title="Past Events" />
 
             {/* <div className="flex max-w-full flex-col items-start gap-y-8">
@@ -40,7 +40,10 @@ export function EventsPastEvents() {
                 )
                     .slice(0, 4)
                     .map((item) => (
-                        <div className="w-[1200px] max-w-full space-y-4 rounded-md border p-8 text-start shadow-md">
+                        <div
+                            key={item.title + item.time}
+                            className="w-[1200px] max-w-full space-y-4 rounded-md border p-8 text-start shadow-md"
+                        >
                             <div className="space-y-4">
                                 <p className="text-3xl font-semibold leading-none">
                                     {item.title}
