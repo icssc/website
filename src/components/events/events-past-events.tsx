@@ -47,11 +47,11 @@ export function EventsPastEvents() {
                                 </p>
                             </div>
 
-                            <p className="line-clamp-6 max-w-fit text-pretty leading-snug text-ic-muted md:text-lg md:leading-snug">
+                            <p className="text-ic-muted-dark line-clamp-6 max-w-fit text-pretty leading-snug md:text-lg md:leading-snug">
                                 {item.description}
                             </p>
 
-                            <p className="text-ic-muted-dark font-medium">
+                            <p className="font-medium text-ic-white">
                                 {formatRelativeTime(new Date(item.time))}
                             </p>
                         </div>
