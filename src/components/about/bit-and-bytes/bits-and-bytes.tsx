@@ -8,9 +8,9 @@ export function BitsAndBytes() {
             <SectionHeading
                 title="Bits and Bytes Program"
                 subtitle="Bits & Bytes is a year long mentorship program helping new ICS students transition to life at UCI through organized socials! Group leaders, aka Bytes, will guide and provide a tighknit community at UCI for incoming freshmen and transfers, aka Bits."
-                subtitleClassName="text-neutral-300"
+                subtitleClassName="text-ic-muted-dark"
                 details="Applications are currently closed. Check back in the Fall for application details."
-                detailsClassName="text-center text-neutral-300"
+                detailsClassName="text-center text-ic-muted-dark"
             />
 
             <div className="flex flex-col items-start gap-x-16 gap-y-8 lg:flex-row">

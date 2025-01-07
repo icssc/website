@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { CONTACT_DATA, CONTACT_EMAIL } from "@/components/contact/contact-data";
+import { CONTACT_EMAIL } from "@/components/contact/contact-data";
+import { ContactIcons } from "@/components/contact/contact-icons";
 import { PageContainer } from "@/components/shared/page-container";
 import { PageHeading } from "@/components/shared/page-heading";
 
@@ -23,22 +24,7 @@ export default function Page() {
                     </div>
                 </Link>
 
-                <div className="flex flex-wrap justify-center gap-x-8">
-                    {CONTACT_DATA.map(({ label, href, icon: Icon }) => (
-                        <Link
-                            key={label}
-                            href={href}
-                            target="_blank"
-                            referrerPolicy="no-referrer"
-                            className="group no-underline"
-                        >
-                            <Icon
-                                className="hover:text-ic-pink-hover size-12 transition duration-300"
-                                aria-label={label}
-                            />
-                        </Link>
-                    ))}
-                </div>
+                <ContactIcons />
             </div>
         </PageContainer>
     );

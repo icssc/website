@@ -12,7 +12,7 @@ export function AffiliatedClubs() {
                 title="Affiliated Clubs"
                 subtitle="ICS Affiliated Clubs provide additional opportunities to
                     connect with the school of ICS and fellow peers"
-                subtitleClassName="text-neutral-300"
+                subtitleClassName="text-ic-muted-dark"
             />
 
             <div className="flex flex-wrap justify-center gap-x-16 gap-y-8">

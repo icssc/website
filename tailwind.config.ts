@@ -57,9 +57,11 @@ const config: Config = {
                     },
                     black: "#262626",
                     white: "#FAFAFA",
-                    muted: "#737373",
-                    gray: "#C7C7C7",
-                    grey: "#C7C7C7",
+                    muted: {
+                        DEFAULT: "#737373",
+                        light: "#737373", // text-neutral-500
+                        dark: "#d4d4d4", // text-neutral-300
+                    },
                 },
             },
             borderRadius: {
