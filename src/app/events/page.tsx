@@ -1,13 +1,14 @@
-import { PastEvents } from "@/components/events/past-events";
-import { UpcomingEvent } from "@/components/events/upcoming-event";
+import { EventsPastEvents } from "@/components/events/events-past-events";
+import { EventsStayConnected } from "@/components/events/events-stay-connected";
+import { EventsUpcomingEvents } from "@/components/events/events-upcoming-events";
 import { PageContainer } from "@/components/shared/page-container";
 
 export default function Page() {
     return (
-        <PageContainer className="pt-32">
-            <UpcomingEvent />
-
-            <PastEvents />
+        <PageContainer className="px-0 py-16 lg:px-0">
+            <EventsUpcomingEvents />
+            <EventsPastEvents />
+            <EventsStayConnected />
         </PageContainer>
     );
 }

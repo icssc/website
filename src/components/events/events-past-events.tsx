@@ -10,27 +10,31 @@ export function EventsPastEvents() {
             <div className="flex max-w-full flex-col items-start gap-y-8">
                 {EVENTS_DATA.filter(
                     (item) => Date.now() > new Date(item.time).getTime()
-                ).map((item) => (
-                    <div
-                        key={item.title + item.time}
-                        className="border-ic-muted-dark/20 w-[1000px] max-w-full space-y-4 border-l-2 px-4 text-start"
-                    >
-                        <div className="space-y-2">
-                            <p className="text-2xl font-semibold">
-                                {item.title}
-                            </p>
+                )
+                    .slice(0, 4)
+                    .map((item) => (
+                        <div
+                            key={item.title + item.time}
+                            className="border-ic-muted-dark/20 w-[1000px] max-w-full space-y-4 border-l-2 px-4 text-start"
+                        >
+                            <div className="space-y-2">
+                                <p className="text-2xl font-semibold">
+                                    {item.title}
+                                </p>
 
-                            <p className="text-ic-muted-dark line-clamp-6 text-pretty text-base leading-tight">
-                                {item.description}
+                                <p className="text-ic-muted-dark line-clamp-6 text-pretty text-base leading-tight">
+                                    {item.description}
+                                </p>
+                            </div>
+
+                            <p className="text-ic-muted-dark font-medium">
+                                {formatRelativeTime(new Date(item.time))}
                             </p>
                         </div>
-
-                        <p className="text-ic-muted-dark font-medium">
-                            {formatRelativeTime(new Date(item.time))}
-                        </p>
-                    </div>
-                ))}
+                    ))}
             </div>
+
+            <p className="text-xl font-medium">...and many more events!</p>
         </SectionContainer>
     );
 }

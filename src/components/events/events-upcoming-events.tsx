@@ -11,7 +11,15 @@ export function EventsUpcomingEvents() {
         .at(0);
 
     if (!upcomingEvent) {
-        return null;
+        return (
+            <SectionContainer className="flex flex-col justify-center md:items-center md:text-center">
+                <SectionHeading
+                    title="No Upcoming Events"
+                    subtitle="Check out out social medias for updates on upcoming events!"
+                    subtitleClassName="pt-8"
+                />
+            </SectionContainer>
+        );
     }
 
     return (
