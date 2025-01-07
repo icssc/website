@@ -1,5 +1,5 @@
 import React from "react";
-import { SectionApplicationDetails } from "@/components/shared/section-application-details";
+// import { SectionApplicationDetails } from "@/components/shared/section-application-details";
 import { cn } from "@/lib/utils";
 
 interface SectionHeadingProps {
@@ -14,10 +14,10 @@ interface SectionHeadingProps {
 export function SectionHeading({
     title,
     subtitle,
-    details,
+    details: _details,
     containerClassName,
     subtitleClassName,
-    detailsClassName,
+    detailsClassName: _detailsClassName,
 }: SectionHeadingProps) {
     return (
         <div className={cn("space-y-2", containerClassName)}>

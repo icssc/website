@@ -1,7 +1,7 @@
 import { EVENTS_DATA } from "@/components/events/events-data";
 import { SectionContainer } from "@/components/shared/section-container";
 import { SectionHeading } from "@/components/shared/section-heading";
-import { ClockIcon, DotIcon, MapPinIcon } from "lucide-react";
+import { ClockIcon, MapPinIcon } from "lucide-react";
 
 export function EventsUpcomingEvents() {
     const upcomingEvent = EVENTS_DATA.filter(
