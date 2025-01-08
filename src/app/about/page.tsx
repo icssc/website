@@ -15,7 +15,7 @@ import { ExternalLinkIcon } from "lucide-react";
 export default function Page() {
     return (
         <PageContainer className="max-w-none px-0 py-0 lg:px-0">
-            <div className="mx-auto flex h-[100svh] max-h-[800px] w-full flex-col items-end overflow-hidden rounded-md p-3">
+            <div className="mx-auto flex h-[100svh] w-full flex-col items-end overflow-hidden rounded-md p-3">
                 <div className="relative h-full min-h-full w-full min-w-full">
                     <Image
                         src={generalImage}
@@ -29,12 +29,12 @@ export default function Page() {
 
                     <div
                         className={cn(
-                            "absolute inset-0 rounded-md border-black bg-neutral-800 bg-opacity-70 p-3"
+                            "absolute inset-0 rounded-md border-black bg-neutral-800 bg-opacity-60 p-3"
                         )}
                     />
 
                     <div className="absolute bottom-0 left-1/2 flex h-fit w-full max-w-screen-3xl -translate-x-1/2 px-4 pb-8 lg:px-8">
-                        <div className="text-pretty text-[clamp(3rem,8vw,8rem)] font-semibold leading-none text-ic-white md:text-balance">
+                        <div className="text-pretty text-[clamp(3rem,8vw,8rem)] font-semibold leading-none tracking-tighter text-ic-white md:text-balance">
                             UCI&apos;s largest{" "}
                             <span className="text-ic-pink">
                                 Computer Science
@@ -46,7 +46,7 @@ export default function Page() {
             </div>
 
             <div className="mx-auto space-y-24">
-                <SectionContainer className="flex flex-col md:items-center md:text-center">
+                <SectionContainer className="flex flex-col space-y-8 md:items-center md:text-center">
                     <SectionHeading title="Mission Statement" />
 
                     <div className="flex max-w-[1200px] flex-col gap-x-8 gap-y-2 md:flex-row md:justify-center">
