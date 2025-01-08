@@ -29,12 +29,10 @@ export default function Page() {
                         )}
                     />
 
-                    <div className="absolute bottom-0 left-1/2 flex h-fit w-full max-w-screen-3xl -translate-x-1/2 p-8">
-                        {/* // TODO: Update Copy */}
-                        <h1 className="text-balance text-[clamp(3rem,7vw,5rem)] font-semibold leading-none text-ic-white">
-                            ICSSC connects the ICS student body with academic,
-                            social, and professional opportunities
-                        </h1>
+                    <div className="absolute bottom-0 left-1/2 flex h-fit w-full max-w-screen-3xl -translate-x-1/2 px-4 pb-8 lg:px-8">
+                        <div className="text-pretty text-[clamp(3rem,8vw,8rem)] font-semibold leading-none text-ic-white md:text-balance">
+                            UCI&apos;s largest Computer Science community
+                        </div>
                     </div>
                 </div>
             </div>
