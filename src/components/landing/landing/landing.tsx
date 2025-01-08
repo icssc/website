@@ -25,7 +25,7 @@ export function Landing() {
                         />
                         <div
                             className={cn(
-                                "absolute inset-0 w-full rounded-md border-black bg-neutral-800 bg-opacity-60"
+                                "absolute inset-0 w-full rounded-md border-black bg-neutral-800 bg-opacity-70"
                             )}
                         />
                     </div>
