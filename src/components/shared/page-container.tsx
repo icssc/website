@@ -13,7 +13,6 @@ export function PageContainer({ className, children }: PageContainerProps) {
                 className
             )}
         >
-            {" "}
             {children}
         </div>
     );

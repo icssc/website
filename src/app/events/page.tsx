@@ -5,7 +5,7 @@ import { PageContainer } from "@/components/shared/page-container";
 
 export default function Page() {
     return (
-        <PageContainer className="px-0 py-16 lg:px-0">
+        <PageContainer className="max-w-none px-0 py-16 lg:px-0">
             <EventsUpcomingEvents />
             <EventsPastEvents />
             <EventsStayConnected />

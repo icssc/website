@@ -7,7 +7,10 @@ import { cn } from "@/lib/utils";
 
 export function AffiliatedClubs() {
     return (
-        <SectionContainer className="bg-ic-black py-16 text-ic-white">
+        <SectionContainer
+            className="py-16 text-ic-white"
+            containerClassName=" bg-ic-black"
+        >
             <SectionHeading
                 title="Affiliated Clubs"
                 subtitle="ICS Affiliated Clubs provide additional opportunities to

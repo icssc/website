@@ -10,7 +10,7 @@ import generalImage from "@/public/landing/general.jpg";
 
 export default function Page() {
     return (
-        <PageContainer className="max-w-full px-0 py-0 lg:px-0">
+        <PageContainer className="max-w-none px-0 py-0 lg:px-0">
             <div className="mx-auto flex h-[100svh] max-h-[800px] w-full flex-col items-end overflow-hidden rounded-md p-3">
                 <div className="relative h-full min-h-full w-full min-w-full">
                     <Image
@@ -39,7 +39,7 @@ export default function Page() {
                 </div>
             </div>
 
-            <div className="mx-auto max-w-screen-3xl space-y-24">
+            <div className="mx-auto space-y-24">
                 <Committees />
                 <BitsAndBytes />
                 <AboutBoard />

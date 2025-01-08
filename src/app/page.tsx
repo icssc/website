@@ -10,7 +10,7 @@ export default function Home() {
         <PageContainer className="max-w-full px-0 py-0 lg:px-0">
             <Landing />
 
-            <div className="mx-auto max-w-screen-3xl space-y-24">
+            <div className="mx-auto space-y-24">
                 <LandingAbout />
                 <LandingEvents />
                 <LandingProjectsGrid />

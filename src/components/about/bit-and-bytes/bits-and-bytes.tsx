@@ -4,7 +4,10 @@ import { SectionHeading } from "@/components/shared/section-heading";
 
 export function BitsAndBytes() {
     return (
-        <SectionContainer className="bg-ic-black py-16 text-ic-white">
+        <SectionContainer
+            className="py-16 text-ic-white"
+            containerClassName=" bg-ic-black"
+        >
             <SectionHeading
                 title="Bits and Bytes Program"
                 subtitle="Bits & Bytes is a year long mentorship program helping new ICS students transition to life at UCI through organized socials! Group leaders, aka Bytes, will guide and provide a tighknit community at UCI for incoming freshmen and transfers, aka Bits."
