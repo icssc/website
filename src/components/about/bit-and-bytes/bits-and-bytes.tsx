@@ -10,7 +10,7 @@ export function BitsAndBytes() {
         >
             <SectionHeading
                 title="Bits and Bytes Program"
-                subtitle="Bits & Bytes is a year long mentorship program helping new ICS students transition to life at UCI through organized socials! Group leaders, aka Bytes, will guide and provide a tighknit community at UCI for incoming freshmen and transfers, aka Bits."
+                subtitle="Bits & Bytes is a year long mentorship program helping new ICS students transition to life at UCI through organized socials! Group leaders, aka Bytes, will guide and provide a tight-knit community at UCI for incoming freshmen and transfers, aka Bits."
                 subtitleClassName="text-ic-muted-dark"
                 details="Applications are currently closed. Check back in the Fall for application details."
                 detailsClassName="text-center text-ic-muted-dark"
