@@ -25,14 +25,16 @@ export function SectionHeading({
                 {title}
             </h2>
 
-            <p
-                className={cn(
-                    "text-pretty text-lg leading-tight text-ic-muted lg:text-xl",
-                    subtitleClassName
-                )}
-            >
-                {subtitle}
-            </p>
+            {subtitle ? (
+                <p
+                    className={cn(
+                        "text-pretty text-lg leading-tight text-ic-muted lg:text-xl",
+                        subtitleClassName
+                    )}
+                >
+                    {subtitle}
+                </p>
+            ) : null}
 
             {/* <SectionApplicationDetails
                 details={details}

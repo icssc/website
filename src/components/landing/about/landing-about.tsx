@@ -12,7 +12,7 @@ export function LandingAbout() {
                 <div className="space-y-4">
                     <SectionHeading
                         title="Your ICS Community"
-                        subtitle="ICS Student Council, founded in 2010, is a student-run
+                        subtitle="ICS Student Council, founded in 2010 at the University of California, Irvine, is a student-run
                         organization that serves ICS students. Our mission is to
                         deepen students' connections with the Donald Bren
                         School of Information and Computer Sciences."
@@ -47,7 +47,7 @@ export function LandingAbout() {
                     </div>
                 </div>
 
-                <Button className="hover:bg-ic-pink-hover bg-ic-pink px-6 py-2 text-base">
+                <Button className="bg-ic-pink px-6 py-2 text-base hover:bg-ic-pink-hover">
                     Learn More
                 </Button>
             </div>
