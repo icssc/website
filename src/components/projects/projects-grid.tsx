@@ -39,7 +39,7 @@ export function ProjectsGrid() {
                             ease: "easeOut",
                         }}
                     >
-                        <div className="group aspect-video overflow-hidden rounded-t-sm bg-neutral-800">
+                        <div className="group aspect-video overflow-hidden rounded-t-md bg-neutral-800">
                             <Link
                                 href={project.projectLink ?? ""}
                                 className={cn(

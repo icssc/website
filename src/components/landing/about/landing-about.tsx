@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { SectionContainer } from "@/components/shared/section-container";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { Button } from "@/components/ui/button";
@@ -47,9 +48,11 @@ export function LandingAbout() {
                     </div>
                 </div>
 
-                <Button className="bg-ic-pink px-6 py-2 text-base hover:bg-ic-pink-hover">
-                    Learn More
-                </Button>
+                <Link href={"/about"}>
+                    <Button className="bg-ic-pink px-6 py-2 text-base hover:bg-ic-pink-hover">
+                        Learn More
+                    </Button>
+                </Link>
             </div>
 
             <div className="flex max-h-60 w-full shrink-0 rounded-md shadow-md lg:max-h-[500px] lg:max-w-[50%]">

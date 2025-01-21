@@ -16,10 +16,10 @@ export default function Page() {
                 <div className="relative h-full min-h-full w-full min-w-full">
                     <Image
                         src={generalImage}
-                        alt="foo" // TODO
+                        alt="landing splash" // TODO
                         width={2000}
                         height={800}
-                        className="h-full w-full rounded-md object-cover blur-sm"
+                        className="h-full w-full rounded-md object-cover"
                         priority
                         placeholder="blur"
                     />
