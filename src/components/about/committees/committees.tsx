@@ -13,32 +13,34 @@ export function Committees() {
                 detailsClassName="text-center"
             />
 
-            <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
-                {COMMITTEE_DATA.map(({ name, description }) => (
-                    <div
-                        key={name}
-                        className="flex flex-col justify-between gap-x-16 gap-y-4"
-                    >
-                        <div className="max-w-[600px] space-y-4">
-                            <div className="space-y-1">
-                                <p className="text-2xl font-semibold lg:text-3xl">
-                                    {name}
-                                </p>
-                                <p className="text-pretty leading-tight text-ic-muted">
-                                    {description}
-                                </p>
+            <div className="grid grid-cols-1 gap-x-12 gap-y-20 md:grid-cols-2">
+                {COMMITTEE_DATA.map(
+                    ({ name, description, image = "/landing/general.jpg" }) => (
+                        <div
+                            key={name}
+                            className="flex flex-col justify-between gap-x-16 gap-y-4"
+                        >
+                            <div className="space-y-4">
+                                <div className="space-y-1">
+                                    <p className="text-2xl font-semibold lg:text-3xl">
+                                        {name}
+                                    </p>
+                                    <p className="text-pretty leading-tight text-ic-muted">
+                                        {description}
+                                    </p>
+                                </div>
                             </div>
-                        </div>
 
-                        <Image
-                            className="aspect-video max-h-56 w-full rounded-md bg-ic-black object-cover shadow-md"
-                            src={"/landing/general.jpg"}
-                            width={800}
-                            height={250}
-                            alt={`Image of the ${name} committee`}
-                        />
-                    </div>
-                ))}
+                            <Image
+                                className="aspect-video max-h-56 w-full rounded-md bg-ic-black object-cover shadow-md"
+                                src={image}
+                                width={800}
+                                height={450}
+                                alt={`Image of the ${name} committee`}
+                            />
+                        </div>
+                    )
+                )}
             </div>
         </SectionContainer>
     );

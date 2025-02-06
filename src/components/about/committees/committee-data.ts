@@ -2,6 +2,7 @@ export type Committee = {
     name: string;
     description: string;
     members: string[];
+    image?: string;
 };
 
 export const COMMITTEE_DATA: Committee[] = [
@@ -21,6 +22,7 @@ export const COMMITTEE_DATA: Committee[] = [
             "Dante Dam",
             "Himal Malik",
         ],
+        image: "/committees/aaa.jpg",
     },
     {
         name: "Corporate Outreach",
