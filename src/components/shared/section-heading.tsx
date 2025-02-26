@@ -1,4 +1,4 @@
-import React from "react";
+import type React from "react";
 // import { SectionApplicationDetails } from "@/components/shared/section-application-details";
 import { cn } from "@/lib/utils";
 
