@@ -15,7 +15,8 @@ export function HeaderAnimated() {
 	useMotionValueEvent(scrollYProgress, "change", (current) => {
 		// Check if current is not undefined and is a number
 		if (typeof current === "number") {
-			const direction = current! - scrollYProgress.getPrevious()!;
+			const previous = scrollYProgress.getPrevious();
+			const direction = previous ? current - previous : -1;
 
 			if (scrollY.get() <= 96) {
 				setVisible(false);

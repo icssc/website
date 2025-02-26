@@ -40,7 +40,7 @@ export default function RootLayout({
 				className={cn(
 					GeistSans.variable,
 					font.variable,
-					`bg-ic-white font-inter antialiased`,
+					"bg-ic-white font-inter antialiased",
 				)}
 			>
 				<div className="flex min-h-[100svh] flex-col">

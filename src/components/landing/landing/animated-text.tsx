@@ -56,6 +56,7 @@ export function AnimatedText({ text, className }: AnimatedNameProps) {
 					<motion.div
 						ref={ref}
 						aria-hidden="true"
+						// biome-ignore lint/suspicious/noArrayIndexKey: text array should never change order.
 						key={index}
 						initial="hidden"
 						animate={ctrls}
@@ -70,6 +71,7 @@ export function AnimatedText({ text, className }: AnimatedNameProps) {
 							return (
 								<motion.div
 									aria-hidden="true"
+									// biome-ignore lint/suspicious/noArrayIndexKey: text array should never change order.
 									key={index}
 									variants={characterAnimation}
 									className="inline-block"
