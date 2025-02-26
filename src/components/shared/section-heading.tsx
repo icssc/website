@@ -3,43 +3,43 @@ import type React from "react";
 import { cn } from "@/lib/utils";
 
 interface SectionHeadingProps {
-    title: string | React.ReactNode;
-    subtitle?: string | React.ReactNode;
-    details?: string | React.ReactNode;
-    containerClassName?: string;
-    subtitleClassName?: string;
-    detailsClassName?: string;
+	title: string | React.ReactNode;
+	subtitle?: string | React.ReactNode;
+	details?: string | React.ReactNode;
+	containerClassName?: string;
+	subtitleClassName?: string;
+	detailsClassName?: string;
 }
 
 export function SectionHeading({
-    title,
-    subtitle,
-    details: _details,
-    containerClassName,
-    subtitleClassName,
-    detailsClassName: _detailsClassName,
+	title,
+	subtitle,
+	details: _details,
+	containerClassName,
+	subtitleClassName,
+	detailsClassName: _detailsClassName,
 }: SectionHeadingProps) {
-    return (
-        <div className={cn("space-y-2", containerClassName)}>
-            <h2 className="text-4xl font-semibold leading-none lg:text-5xl">
-                {title}
-            </h2>
+	return (
+		<div className={cn("space-y-2", containerClassName)}>
+			<h2 className="text-4xl font-semibold leading-none lg:text-5xl">
+				{title}
+			</h2>
 
-            {subtitle ? (
-                <p
-                    className={cn(
-                        "text-pretty text-lg leading-tight text-ic-muted lg:text-xl",
-                        subtitleClassName
-                    )}
-                >
-                    {subtitle}
-                </p>
-            ) : null}
+			{subtitle ? (
+				<p
+					className={cn(
+						"text-pretty text-lg leading-tight text-ic-muted lg:text-xl",
+						subtitleClassName,
+					)}
+				>
+					{subtitle}
+				</p>
+			) : null}
 
-            {/* <SectionApplicationDetails
+			{/* <SectionApplicationDetails
                 details={details}
                 className={detailsClassName}
             /> */}
-        </div>
-    );
+		</div>
+	);
 }
