@@ -7,7 +7,7 @@
 	},
 	"files": {
 		"ignoreUnknown": false,
-		"ignore": []
+		"ignore": [".next", ".open-next",".wrangler"]
 	},
 	"formatter": {
 		"enabled": true,
@@ -26,7 +26,7 @@
 				"noHeadElement": "error",
 				"noHeadImportInDocument": "error",
 				"noImgElement": "error"
-				
+
       }
 		}
 	},
