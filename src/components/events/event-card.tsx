@@ -50,12 +50,12 @@ export function EventCard({
     return (
         <>
             <div className="grid grid-cols-1 gap-8 border-t-2 py-4 pt-8 md:grid-cols-5 lg:grid-cols-3">
-                <div className="flex flex-col items-start space-y-2 md:col-span-2 lg:col-span-1">
+                <div className="flex flex-col items-start space-y-4 md:col-span-2 lg:col-span-1">
                     <p className="text-nowrap text-xl font-bold">
                         {formattedDate}
                     </p>
 
-                    <div className="flex items-center gap-4">
+                    <div className="flex flex-wrap items-center gap-2">
                         <span className="flex items-center gap-1">
                             <ClockIcon className="size-5" />
                             {formattedTime}
