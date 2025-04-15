@@ -67,7 +67,7 @@ export function EventCard({
 
                 <div className="col-span-1 flex flex-col items-start space-y-2 md:col-span-3 lg:col-span-1">
                     <h3
-                        className="text-3xl font-semibold transition-opacity hover:opacity-80 md:cursor-pointer md:underline lg:pointer-events-none lg:cursor-default lg:no-underline"
+                        className="text-3xl font-semibold underline transition-opacity hover:opacity-80 md:cursor-pointer lg:pointer-events-none lg:cursor-default lg:no-underline"
                         onClick={() => setIsOpen(true)}
                     >
                         {title}
@@ -83,7 +83,7 @@ export function EventCard({
                         <Image
                             src={`/events/${src}`}
                             alt={title}
-                            className="h-auto max-h-80 w-full object-cover"
+                            className="h-auto max-h-[400px] w-full object-cover"
                             style={{ aspectRatio }}
                             width={320}
                             height={400}
@@ -98,7 +98,9 @@ export function EventCard({
             >
                 <DialogContent className="max-w-md rounded-lg p-5">
                     <DialogHeader>
-                        <DialogTitle className="text-2xl">{title}</DialogTitle>
+                        <DialogTitle className="text-left text-2xl">
+                            {title}
+                        </DialogTitle>
                     </DialogHeader>
 
                     <div
@@ -109,7 +111,7 @@ export function EventCard({
                             src={`/events/${src}`}
                             alt={title}
                             fill
-                            className="rounded-md object-cover"
+                            className="rounded-md object-cover shadow-md"
                         />
                     </div>
                 </DialogContent>
