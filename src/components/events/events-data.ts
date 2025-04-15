@@ -9,7 +9,7 @@ type Event = {
 
 export const EVENTS_DATA: Event[] = [
     {
-        src: "event_aux-battle.png",
+        src: "event_aux-battle.jpg",
         title: "Aux Battle",
         time: "2025-03-12T19:00",
         location: "DBH 6011",
@@ -21,7 +21,7 @@ export const EVENTS_DATA: Event[] = [
   🎶 ✨",
     },
     {
-        src: "event_chapman-mixer.png",
+        src: "event_chapman-mixer.jpg",
         title: "Chapman x ICSSC UTC Mixer",
         time: "2025-03-07T18:00",
         location: "University Town Center",
@@ -34,7 +34,7 @@ export const EVENTS_DATA: Event[] = [
   UTC before kicking off your weekend!",
     },
     {
-        src: "event_squid-game.png",
+        src: "event_squid-game.jpg",
         title: "Squid Game Social",
         time: "2025-03-05T18:30",
         location: "DBH 6011",
@@ -47,7 +47,7 @@ export const EVENTS_DATA: Event[] = [
   🏆 🦑",
     },
     {
-        src: "event_research-panel.png",
+        src: "event_research-panel.jpg",
         title: "Research Panel",
         time: "2025-02-26T19:00",
         location: "DBH 6011",
@@ -62,7 +62,7 @@ export const EVENTS_DATA: Event[] = [
   👀🙌",
     },
     {
-        src: "event_planning-your-academic-journey.png",
+        src: "event_planning-your-academic-journey.jpg",
         title: "Planning Your Academic Journey",
         time: "2025-02-19T19:00",
         location: "DBH 6011",
@@ -76,7 +76,7 @@ export const EVENTS_DATA: Event[] = [
         aspectRatio: "1/1",
     },
     {
-        src: "event_cupids-mailbox-crafts.png",
+        src: "event_cupids-mailbox-crafts.jpg",
         title: "Cupid's Mailbox Crafts",
         time: "2025-02-12T19:00",
         location: "DBH 6011",
@@ -90,7 +90,7 @@ export const EVENTS_DATA: Event[] = [
   special or yourself (no judgement), we’ve got you covered!",
     },
     {
-        src: "event_intro-to-ai-workshop.png",
+        src: "event_intro-to-ai-workshop.jpg",
         title: "Intro to AI Workshop",
         time: "2025-02-05T19:00",
         location: "DBH 6011",
@@ -104,7 +104,7 @@ export const EVENTS_DATA: Event[] = [
         aspectRatio: "1/1",
     },
     {
-        src: "event_resume-workshop.png",
+        src: "event_resume-workshop.jpg",
         title: "Resume Workshop",
         time: "2025-01-29T19:00",
         location: "Zoom",
@@ -115,7 +115,7 @@ export const EVENTS_DATA: Event[] = [
   metrics to capture recruiters’ attention. 🧑‍💻👩‍💻",
     },
     {
-        src: "event_icssc-faculty-panel.png",
+        src: "event_icssc-faculty-panel.jpg",
         title: "ICS Faculty Panel",
         time: "2025-01-22T19:00",
         location: "DBH 6011",
@@ -129,7 +129,7 @@ export const EVENTS_DATA: Event[] = [
         aspectRatio: "1/1",
     },
     {
-        src: "event_ics-club-fair-2025.png",
+        src: "event_ics-club-fair-2025.jpg",
         title: "ICS Club Fair",
         time: "2025-01-15T19:00",
         location: "DBH 6011",
@@ -141,7 +141,7 @@ export const EVENTS_DATA: Event[] = [
         aspectRatio: "1/1",
     },
     {
-        src: "event_sliding-into-the-new-year.png",
+        src: "event_sliding-into-the-new-year.jpg",
         title: "Sliding Into the New Year",
         time: "2025-01-08T19:00",
         location: "DBH 6011",
@@ -154,7 +154,7 @@ export const EVENTS_DATA: Event[] = [
         aspectRatio: "1/1",
     },
     {
-        src: "event_cookie-decorating.png",
+        src: "event_cookie-decorating.jpg",
         title: "Cookie Decorating",
         time: "2024-12-04T19:00",
         location: "DBH 6011",
@@ -167,7 +167,7 @@ export const EVENTS_DATA: Event[] = [
         aspectRatio: "1/1",
     },
     {
-        src: "event_hackathon-101.png",
+        src: "event_hackathon-101.jpg",
         title: "Hackathon 101",
         time: "2024-11-14T19:00",
         location: "DBH 6011",
@@ -180,7 +180,7 @@ export const EVENTS_DATA: Event[] = [
         aspectRatio: "1/1",
     },
     {
-        src: "event_ics-pathways.png",
+        src: "event_ics-pathways.jpg",
         title: "ICS Pathways",
         time: "2024-11-13T19:00",
         location: "DBH 6011",
@@ -195,7 +195,7 @@ export const EVENTS_DATA: Event[] = [
         aspectRatio: "1/1",
     },
     {
-        src: "event_two-rooms-and-a-boom.png",
+        src: "event_two-rooms-and-a-boom.jpg",
         title: "Two Rooms and a Boom!",
         time: "2024-11-06T19:00",
         location: "DBH 6011",
@@ -209,7 +209,7 @@ export const EVENTS_DATA: Event[] = [
         aspectRatio: "1/1",
     },
     {
-        src: "event_mock-interviews.png",
+        src: "event_mock-interviews.jpg",
         title: "Mock Interviews",
         time: "2024-10-30T18:30",
         location: "Zoom",
@@ -226,7 +226,7 @@ export const EVENTS_DATA: Event[] = [
         aspectRatio: "1/1",
     },
     {
-        src: "event_bits-and-bytes-reveal.png",
+        src: "event_bits-and-bytes-reveal.jpg",
         title: "Bits & Bytes Fam Reveal",
         time: "2024-10-23T19:00",
         location: "DBH 6011",
@@ -240,7 +240,7 @@ export const EVENTS_DATA: Event[] = [
         aspectRatio: "1/1",
     },
     {
-        src: "event_internship-panel.png",
+        src: "event_internship-panel.jpg",
         title: "Internship Panel",
         time: "2024-10-16T19:00",
         location: "DBH 6011",
@@ -282,7 +282,7 @@ export const EVENTS_DATA: Event[] = [
         aspectRatio: "1/1",
     },
     {
-        src: "spacex.png",
+        src: "spacex.jpg",
         title: "Space X + Obsidian Entertainment Office Tours",
         time: "2024-01-31T00:00",
         location: "",
@@ -296,7 +296,7 @@ export const EVENTS_DATA: Event[] = [
         aspectRatio: "1/1",
     },
     {
-        src: "Webjam-IG.PNG",
+        src: "Webjam-IG.jpg",
         title: "WebJam 2023",
         time: "2023-11-13T00:00",
         location: "Donald Bren Hall",
@@ -311,7 +311,7 @@ export const EVENTS_DATA: Event[] = [
         aspectRatio: "1/1",
     },
     {
-        src: "Artsy_Autumn_IG.png",
+        src: "Artsy_Autumn_IG.jpg",
         title: "Artsty Autumn",
         time: "2024-11-08T00:00",
         location: "DBH 6011",
@@ -322,7 +322,7 @@ export const EVENTS_DATA: Event[] = [
         aspectRatio: "1/1",
     },
     {
-        src: "Bits&BytesFamReveal2023_InstagramSquare.png",
+        src: "Bits&BytesFamReveal2023_InstagramSquare.jpg",
         title: "Bits & Bytes Fam Reveal",
         time: "2024-10-25T00:00",
         location: "DBH 6011",
@@ -332,7 +332,7 @@ export const EVENTS_DATA: Event[] = [
         aspectRatio: "1/1",
     },
     {
-        src: "ROUND1_IG.png",
+        src: "ROUND1_IG.jpg",
         title: "Web Jam",
         time: "2024-10-21T00:00",
         location: "Mainplace Mall",
@@ -406,7 +406,7 @@ export const EVENTS_DATA: Event[] = [
         aspectRatio: "1/1",
     },
     {
-        src: "event_microtalk.png",
+        src: "event_microtalk.jpg",
         title: "ICSSC's Micro Talks",
         time: "2023-05-10T00:00",
         location: "ICS 428",

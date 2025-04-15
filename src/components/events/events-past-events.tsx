@@ -63,13 +63,23 @@ export function EventsPastEvents() {
             </div>
 
             {displayCount < pastEvents.length && (
-                <Button
-                    variant="link"
-                    className="mt-8 text-xl text-ic-white underline"
-                    onClick={handleShowMore}
-                >
-                    {`And many more events! (show ${Math.min(5, pastEvents.length - displayCount)} more)`}
-                </Button>
+                <div className="mt-8 flex items-center gap-4 text-xl text-ic-white">
+                    ...and many more events!
+                    <Button
+                        variant="link"
+                        className="text-xl text-ic-white underline"
+                        onClick={handleShowMore}
+                    >
+                        Show 5 More
+                    </Button>
+                    <Button
+                        variant="link"
+                        className="text-xl text-ic-white underline"
+                        onClick={() => setDisplayCount(pastEvents.length)}
+                    >
+                        Show All
+                    </Button>
+                </div>
             )}
         </SectionContainer>
     );
