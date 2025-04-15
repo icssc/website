@@ -70,7 +70,7 @@ export function EventCard({
 
                 <div className="col-span-1 flex flex-col items-start space-y-2 md:col-span-3 lg:col-span-1">
                     <h3
-                        className="text-3xl font-semibold underline transition-opacity hover:opacity-80 md:cursor-pointer lg:pointer-events-none lg:cursor-default lg:no-underline"
+                        className="text-pretty text-left text-3xl font-semibold underline transition-opacity hover:opacity-80 md:cursor-pointer lg:pointer-events-none lg:cursor-default lg:no-underline"
                         onClick={() => setIsOpen(true)}
                     >
                         {title}

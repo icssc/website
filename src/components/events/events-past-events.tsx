@@ -63,14 +63,13 @@ export function EventsPastEvents() {
             </div>
 
             {displayCount < pastEvents.length && (
-                <div className="mt-8 flex items-center gap-4 text-xl text-ic-white">
-                    ...and many more events!
+                <div className="mt-8 flex items-center justify-center gap-4 text-xl text-ic-white">
                     <Button
                         variant="link"
                         className="text-xl text-ic-white underline"
                         onClick={handleShowMore}
                     >
-                        Show 5 More
+                        Show More
                     </Button>
                     <Button
                         variant="link"
