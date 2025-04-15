@@ -46,7 +46,7 @@ export const COMMITTEE_DATA: Committee[] = [
         name: "Events",
         description:
             "The Events committee coordinates and hosts a variety of different events designed for the ICS student body. Through our yearly ICS Bonfire, Brain Games, and WebJam competition, Events creates opportunities for ICS students to engage with our community.",
-        chairs: ["Rachel Kline", "Anna Lee"],
+        chairs: ["Anna Lee", "Rachel Kline"],
         members: [
             "Alan Tran",
             "Anthony Tam",
@@ -70,7 +70,7 @@ export const COMMITTEE_DATA: Committee[] = [
         name: "Graphics",
         description:
             "The Graphics Committee creates graphics for all aspects of ICSSC, from event advertisement graphics to website/project assets, stickers, promotional material, and even merch!",
-        chairs: ["Michelle Huang", "Alaina Klaes"],
+        chairs: ["Alaina Klaes", "Michelle Huang"],
         members: [
             "Audrey Chen",
             "Karena Tran",
