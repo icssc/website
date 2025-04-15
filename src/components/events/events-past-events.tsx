@@ -43,10 +43,6 @@ export function EventsPastEvents() {
         setDisplayCount(Math.min(displayCount + 5, pastEvents.length));
     };
 
-    const handleShowLess = () => {
-        setDisplayCount(3);
-    };
-
     return (
         <SectionContainer
             className="flex flex-col py-16 text-ic-white md:items-center md:text-center"
@@ -66,15 +62,13 @@ export function EventsPastEvents() {
                 ))}
             </div>
 
-            {pastEvents.length > 3 && (
+            {displayCount < pastEvents.length && (
                 <Button
                     variant="link"
                     className="mt-8 text-xl text-ic-white underline"
-                    onClick={displayCount > 3 ? handleShowLess : handleShowMore}
+                    onClick={handleShowMore}
                 >
-                    {displayCount > 3
-                        ? "Show Less"
-                        : `And many more events! (show ${Math.min(5, pastEvents.length - displayCount)} more)`}
+                    {`And many more events! (show ${Math.min(5, pastEvents.length - displayCount)} more)`}
                 </Button>
             )}
         </SectionContainer>
