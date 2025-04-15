@@ -10,11 +10,13 @@ export function Committee({
     description,
     image,
     members,
+    chairs,
 }: {
     name: string;
     description: string;
     image: string;
     members: string[];
+    chairs: string[];
 }) {
     const [showMore, setShowMore] = useState(false);
     const [isOverflowing, setIsOverflowing] = useState(false);
@@ -38,7 +40,6 @@ export function Committee({
 
     return (
         <div className="flex h-full flex-col justify-between space-y-4">
-            {/* Top Section: Title + Description */}
             <div className="space-y-4">
                 <div className="space-y-1">
                     <p className="text-2xl font-semibold lg:text-3xl">{name}</p>
@@ -48,11 +49,10 @@ export function Committee({
                 </div>
             </div>
 
-            {/* Bottom Section: Image + Members */}
             <div className="flex flex-col space-y-4">
                 <div>
                     <Image
-                        className="aspect-video max-h-72 w-full rounded-md bg-ic-black object-cover object-center shadow-md"
+                        className="aspect-video max-h-96 w-full rounded-md bg-ic-black object-cover object-center shadow-md"
                         src={image}
                         width={800}
                         height={450}
@@ -61,6 +61,9 @@ export function Committee({
                 </div>
 
                 <div>
+                    <span className="font-semibold">
+                        Chair(s): {chairs.join(", ")}
+                    </span>
                     <div
                         ref={contentRef}
                         className={cn(

@@ -20,6 +20,7 @@ export function Committees() {
                         description,
                         image = "/landing/general.jpg",
                         members,
+                        chairs,
                     }) => (
                         <Committee
                             key={name}
@@ -27,6 +28,7 @@ export function Committees() {
                             description={description}
                             image={image}
                             members={members}
+                            chairs={chairs}
                         />
                     )
                 )}

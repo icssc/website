@@ -8,6 +8,7 @@ import {
     DialogHeader,
     DialogTitle,
 } from "@/components/ui/dialog";
+import { cn } from "@/lib/utils";
 import { ClockIcon, MapPinIcon } from "lucide-react";
 
 interface EventCardProps {
@@ -18,6 +19,7 @@ interface EventCardProps {
     src: string;
     aspectRatio?: string;
     timeFormat?: (date: Date) => string;
+    isDarkMode?: boolean;
 }
 
 export function EventCard({
@@ -28,6 +30,7 @@ export function EventCard({
     src,
     aspectRatio = "4/5",
     timeFormat,
+    isDarkMode = false,
 }: EventCardProps) {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -46,7 +49,7 @@ export function EventCard({
 
     return (
         <>
-            <div className="grid grid-cols-1 gap-8 border-t-2 py-4 md:grid-cols-5 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-8 border-t-2 py-4 pt-8 md:grid-cols-5 lg:grid-cols-3">
                 <div className="flex flex-col items-start space-y-2 md:col-span-2 lg:col-span-1">
                     <p className="text-nowrap text-xl font-bold">
                         {formattedDate}
@@ -73,7 +76,14 @@ export function EventCard({
                         {title}
                     </h3>
 
-                    <p className="line-clamp-6 text-pretty text-left text-ic-muted">
+                    <p
+                        className={cn("line-clamp-6 text-pretty text-left")}
+                        style={{
+                            color: isDarkMode
+                                ? "var(--ic-muted-dark)"
+                                : "var(--ic-muted)",
+                        }}
+                    >
                         {description}
                     </p>
                 </div>

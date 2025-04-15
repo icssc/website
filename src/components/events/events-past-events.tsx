@@ -1,8 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import { EVENTS_DATA } from "@/components/events/events-data";
 import { SectionContainer } from "@/components/shared/section-container";
 import { SectionHeading } from "@/components/shared/section-heading";
+import { Button } from "@/components/ui/button";
 
 import { EventCard } from "./event-card";
 
@@ -29,9 +31,21 @@ function formatRelativeTime(date: Date) {
 }
 
 export function EventsPastEvents() {
+    const [displayCount, setDisplayCount] = useState(3);
+
     const pastEvents = EVENTS_DATA.filter(
         (item) => Date.now() > new Date(item.time).getTime()
-    ).slice(0, 4);
+    );
+
+    const displayEvents = pastEvents.slice(0, displayCount);
+
+    const handleShowMore = () => {
+        setDisplayCount(Math.min(displayCount + 5, pastEvents.length));
+    };
+
+    const handleShowLess = () => {
+        setDisplayCount(3);
+    };
 
     return (
         <SectionContainer
@@ -41,17 +55,28 @@ export function EventsPastEvents() {
             <SectionHeading title="Past Events" />
 
             <div className="flex flex-col items-start gap-y-12">
-                {pastEvents.map((event) => (
+                {displayEvents.map((event) => (
                     <EventCard
                         key={event.title + event.time}
                         {...event}
                         aspectRatio={event.aspectRatio}
                         timeFormat={formatRelativeTime}
+                        isDarkMode={true}
                     />
                 ))}
             </div>
 
-            <p className="text-xl font-medium">...and many more events!</p>
+            {pastEvents.length > 3 && (
+                <Button
+                    variant="link"
+                    className="mt-8 text-xl text-ic-white underline"
+                    onClick={displayCount > 3 ? handleShowLess : handleShowMore}
+                >
+                    {displayCount > 3
+                        ? "Show Less"
+                        : `And many more events! (show ${Math.min(5, pastEvents.length - displayCount)} more)`}
+                </Button>
+            )}
         </SectionContainer>
     );
 }
