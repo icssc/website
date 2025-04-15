@@ -26,10 +26,8 @@ export function Committee({
         const checkOverflow = () => {
             const el = contentRef.current;
             if (el) {
-                el.style.display = "-webkit-box";
-                el.style.webkitLineClamp = showMore ? "none" : "2";
-                const isClamped = el.scrollHeight > el.clientHeight;
-                setIsOverflowing(isClamped);
+                // Compare scrollHeight to offsetHeight to detect overflow
+                setIsOverflowing(el.scrollHeight > el.offsetHeight);
             }
         };
 
@@ -62,13 +60,13 @@ export function Committee({
 
                 <div>
                     <span className="font-semibold">
-                        Chair(s): {chairs.join(", ")}
+                        Chair(s): {chairs?.join(", ")}
                     </span>
                     <div
                         ref={contentRef}
                         className={cn(
                             "transition-all",
-                            showMore ? "line-clamp-none" : "line-clamp-2"
+                            showMore ? "" : "line-clamp-2"
                         )}
                     >
                         <span className="font-semibold">Members: </span>
