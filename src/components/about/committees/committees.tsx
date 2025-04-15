@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Committee } from "@/components/about/committees/committee";
 import { COMMITTEE_DATA } from "@/components/about/committees/committee-data";
 import { SectionContainer } from "@/components/shared/section-container";
 import { SectionHeading } from "@/components/shared/section-heading";
@@ -13,32 +13,21 @@ export function Committees() {
                 detailsClassName="text-center"
             />
 
-            <div className="grid grid-cols-1 gap-x-12 gap-y-20 md:grid-cols-2">
+            <div className="mx-auto grid max-w-6xl grid-cols-1 gap-x-12 gap-y-8 md:gap-y-16">
                 {COMMITTEE_DATA.map(
-                    ({ name, description, image = "/landing/general.jpg" }) => (
-                        <div
+                    ({
+                        name,
+                        description,
+                        image = "/landing/general.jpg",
+                        members,
+                    }) => (
+                        <Committee
                             key={name}
-                            className="flex flex-col justify-between gap-x-16 gap-y-4"
-                        >
-                            <div className="space-y-4">
-                                <div className="space-y-1">
-                                    <p className="text-2xl font-semibold lg:text-3xl">
-                                        {name}
-                                    </p>
-                                    <p className="text-pretty leading-tight text-ic-muted">
-                                        {description}
-                                    </p>
-                                </div>
-                            </div>
-
-                            <Image
-                                className="aspect-video max-h-56 w-full rounded-md bg-ic-black object-cover object-center shadow-md"
-                                src={image}
-                                width={800}
-                                height={450}
-                                alt={`Image of the ${name} committee`}
-                            />
-                        </div>
+                            name={name}
+                            description={description}
+                            image={image}
+                            members={members}
+                        />
                     )
                 )}
             </div>
