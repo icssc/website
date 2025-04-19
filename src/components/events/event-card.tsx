@@ -76,14 +76,7 @@ export function EventCard({
                         {title}
                     </h3>
 
-                    <p
-                        className={cn("line-clamp-6 text-pretty text-left")}
-                        style={{
-                            color: isDarkMode
-                                ? "var(--ic-muted-dark)"
-                                : "var(--ic-muted)",
-                        }}
-                    >
+                    <p className={cn("line-clamp-6 text-pretty text-left")}>
                         {description}
                     </p>
                 </div>
@@ -106,9 +99,20 @@ export function EventCard({
                 open={isOpen}
                 onOpenChange={setIsOpen}
             >
-                <DialogContent className="max-w-md rounded-lg p-5">
+                <DialogContent
+                    className={cn(
+                        "max-w-md rounded-lg border-none p-5",
+                        isDarkMode ? "bg-ic-black" : "bg-inherit"
+                    )}
+                    xClassname="stroke-ic-pink"
+                >
                     <DialogHeader>
-                        <DialogTitle className="text-left text-2xl">
+                        <DialogTitle
+                            className={cn(
+                                "text-left text-2xl",
+                                isDarkMode && "text-ic-muted-dark"
+                            )}
+                        >
                             {title}
                         </DialogTitle>
                     </DialogHeader>

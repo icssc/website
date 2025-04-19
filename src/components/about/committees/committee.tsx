@@ -60,7 +60,8 @@ export function Committee({
 
                 <div>
                     <span className="font-semibold">
-                        Chair(s): {chairs?.join(", ")}
+                        {chairs.length > 1 ? "Chairs" : "Chair"}:{" "}
+                        {chairs?.join(", ")}
                     </span>
                     <div
                         ref={contentRef}
