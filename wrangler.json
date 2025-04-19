@@ -13,6 +13,10 @@
 		{
 			"pattern": "new.icssc.club",
 			"custom_domain": true
+		},
+		{
+			"pattern": "studentcouncil.ics.uci.edu",
+			"custom_domain": true
 		}
 	]
 }
