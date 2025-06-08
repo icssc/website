@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { CONTACT_DATA } from "@/components/contact/contact-data";
 
 export function Footer() {
@@ -12,14 +11,14 @@ export function Footer() {
 				</div>
 				<div className="flex space-x-4">
 					{CONTACT_DATA.map(({ label, href, icon: Icon }) => (
-						<Link
+						<a
 							href={href}
 							key={label}
 							target="_blank"
 							referrerPolicy="no-referrer"
 						>
 							<Icon className="size-4" />
-						</Link>
+						</a>
 					))}
 				</div>
 			</div>

@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import {
     Dialog,
     DialogContent,
@@ -50,7 +49,7 @@ export function EventCard({
     return (
         <>
             <div className="grid grid-cols-1 gap-8 border-t-2 py-4 pt-8 md:grid-cols-5 lg:grid-cols-3">
-                <div className="flex flex-col items-start space-y-4 md:col-span-2 lg:col-span-1">
+                <div className="flex flex-col items-start space-y-4 md:col-span-2 lg:col-span-1 text-left">
                     <p className="text-nowrap text-xl font-bold">
                         {formattedDate}
                     </p>
@@ -70,7 +69,7 @@ export function EventCard({
 
                 <div className="col-span-1 flex flex-col items-start space-y-2 md:col-span-3 lg:col-span-1">
                     <h3
-                        className="text-pretty text-left text-3xl font-semibold underline transition-opacity hover:opacity-80 md:cursor-pointer lg:pointer-events-none lg:cursor-default lg:no-underline"
+                        className="text-pretty text-left text-3xl font-semibold underline transition-opacity hover:opacity-80 cursor-pointer lg:pointer-events-none lg:cursor-default lg:no-underline"
                         onClick={() => setIsOpen(true)}
                     >
                         {title}
@@ -83,8 +82,8 @@ export function EventCard({
 
                 <div className="hidden justify-end lg:flex">
                     <div className="w-full max-w-xs">
-                        <Image
-                            src={`/events/${src}`}
+                        <img
+                            src={`/assets/events/${src}`}
                             alt={title}
                             className="h-auto max-h-[400px] w-full object-cover"
                             style={{ aspectRatio }}
@@ -121,11 +120,10 @@ export function EventCard({
                         className="relative w-full"
                         style={{ aspectRatio }}
                     >
-                        <Image
-                            src={`/events/${src}`}
+                        <img
+                            src={`/assets/events/${src}`}
                             alt={title}
-                            fill
-                            className="rounded-md object-cover shadow-md"
+                            className="absolute inset-0 h-full w-full rounded-md object-cover shadow-md"
                         />
                     </div>
                 </DialogContent>

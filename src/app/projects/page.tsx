@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { ProjectsGrid } from "@/components/projects/projects-grid";
 import { ProjectsInfo } from "@/components/projects/projects-info";
 import { PageContainer } from "@/components/shared/page-container";
@@ -23,13 +22,13 @@ function Subtitle() {
 		<>
 			ICSSC actively develops and maintains software projects that benefit the
 			UCI community. We encourage contributions to our projects via our{" "}
-			<Link
-				href={"https://www.github.com/icssc"}
+			<a
+				href="https://www.github.com/icssc"
 				target="_blank"
 				referrerPolicy="no-referrer"
 			>
 				Github
-			</Link>
+			</a>
 			.
 		</>
 	);

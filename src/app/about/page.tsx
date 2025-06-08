@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { AffiliatedClubs } from "@/components/about/affliated-clubs/affiliated-clubs";
 import { Awards } from "@/components/about/awards/awards";
 import { BitsAndBytes } from "@/components/about/bit-and-bytes/bits-and-bytes";
@@ -7,26 +6,24 @@ import { Committees } from "@/components/about/committees/committees";
 import { MissionStatement } from "@/components/about/mission-statement";
 import { PageContainer } from "@/components/shared/page-container";
 import { cn } from "@/lib/utils";
-import General from "@/public/about/general.jpg";
 
 export default function Page() {
     return (
         <PageContainer className="max-w-none px-0 py-0 lg:px-0">
             <div className="mx-auto flex h-[100svh] w-full flex-col items-end overflow-hidden rounded-md p-3">
                 <div className="relative h-full min-h-full w-full min-w-full">
-                    <Image
-                        src={General}
+                    <img
+                        src="/assets/about/general.jpg"
                         alt="about landing splash"
                         width={2000}
                         height={800}
                         className="h-full w-full rounded-md object-cover"
-                        priority
-                        placeholder="blur"
+                        loading="eager"
                     />
 
                     <div
                         className={cn(
-                            "absolute inset-0 rounded-md border-black bg-neutral-800 bg-opacity-60 p-3"
+                            "absolute inset-0 rounded-md border-black bg-neutral-800 bg-opacity-50 p-3"
                         )}
                     />
 

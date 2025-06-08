@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -49,7 +48,7 @@ export function Committee({
 
             <div className="flex flex-col space-y-4">
                 <div>
-                    <Image
+                    <img
                         className="aspect-video max-h-96 w-full rounded-md bg-ic-black object-cover object-center shadow-md"
                         src={image}
                         width={800}

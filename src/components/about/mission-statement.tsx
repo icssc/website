@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { SectionContainer } from "@/components/shared/section-container";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { ExternalLinkIcon } from "lucide-react";
@@ -23,7 +22,7 @@ export function MissionStatement() {
 				</p>
 			</div>
 
-			<Link
+			<a
 				href="https://docs.google.com/document/u/1/d/e/2PACX-1vRyMWoGcQdoROu6-NhLiUrv4oAc1Bj-ixiVfBYGGRax6U4XGaAsePzQ4tXyiVoxBFITMM5Na_DeA_74/pub"
 				target="_blank"
 				referrerPolicy="no-referrer"
@@ -33,7 +32,7 @@ export function MissionStatement() {
 					<span>See our Constitution</span>{" "}
 					<ExternalLinkIcon className="size-[18px] md:size-auto" />
 				</div>
-			</Link>
+			</a>
 		</SectionContainer>
 	);
 }

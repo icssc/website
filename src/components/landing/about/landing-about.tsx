@@ -1,11 +1,8 @@
-import Image from "next/image";
-import Link from "next/link";
 import { SectionContainer } from "@/components/shared/section-container";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 // import MeetingImage from "@/public/landing/meeting.jpg";
-import WeekImage from "@/public/landing/week.jpg";
 import { HandshakeIcon, LibraryBigIcon, SunIcon } from "lucide-react";
 
 export function LandingAbout() {
@@ -50,16 +47,16 @@ export function LandingAbout() {
                     </div>
                 </div>
 
-                <Link href={"/about"}>
+                <a href="/about">
                     <Button className="bg-ic-pink px-6 py-2 text-base hover:bg-ic-pink-hover">
                         Learn More
                     </Button>
-                </Link>
+                </a>
             </div>
 
             <div className="flex max-h-60 w-full shrink-0 rounded-md shadow-md lg:max-h-[500px] lg:max-w-[50%]">
-                <Image
-                    src={WeekImage}
+                <img
+                    src="/assets/landing/week.jpg"
                     alt="general meeting"
                     width={800}
                     height={2000}
