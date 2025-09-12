@@ -23,7 +23,7 @@ export function MissionStatement() {
 			</div>
 
 			<a
-				href="https://docs.google.com/document/u/1/d/e/2PACX-1vRyMWoGcQdoROu6-NhLiUrv4oAc1Bj-ixiVfBYGGRax6U4XGaAsePzQ4tXyiVoxBFITMM5Na_DeA_74/pub"
+				href="https://docs.google.com/document/d/e/2PACX-1vSPPEI-zSWtQZ8w_EWMlaGJuTTjg1NC2JvOV_-uZCrAKexLCofAmc81HibsSo-h-YRGQc0tBZcrqf63/pub"
 				target="_blank"
 				referrerPolicy="no-referrer"
 				className="no-underline"
