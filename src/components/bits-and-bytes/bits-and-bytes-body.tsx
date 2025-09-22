@@ -82,7 +82,7 @@ const FEATURES: FeatureCardProps[] = [
         description:
             "In a Bits & Byte Fam, there are 2 bytes with 2-6 bits each! Bytes focus on creating a great experience, Bits focus on having fun!",
         imageClassName: "-mt-14",
-        href: "/bits-and-bytes/join-family",
+        href: "https://forms.gle/VeGZbMkWPNnko32s6",
     },
 ];
 
