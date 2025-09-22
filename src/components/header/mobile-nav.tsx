@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NAV_DATA } from "@/components/header/nav-data";
 import { Button } from "@/components/ui/button";
@@ -62,7 +61,7 @@ export function MobileNav() {
 				</DialogHeader>
 				<div className="flex w-full flex-col items-center gap-y-4">
 					{NAV_DATA.map((item) => (
-						<Link
+						<a
 							key={item.link}
 							href={item.link}
 							className={cn(
@@ -73,7 +72,7 @@ export function MobileNav() {
 							onClick={handleClick}
 						>
 							<span className="text-center text-2xl">{item.name}</span>
-						</Link>
+						</a>
 					))}
 				</div>
 			</DialogContent>

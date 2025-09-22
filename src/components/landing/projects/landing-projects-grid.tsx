@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
 import { PROJECTS_DATA } from "@/components/projects/projects-data";
 import { SectionContainer } from "@/components/shared/section-container";
 import { SectionHeading } from "@/components/shared/section-heading";
@@ -32,12 +30,12 @@ export function LandingProjectsGrid() {
                             className="space-y-4"
                         >
                             <div className="group aspect-video overflow-hidden rounded-t-sm bg-neutral-800">
-                                <Link
-                                    href={"/projects"}
+                                <a
+                                    href="/projects"
                                     className="flex h-full"
                                 >
-                                    <Image
-                                        src={project.image}
+                                    <img
+                                        src={`/assets${project.image}`}
                                         alt={project.name}
                                         width={800}
                                         height={800}
@@ -45,7 +43,7 @@ export function LandingProjectsGrid() {
                                             "h-full w-full object-cover object-top"
                                         }
                                     />
-                                </Link>
+                                </a>
                             </div>
 
                             <div>
@@ -72,11 +70,11 @@ export function LandingProjectsGrid() {
             </div>
 
             <div className="text-center">
-                <Link href="/projects">
+                <a href="/projects">
                     <p className="text-xl font-medium">
                         See all of our projects &rarr;
                     </p>
-                </Link>
+                </a>
             </div>
         </SectionContainer>
     );

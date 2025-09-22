@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
 import { PROJECTS_DATA } from "@/components/projects/projects-data";
 import { cn } from "@/lib/utils";
 import { SiGithub } from "@icons-pack/react-simple-icons";
@@ -40,7 +38,7 @@ export function ProjectsGrid() {
                         }}
                     >
                         <div className="group aspect-video overflow-hidden rounded-t-md bg-neutral-800">
-                            <Link
+                            <a
                                 href={project.projectLink ?? ""}
                                 className={cn(
                                     project.projectLink
@@ -51,19 +49,16 @@ export function ProjectsGrid() {
                                 target="_blank"
                                 referrerPolicy="no-referrer"
                             >
-                                <Image
-                                    src={project.image}
+                                <img
+                                    src={`/assets${project.image}`}
                                     alt={project.name}
                                     width={800}
                                     height={800}
                                     className={cn(
                                         "h-full w-full object-cover object-top"
-                                        // project.projectLink
-                                        //     ? "transition-all duration-300 ease-in-out"
-                                        //     : null
                                     )}
                                 />
-                            </Link>
+                            </a>
                         </div>
 
                         <div>
@@ -75,13 +70,13 @@ export function ProjectsGrid() {
                             >
                                 <p>{project.name}</p>
 
-                                <Link
+                                <a
                                     href={project.githubLink}
                                     target="_blank"
                                     referrerPolicy="no-referrer"
                                 >
                                     <SiGithub className="size-5" />
-                                </Link>
+                                </a>
                             </div>
                             <div
                                 className={cn(

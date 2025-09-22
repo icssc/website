@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { SPONSORS } from "@/components/landing/sponsors/sponsors-data";
 import { SectionContainer } from "@/components/shared/section-container";
 import { SectionHeading } from "@/components/shared/section-heading";
@@ -20,8 +19,8 @@ export function LandingSponsors() {
 						className="flex w-3/4 max-w-80 items-center justify-center lg:w-1/3"
 						key={sponsor.title}
 					>
-						<Image
-							src={sponsor.image}
+						<img
+							src={`/assets${sponsor.image}`}
 							alt={sponsor.title}
 							width={300}
 							height={300}

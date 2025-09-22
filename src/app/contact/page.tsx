@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { CONTACT_EMAIL } from "@/components/contact/contact-data";
 import { ContactIcons } from "@/components/contact/contact-icons";
 import { PageContainer } from "@/components/shared/page-container";
@@ -13,7 +12,7 @@ export default function Page() {
 			/>
 
 			<div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-8">
-				<Link
+				<a
 					href={`mailto:${CONTACT_EMAIL}`}
 					target="_blank"
 					referrerPolicy="no-referrer"
@@ -22,7 +21,7 @@ export default function Page() {
 					<div className="hover:bg-ic-pink-hover mx-auto flex h-12 w-fit items-center justify-center rounded-full bg-ic-pink px-8 text-2xl font-medium text-ic-white shadow-md transition">
 						<p>{CONTACT_EMAIL}</p>
 					</div>
-				</Link>
+				</a>
 
 				<ContactIcons />
 			</div>

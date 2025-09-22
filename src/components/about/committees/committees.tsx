@@ -26,7 +26,7 @@ export function Committees() {
                             key={name}
                             name={name}
                             description={description}
-                            image={image}
+                            image={`/assets${image}`}
                             members={members}
                             chairs={chairs}
                         />

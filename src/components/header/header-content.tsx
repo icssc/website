@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { MobileNav } from "@/components/header/mobile-nav";
 import { NAV_DATA } from "@/components/header/nav-data";
@@ -10,19 +8,19 @@ export function HeaderContent() {
 
 	return (
 		<div className="mx-auto flex max-w-screen-3xl items-center justify-between px-8 lg:px-16">
-			<Link href={"/"}>
-				<Image
-					src={"/brand/logo.svg"}
+			<a href="/">
+				<img
+					src="/assets/brand/logo.svg"
 					alt="logo"
 					width={40}
 					height={40}
 					className="aspect-square object-cover"
 				/>
-			</Link>
+			</a>
 
 			<div className="hidden flex-row space-x-8 md:flex">
 				{NAV_DATA.map((item) => (
-					<Link
+					<a
 						key={item.link}
 						href={item.link}
 						className={cn(
@@ -32,7 +30,7 @@ export function HeaderContent() {
 						)}
 					>
 						<span className="text-lg">{item.name}</span>
-					</Link>
+					</a>
 				))}
 			</div>
 

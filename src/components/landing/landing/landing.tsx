@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { AnimatedText } from "@/components/landing/landing/animated-text";
 import { ScreenFitText } from "@/components/landing/landing/screen-fit-text";
 import { cn } from "@/lib/utils";
@@ -12,20 +11,19 @@ export function Landing() {
             <div className="relative h-full w-full overflow-hidden p-3">
                 <div className="relative flex h-full min-h-full w-full flex-col justify-end rounded-md bg-black">
                     <div className="relative flex h-full min-h-full w-full max-w-full">
-                        <Image
-                            src={bonfireImage}
+                        <img
+                            src="/assets/landing/bonfire.jpg"
                             alt="bonfire"
                             width={1500}
                             height={500}
                             className={cn(
                                 "h-full w-full rounded-md object-cover"
                             )}
-                            placeholder="blur"
-                            priority
+                            loading="eager"
                         />
                         <div
                             className={cn(
-                                "absolute inset-0 w-full rounded-md border-black bg-neutral-800 bg-opacity-70"
+                                "absolute inset-0 w-full rounded-md border-black bg-neutral-800 bg-opacity-50"
                             )}
                         />
                     </div>

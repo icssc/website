@@ -1,8 +1,6 @@
 "use client";
 
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
 import { PageContainer } from "@/components/shared/page-container";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -23,8 +21,8 @@ export default function Page() {
 
 	return (
 		<PageContainer className="mt-32 flex h-full flex-col items-center justify-center space-y-8">
-			<Image
-				src={"/anteater-laptop.png"}
+			<img
+				src="/assets/anteater-laptop.png"
 				alt="Anteater Laptop"
 				width={300}
 				height={300}
@@ -39,9 +37,9 @@ export default function Page() {
 				<p className="text-balance text-center text-5xl font-semibold tracking-tight">
 					Page Not Found
 				</p>
-				<Link href={"/"}>
+				<a href="/">
 					<Button variant={"link"}>Return Home</Button>
-				</Link>
+				</a>
 			</div>
 		</PageContainer>
 	);

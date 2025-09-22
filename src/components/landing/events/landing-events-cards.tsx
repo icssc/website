@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useCallback, useEffect, useState } from "react";
-import Image from "next/image";
 import { LANDING_EVENTS_DATA } from "@/components/landing/events/landing-events-data";
 import { cn } from "@/lib/utils";
 
@@ -101,14 +100,24 @@ export const LandingEventsCards = ({
                 )}
             >
                 {LANDING_EVENTS_DATA.map((item) => (
-                    <Image
-                        key={item}
-                        src={`/landing/${item}`}
-                        alt=""
-                        width={450}
-                        height={300}
-                        className="aspect-video w-[350px] rounded-md object-cover lg:w-[450px]"
-                    />
+                    <div key={item.title} className="relative">
+                        <img
+                            src={`/assets/landing/${item.src}`}
+                            alt=""
+                            width={450}
+                            height={300}
+                            className="aspect-video w-[350px] rounded-md object-cover lg:w-[450px]"
+                        />
+
+                        <div className="absolute inset-0 flex flex-col items-center justify-center bg-ic-black/50 opacity-0 transition-opacity hover:opacity-100">
+                            <p className="text-xl font-medium">
+                                {item.title}
+                            </p>
+							<p className="text-sm">
+								{item.year}
+							</p>
+                        </div>
+                    </div>
                 ))}
             </ul>
         </div>

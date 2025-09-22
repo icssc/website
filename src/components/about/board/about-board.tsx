@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { SectionContainer } from "@/components/shared/section-container";
 import { SectionHeading } from "@/components/shared/section-heading";
 
@@ -17,15 +16,13 @@ export function AboutBoard() {
 				each Spring quarter. Candidates will submit declarations, campaign, and
 				give a short speech about their qualifications as described in Article
 				III, Section D of{" "}
-				<Link
-					href={
-						"https://docs.google.com/document/d/e/2PACX-1vRyMWoGcQdoROu6-NhLiUrv4oAc1Bj-ixiVfBYGGRax6U4XGaAsePzQ4tXyiVoxBFITMM5Na_DeA_74/pub"
-					}
+				<a
+					href="https://docs.google.com/document/d/e/2PACX-1vRyMWoGcQdoROu6-NhLiUrv4oAc1Bj-ixiVfBYGGRax6U4XGaAsePzQ4tXyiVoxBFITMM5Na_DeA_74/pub"
 					target="_blank"
 					referrerPolicy="no-referrer"
 				>
 					our constitution
-				</Link>
+				</a>
 				. Other board positions will be filled through application later in the
 				quarter.
 				<br />

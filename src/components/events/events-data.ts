@@ -9,6 +9,62 @@ type Event = {
 
 export const EVENTS_DATA: Event[] = [
     {
+        "src": "event_ics-fair-2025.png",
+        "title": "ICS Fair",
+        "time": "2025-05-23T10:00",
+        "location": "Engineering Gateway",
+        "description": "🤠Giddy up, Anteaters! The ICS Fair is back and better than ever! 🎉 Come explore booths from ICS clubs with games, activities, and ways to get involved! Earn tickets as you go and trade them in for awesome prizes!"
+    },
+    {
+        "src": "event_type-type-revolution.png",
+        "title": "Type Type Revolution",
+        "time": "2025-05-21T19:00",
+        "location": "DBH 6011",
+        "description": "Ever sing along to a song without actually knowing the lyrics? 🎵 Time to put that to the test at Type Type Revolution ⌨️! Team up with a partner to type ✍️ out the lyrics to your favorite songs 🎤 while jamming to smash hits 🍓🔨 from the past ⌛. Think fast, type faster, and see if you can keep up with the beat! ⌨️"
+    },
+    {
+        "src": "event_life-after-ics.png",
+        "title": "Life After ICS: Alumni Panel",
+        "time": "2025-05-14T19:00",
+        "location": "DBH 6011",
+        "description": "Ever wondered what life is like after you graduate whether that be industry💼, graduate school🎓, looking for a job🔎, and more? Join us for an engaging alumni panel featuring former undergraduates from the ICS department!🧑‍💼👩‍💼👨‍💼\n\nThis is your chance to ask your burning questions🔥about what your future may look like and gain insights into their experiences and advice for navigating the ICS field.💡You'll have the opportunity to hear insights regarding transitioning into different vocations, gain advice from your former peers and alumni from UCI, and learn more about various personal and post-graduation experiences."
+    },
+    {
+        "src": "event_fusion-icssc.png",
+        "title": "ICSSC x Fusion Bridge Building",
+        "time": "2025-05-06T19:00", 
+        "location": "Ring Room @ Cross-Cultural Center",
+        "description": "Join ICSSC x Fusion to build bridges - both literally and socially! 🌉\n\nGet ready for a night of hands-on engineering challenges ⚔️ - come test your skills in:\n\n🚗 Bridge Building Showdown: Team up to design a bridge strong enough to support a car and survive a coin weight test! 💪\n✈️ Paper Airplane Competition: Work together to create a detailed protocol on how to fold a paper airplane!\n\nBring your ideas and meet new faces - don't miss this fusion of fun! 😉🤣"
+    },
+    {
+        "src": "event_game-night.png",
+        "title": "Game Night",
+        "time": "2025-04-23T19:00",
+        "location": "DBH 6011",
+        "description": "Wanna play a game 🎮 before midterms season? Or maybe two? Or three 👀? Come to ICSSC Game Night‼️ Join your friends 👯 in playing some fun games on a switch or classics 🃏 like uno, jenga, poker ♥️ ♠️♦️♣️, and more! There will be snacks 🍪 too to recharge in between games 🧁🫶"
+      },
+    {
+        "src": "event_egghunt2025.png",
+        "title": "Egg Hunt",
+        "time": "2025-04-16T19:00",
+        "location": "DBH 6011",
+        "description": "Spring has sprung - and you know what that means… EGG HUNT TIME! 🐣🌸 Join ICSSC during Week 3 for a super fun 🕵️‍♀️ partner egg hunt adventure through DBH! Work together, out-sleuth other teams, and see who can collect the most eggs hidden throughout the building! 🧺✨ 🥇The winning team gets a special prize — and eternal ICSSC bragging rights 😉"
+      },
+      {
+        "src": "event_elections.png",
+        "title": "ICSSC Elections", 
+        "time": "2025-04-09T19:00",
+        "location": "DBH 6011",
+        "description": "ARE YOU 🫵 READY FOR ICSSC ELECTIONS⁉️ Starting today, the positions for Executive Board (President, Internal Vice President, and External Vice President) of ICS Student Council are available for election for the 2025-26 school year."
+      },
+      {
+        "src": "event_pickleball.png",
+        "title": "Pickleball",
+        "time": "2025-04-02T19:00",
+        "location": "ARC Upper Field Pickleball Courts",
+        "description": "🥒🏓 Start off your Spring Quarter with a new hobby: Pickleball! We'll have experienced players on hand to show you the ropes, and extra equipment available to borrow. Whether you're looking to learn or just have a good time, it's the perfect opportunity to meet new people, enjoy the game, and touch grass. See you on the courts!!😎"
+      },
+    {
         src: "event_aux-battle.jpg",
         title: "Aux Battle",
         time: "2025-03-12T19:00",

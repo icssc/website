@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { SectionContainer } from "@/components/shared/section-container";
 import { SectionHeading } from "@/components/shared/section-heading";
 
@@ -19,8 +18,8 @@ export function BitsAndBytes() {
 			<div className="flex flex-col items-start gap-x-16 gap-y-8 lg:flex-row">
 				<div className="flex flex-col items-center justify-center space-y-8 lg:w-1/2">
 					<div className="flex max-h-48 items-center justify-center overflow-hidden">
-						<Image
-							src="/bits-and-bytes/become-a-byte.png"
+						<img
+							src="/assets/bits-and-bytes/become-a-byte.png"
 							alt="Become a Byte"
 							width={500}
 							height={200}
@@ -41,8 +40,8 @@ export function BitsAndBytes() {
 
 				<div className="flex flex-col items-center justify-center space-y-8 lg:w-1/2">
 					<div className="flex max-h-48 items-center justify-center overflow-hidden">
-						<Image
-							src="/bits-and-bytes/join-a-family.png"
+						<img
+							src="/assets/bits-and-bytes/join-a-family.png"
 							alt="Become a Byte"
 							width={500}
 							height={200}

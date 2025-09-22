@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
 import { AFFILIATED_CLUBS } from "@/components/about/affliated-clubs/affiliated-clubs-data";
 import { SectionContainer } from "@/components/shared/section-container";
 import { SectionHeading } from "@/components/shared/section-heading";
@@ -24,7 +22,7 @@ export function AffiliatedClubs() {
 						className="flex aspect-square w-20 items-center lg:w-40"
 						key={club.name}
 					>
-						<Link
+						<a
 							href={club.website ?? ""}
 							target="_blank"
 							referrerPolicy="no-referrer"
@@ -32,14 +30,14 @@ export function AffiliatedClubs() {
 								club.website ? "cursor-pointer" : "pointer-events-none",
 							)}
 						>
-							<Image
+							<img
 								src={club.logo}
 								alt={club.name}
 								width={200}
 								height={200}
 								className="rounded-sm object-cover"
 							/>
-						</Link>
+						</a>
 					</div>
 				))}
 			</div>

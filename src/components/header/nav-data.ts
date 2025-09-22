@@ -21,6 +21,10 @@ export const NAV_DATA: NavItem[] = [
 		name: "Projects",
 	},
 	{
+		link: "/bits-and-bytes",
+		name: "Bits & Bytes",
+	},
+	{
 		link: "/contact",
 		name: "Contact",
 	},

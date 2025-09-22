@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { LandingEventsCards } from "@/components/landing/events/landing-events-cards";
 import { SectionContainer } from "@/components/shared/section-container";
 import { SectionHeading } from "@/components/shared/section-heading";
@@ -18,9 +17,9 @@ export function LandingEvents() {
             <LandingEventsCards speed="slow" />
 
             <div className="text-center">
-                <Link href="/events">
+                <a href="/events">
                     <p className="text-xl font-medium">See our events &rarr;</p>
-                </Link>
+                </a>
             </div>
         </SectionContainer>
     );
