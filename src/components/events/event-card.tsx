@@ -15,7 +15,7 @@ interface EventCardProps {
     description: string;
     time: string;
     location: string;
-    src: string;
+    src?: string;
     aspectRatio?: string;
     timeFormat?: (date: Date) => string;
     isDarkMode?: boolean;
@@ -82,14 +82,14 @@ export function EventCard({
 
                 <div className="hidden justify-end lg:flex">
                     <div className="w-full max-w-xs">
-                        <img
+                        {src && <img
                             src={`/assets/events/${src}`}
                             alt={title}
                             className="h-auto max-h-[400px] w-full object-cover"
                             style={{ aspectRatio }}
                             width={320}
                             height={400}
-                        />
+                        />}
                     </div>
                 </div>
             </div>
@@ -120,11 +120,11 @@ export function EventCard({
                         className="relative w-full"
                         style={{ aspectRatio }}
                     >
-                        <img
+                        {src && <img
                             src={`/assets/events/${src}`}
                             alt={title}
                             className="absolute inset-0 h-full w-full rounded-md object-cover shadow-md"
-                        />
+                        />}
                     </div>
                 </DialogContent>
             </Dialog>
