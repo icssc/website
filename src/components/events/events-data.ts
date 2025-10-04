@@ -15,6 +15,13 @@ export const EVENTS_DATA: Event[] = [
         "description": "The wait is over—come find out your Bits & Bytes family for the year! Meet your bytes, celebrate with your co-bits, and team up to compete in fun activities against the other families."
     },
     {
+        "src": "event_obsidian-corporate-tour-2025.jpg",
+        "title": "Obsidian Corporate Tour",
+        "time": "2025-10-22T13:30",
+        "location": "Obsidian Office",
+        "description": "The corporate tour application for Obsidian Entertainment is now open! Applications will close next Wednesday, October 8th at 11:59 PM. More information about the application process can be found on the form itself."
+    },
+    {
         "title": "Bits & Bytes Mixer",
         "time": "2025-10-12T14:00",
         "location": "William R. Mason Regional Park",
@@ -26,12 +33,19 @@ export const EVENTS_DATA: Event[] = [
         "location": "DBH 3011",
         "description": "Come meet all the byte pairs in one place! This event is for new ICS students interested in joining the program to see who the mentors are, ask questions, and get a feel for the community before sign-ups close."
     },
-    // {
-    //     "title": "Bytes Social",
-    //     "time": "2025-10-02T19:00",
-    //     "location": "DBH 3011",
-    //     "description": "A bytes-only gathering for mentors to meet each other before the program kicks off. It’s the best time to connect with other upperclassmen and find a potential co-byte if you don’t already have one."
-    // },
+    {
+        "title": "Bytes Social",
+        "time": "2025-10-02T19:00",
+        "location": "DBH 3011",
+        "description": "A bytes-only gathering for mentors to meet each other before the program kicks off. It’s the best time to connect with other upperclassmen and find a potential co-byte if you don’t already have one."
+    },
+    {
+        "src": "event_first-general-meeting-2025.jpg",
+        "title": "First General Meeting",
+        "time": "2025-10-01T19:00",
+        "location": "SH 134",
+        "description": "Our first ICSSC General Meeting is tonight!⭐ Come learn about the structure of our organization and how YOU can get involved in one of our six committees. This is a great time to talk to our board members and ask any questions that you might have before applying. We'll also be releasing more information about our upcoming corporate tours to Obsidian Entertainment and Advantest at the meeting. There will be a UTC social afterwards! 🌯"
+    },
     {
         "src": "event_ics-bonfire-2025.jpg",
         "title": "ICS Bonfire",
