@@ -9,6 +9,7 @@ type Event = {
 
 export const EVENTS_DATA: Event[] = [
     {
+        "src": "event_bits-and-bytes-reveal-2025.jpg",
         "title": "Bits & Bytes Group Reveal",
         "time": "2025-10-22T19:00",
         "location": "University Town Center",
@@ -20,6 +21,19 @@ export const EVENTS_DATA: Event[] = [
         "time": "2025-10-22T13:30",
         "location": "Obsidian Office",
         "description": "The corporate tour application for Obsidian Entertainment is now open! Applications will close next Wednesday, October 8th at 11:59 PM. More information about the application process can be found on the form itself."
+    },
+    {
+        "src": "event_roller-skating-2025.jpg",
+        "title": "Roller Skating Fundraiser",
+        "time": "2025-10-18T18:00",
+        "location": "Fountain Valley Skating Center",
+        "description": "As Silk Sonic would say, skate and slide your way on over to our ICSSC roller skating fundraiser! This Saturday evening (and always), we wanna get to know ya!"
+    },
+    {
+        "title": "Internship Panel",
+        "time": "2025-10-15T19:00",
+        "location": "DBH 3011",
+        "description": "Curious about what it’s like to land and thrive in a top tech internship? Join us for our Internship Panel, where students who have interned at leading companies like Meta, Microsoft, Amazon, and more will share their experiences."
     },
     {
         "title": "Bits & Bytes Mixer",
