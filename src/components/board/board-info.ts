@@ -2,33 +2,29 @@ type BoardMember = {
 	name: string;
 	position: string;
 	image: string;
-	email: string;
+	email?: string;
 };
 
 export const BOARD_INFO: BoardMember[] = [
 	{
-		name: "Taylor Quach",
+		name: "Anna Lee",
 		position: "Co-President",
-		email: "taylorq1@uci.edu",
-		image: "/assets/board/taylor-quach.jpg",
+		image: "/assets/board/anna-lee.jpg",
 	},
 	{
-		name: "Meenakshi Mynampati",
+		name: "Ashley Zhou",
 		position: "Co-President",
-		email: "mmynampa@uci.edu",
-		image: "/assets/board/meenakshi-mynampati.jpg",
+		image: "/assets/board/ashley-zhou.jpg",
 	},
 	{
-		name: "Jeffrey Meng",
+		name: "Ethan Wang",
 		position: "Internal Vice President",
-		email: "jkm@uci.edu",
-		image: "/assets/board/jeffrey-meng.jpg",
+		image: "/assets/board/ethan-wang.jpg",
 	},
 	{
-		name: "Nicole Nguyen",
+		name: "Pranavi Gollanapalli",
 		position: "External Vice President",
-		email: "nicolvn1@uci.edu",
-		image: "/assets/board/nicole-nguyen.jpg",
+		image: "/assets/board/pranavi-gollanapalli.png",
 	},
 	{
 		name: "Nathan Yang",

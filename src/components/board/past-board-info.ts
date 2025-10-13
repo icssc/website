@@ -1,9 +1,99 @@
 type Board = {
 	year: string;
-	positions: { title: string; name: string }[];
+	positions: { title: string; name: string; image?: string }[];
 };
 
 export const PAST_BOARD_INFO: Board[] = [
+	{
+		year: "2024-2025",
+		positions: [
+			{
+				title: "Co-President",
+				name: "Taylor Quach",
+				image: "/assets/board/taylor-quach.jpg",
+			},
+			{
+				title: "Co-President",
+				name: "Meenakshi Mynampati",
+				image: "/assets/board/meenakshi-mynampati.jpg",
+			},
+			{
+				title: "Internal Vice President",
+				name: "Jeffrey Meng",
+				image: "/assets/board/jeffrey-meng.jpg",
+			},
+			{
+				title: "External Vice President",
+				name: "Nicole Nguyen",
+				image: "/assets/board/nicole-nguyen.jpg",
+			},
+			{
+				title: "Treasurer",
+				name: "Nathan Yang",
+				image: "/assets/board/nathan-yang.jpg",
+			},
+			{
+				title: "Secretary",
+				name: "Ethan Wang",
+				image: "/assets/board/ethan-wang.jpg",
+			},
+			{
+				title: "Public Relations Chair",
+				name: "Jeremiah Soe",
+				image: "/assets/board/jeremiah-soe.jpg",
+			},
+			{
+				title: "Events Co-Chair",
+				name: "Rachel Kline",
+				image: "/assets/board/rachel-kline.jpg",
+			},
+			{
+				title: "Events Co-Chair",
+				name: "Anna Lee",
+				image: "/assets/board/anna-lee.jpg",
+			},
+			{
+				title: "Projects Co-Chair",
+				name: "Alexander Liu",
+				image: "/assets/board/alexander-liu.jpg",
+			},
+			{
+				title: "Projects Co-Chair",
+				name: "Eddy Chen",
+				image: "/assets/board/eddy-chen.jpg",
+			},
+			{
+				title: "Projects Co-Chair",
+				name: "Minh Nguyen",
+				image: "/assets/board/minh-nguyen.jpg",
+			},
+			{
+				title: "Corporate Outreach Chair",
+				name: "Rish Sharma",
+				image: "/assets/board/rish-sharma.jpg",
+			},
+			{
+				title: "Academic and Alumni Affairs Chair",
+				name: "Ashley Zhou",
+				image: "/assets/board/ashley-zhou.jpg",
+			},
+			{
+				title: "Graphics Co-Chair",
+				name: "Michelle Huang",
+				image: "/assets/board/michelle-huang.jpg",
+			},
+			{
+				title: "Graphics Co-Chair",
+				name: "Alaina Klaes",
+				image: "/assets/board/alaina-klaes.jpg",
+			},
+			{
+				title: "Webmaster",
+				name: "Kevin Wu",
+				image: "/assets/board/kevin-wu.jpg",
+			},
+		],
+	},
 	{
 		year: "2023-2024",
 		positions: [
