@@ -9,13 +9,17 @@ export function Footer() {
 				<div className="whitespace-nowrap">
 					&#169; {year} ICSSC. All Rights Reserved.
 				</div>
-				<div className="flex space-x-4">
+				<div className="flex space-x-4 items-center">
+					<a href="/privacy-policy" target="_blank" referrerPolicy="no-referrer" rel="noreferrer">
+						<p className="text-sm">Privacy Policy</p>
+					</a>
 					{CONTACT_DATA.map(({ label, href, icon: Icon }) => (
 						<a
 							href={href}
 							key={label}
 							target="_blank"
 							referrerPolicy="no-referrer"
+							rel="noreferrer"
 						>
 							<Icon className="size-4" />
 						</a>

@@ -40,6 +40,7 @@
 		"@biomejs/biome": "1.9.4",
 		"@opennextjs/aws": "^3.4.2",
 		"@opennextjs/cloudflare": "^0.5.4",
+		"@tailwindcss/typography": "^0.5.19",
 		"@types/eslint__js": "^8.42.3",
 		"@types/node": "^20",
 		"@types/react": "^18",
