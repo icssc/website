@@ -76,10 +76,6 @@ export const BOARD_INFO: BoardMember[] = [
 	{
 		name: "Jay Wu",
 		position: "Webmaster",
+		image: "/assets/board/2025/jay-wu.png"
 	},
 ];
-
-
-// export const INCOMING_BOARD_INFO: Array<Pick<BoardMember, 'name' | 'position'>> = [
-
-// ];
