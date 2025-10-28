@@ -9,6 +9,39 @@ type Event = {
 
 export const EVENTS_DATA: Event[] = [
     {
+        "title": "Fall Quarter Internal All-Hands",
+        "time": "2025-11-20T18:30",
+        "location": "PCB 1100",
+        "description": "Join us for our Fall Quarter All-Hands meeting to discuss progress, plans, and connect with fellow committee members."
+    },
+    {
+        "title": "Dave and Buster's Fundraiser",
+        "time": "2025-10-25T14:00",
+        "location": "Irvine Spectrum Center",
+        "description": "Join us for an afternoon of games and fun at Dave and Buster's! Support ICSSC while enjoying arcade games, food, and hanging out with friends from 2-5 PM."
+    },
+    {
+        "src": "event_webjam-2025.png",
+        "title": "WebJam",
+        "time": "2025-11-03T19:00",
+        "location": "DBH and Student Center",
+        "description": "ICSSC's annual WebJam is back! Join us for a week-long programming competition where you'll work on web application design and development in teams of 1-4. Learn more at https://webjam.icssc.club."
+    },
+    {
+        "src": "event_cha-fundraiser-2025.png",
+        "title": "Cha Fundraiser",
+        "time": "2025-10-29T19:00",
+        "location": "University Town Center",
+        "description": "Support ICSSC by grabbing some boba at UTC! Don't forget to show the flyer when you order to help us fundraise! Enjoy some delicious drinks with friends!"
+    },
+    {
+        "src": "event_resume-workshop-2025.png",
+        "title": "Resume Workshop",
+        "time": "2025-10-29T19:00",
+        "location": "ICS 428",
+        "description": "Join us for an exclusive Resume Workshop featuring recruiters from Northrop Grumman and Obsidian Entertainment! Learn firsthand what top employers look for in a standout resume, common red flags to avoid, and how to make your application rise above the rest."
+    },
+    {
         "src": "event_bits-and-bytes-reveal-2025.jpg",
         "title": "Bits & Bytes Group Reveal",
         "time": "2025-10-22T19:00",
