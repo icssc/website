@@ -3,7 +3,8 @@ import { Awards } from "@/components/about/awards/awards";
 import { BitsAndBytes } from "@/components/about/bit-and-bytes/bits-and-bytes";
 import { AboutBoard } from "@/components/about/board/about-board";
 import { Committees } from "@/components/about/committees/committees";
-import { MissionStatement } from "@/components/about/mission-statement";
+import { MissionStatement } from "@/components/about/mission/mission-statement";
+import { WhereWeGo } from "@/components/about/where-we-go/where-we-go";
 import { PageContainer } from "@/components/shared/page-container";
 import { cn } from "@/lib/utils";
 
@@ -46,6 +47,7 @@ export default function Page() {
                 <AboutBoard />
                 <AffiliatedClubs />
                 <Awards />
+                <WhereWeGo />
             </div>
         </PageContainer>
     );
