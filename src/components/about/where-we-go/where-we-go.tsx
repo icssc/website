@@ -11,13 +11,13 @@ export function WhereWeGo() {
                 subtitle="Our members have gone on to work at top companies across the tech industry"
             />
 
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+            <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4">
                 {COMPANIES_DATA.map(({ name, logo }) => (
                     <div
                         key={name}
                         className="flex h-24 items-center justify-center"
                     >
-                        <div className="relative h-12 w-32">
+                        <div className="relative h-16 w-64">
                             <Image
                                 src={`/assets/logos/${logo}`}
                                 alt={`${name} logo`}

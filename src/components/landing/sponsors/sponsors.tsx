@@ -10,7 +10,6 @@ export function LandingSponsors() {
 				subtitle="    Our sponsors enable ICSSC to support students and create
                     exceptional opportunities at the
                     University&nbsp;of&nbsp;California,&nbsp;Irvine."
-				containerClassName="text-center"
 			/>
 
 			<div className="flex w-full flex-wrap justify-center gap-16">
