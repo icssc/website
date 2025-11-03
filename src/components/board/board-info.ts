@@ -33,6 +33,7 @@ export const BOARD_INFO: BoardMember[] = [
 	{
 		name: "Sarah Son",
 		position: "Treasurer",
+		image: "/assets/board/2025/sarah-son.jpg"
 	},
 	{
 		name: "Jeremiah Soe", 
@@ -42,10 +43,12 @@ export const BOARD_INFO: BoardMember[] = [
 	{
 		name: "Andrew Kim",
 		position: "Public Relations Chair",
+		image: "/assets/board/2025/andrew-kim.jpg"
 	},
 	{
 		name: "Matthew Gray",
 		position: "Events Co-Chair",
+		image: "/assets/board/2025/matt-gray.jpg"
 	},
 	{
 		name: "Audrey Lu",
@@ -55,6 +58,7 @@ export const BOARD_INFO: BoardMember[] = [
 	{
 		name: "Andrew Wang",
 		position: "Projects Co-Chair",
+		image: "/assets/board/2025/andrew-wang.png"
 	},
 	{
 		name: "Kevin Wu",
@@ -64,14 +68,17 @@ export const BOARD_INFO: BoardMember[] = [
 	{
 		name: "Li Keller",
 		position: "Corporate Outreach Chair",
+		image: "/assets/board/2025/li-keller.jpg"
 	},
 	{
 		name: "Himal Malik",
 		position: "Academic and Alumni Affairs Chair",
+		image: "/assets/board/2025/himal-malik.jpg"
 	},
 	{
 		name: "Nico Hartman",
 		position: "Graphics Chair",
+		image: "/assets/board/2025/nico-hartman.png"
 	},
 	{
 		name: "Jay Wu",
