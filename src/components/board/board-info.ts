@@ -41,11 +41,6 @@ export const BOARD_INFO: BoardMember[] = [
 		image: "/assets/board/2025/jeremiah-soe.jpg"
 	},
 	{
-		name: "Andrew Kim",
-		position: "Public Relations Chair",
-		image: "/assets/board/2025/andrew-kim.jpg"
-	},
-	{
 		name: "Matthew Gray",
 		position: "Events Co-Chair",
 		image: "/assets/board/2025/matt-gray.jpg"
@@ -64,6 +59,11 @@ export const BOARD_INFO: BoardMember[] = [
 		name: "Kevin Wu",
 		position: "Projects Co-Chair",
 		image: "/assets/board/2025/kevin-wu.jpg"
+	},
+	{
+		name: "Andrew Kim",
+		position: "Public Relations Chair",
+		image: "/assets/board/2025/andrew-kim.jpg"
 	},
 	{
 		name: "Li Keller",
