@@ -9,6 +9,20 @@ type Event = {
 
 export const EVENTS_DATA: Event[] = [
     {
+        "src": "event_ics-pathways.png",
+        "title": "ICSSC x UCR ACM: ICS Pathways Panel",
+        "time": "2025-11-12T19:00",
+        "location": "Zoom",
+        "description": "Wondering what different pathways there are in ICS? (Hint: there's more than just software engineering!) Do you also want to know what classes you can take to land these roles? Well, look no further than our upcoming ICS Pathways and Specialization Panel. Along with ACM @ UCR, you'll get to hear how specializing helps prepare for industry and what classes you can take! Don't miss this opportunity to explore your CS pathway!"
+    },
+    {
+        "src": "event_wikirace-2025.png",
+        "title": "Wiki Racing",
+        "time": "2025-11-19T19:00",
+        "location": "DBH 3011",
+        "description": "Ready, set, click! Join ICSSC for a night of Wiki Racing, a game where you'll race from a starting Wikipedia page to a destination article using only the internal hyperlinks. The first player to reach the destination or the one who takes the fewest clicks wins!"
+    },
+    {
         "title": "Fall Quarter Internal All-Hands",
         "time": "2025-11-20T18:30",
         "location": "PCB 1100",
