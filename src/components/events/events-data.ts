@@ -9,6 +9,13 @@ type Event = {
 
 export const EVENTS_DATA: Event[] = [
     {
+        "src": "event_hobby-hangout-2025.png",
+        "title": "Hobby Hangout",
+        "time": "2025-12-03T19:00",
+        "location": "DBH 3011",
+        "description": "Feeling the end-of-quarter stress? Need a break during Week 10? Join us for our Hobby Hangout! Come hang out, bring your favorite hobby to work on, and enjoy a cozy movie night. Perfect for a midweek reset and to unwind."
+    },
+    {
         "src": "event_ics-pathways.png",
         "title": "ICSSC x UCR ACM: ICS Pathways Panel",
         "time": "2025-11-12T19:00",
