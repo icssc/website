@@ -46,7 +46,7 @@ export const PROJECTS_DATA: Project[] = [
     {
         name: "ZotMeet",
         githubLink: "https://www.github.com/icssc/ZotMeet",
-        // projectLink: "",
+        projectLink: "https://zotmeet.com/",
         description: "Efficient meeting scheduling + study room availabilities",
         image: "/projects/zotmeet.jpg",
     },
