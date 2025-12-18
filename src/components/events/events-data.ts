@@ -9,6 +9,13 @@ type Event = {
 
 export const EVENTS_DATA: Event[] = [
     {
+        "src": "event_leetcode-study-groups-2026.png",
+        "title": "LeetCode Study Groups",
+        "time": "2026-01-02T19:00",
+        "location": "DBH 3011",
+        "description": "Looking to improve your LeetCode skills? Have you been struggling to keep yourself locked in? ICSSC's LeetCode Study Groups is returning for a second year! If you've been assigned a group, join us for the program's kickoff at DBH!"
+    },
+    {
         "src": "event_hobby-hangout-2025.png",
         "title": "Hobby Hangout",
         "time": "2025-12-03T19:00",
