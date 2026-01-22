@@ -18,7 +18,7 @@ export function HeaderContent() {
 				/>
 			</a>
 
-			<div className="hidden flex-row space-x-8 md:flex">
+			<nav aria-label="Main navigation" className="hidden flex-row space-x-8 md:flex">
 				{NAV_DATA.map((item) => (
 					<a
 						key={item.link}
@@ -32,7 +32,7 @@ export function HeaderContent() {
 						<span className="text-lg">{item.name}</span>
 					</a>
 				))}
-			</div>
+			</nav>
 
 			<MobileNav />
 		</div>

@@ -14,7 +14,7 @@ export function SectionContainer({
     children,
 }: SectionContainerProps) {
     return (
-        <div
+        <section
             id={id}
             className={cn("", containerClassName)}
         >
@@ -26,6 +26,6 @@ export function SectionContainer({
             >
                 {children}
             </div>
-        </div>
+        </section>
     );
 }

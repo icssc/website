@@ -60,7 +60,7 @@ export function MobileNav() {
 					<DialogTitle>Mobile Nav</DialogTitle>
 					<DialogDescription>Navigate</DialogDescription>
 				</DialogHeader>
-				<div className="flex w-full flex-col items-center gap-y-4">
+				<nav aria-label="Mobile navigation" className="flex w-full flex-col items-center gap-y-4">
 					{NAV_DATA.map((item) => (
 						<a
 							key={item.link}
@@ -75,7 +75,7 @@ export function MobileNav() {
 							<span className="text-center text-2xl">{item.name}</span>
 						</a>
 					))}
-				</div>
+				</nav>
 			</DialogContent>
 		</Dialog>
 	);
