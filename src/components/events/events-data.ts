@@ -9,6 +9,27 @@ type Event = {
 
 export const EVENTS_DATA: Event[] = [
     {
+        "src": "event_mock-interview-2.png",
+        "title": "Mock Interview Part 2",
+        "time": "2026-01-21T19:00",
+        "location": "DBH 6011",
+        "description": "Part 2 of our series with CTC offers hands-on interview experience with industry professionals. Attendees will participate in mock interviews that mirror real-world behavioral and technical interviews, followed by personalized feedback to strengthen communication, problem-solving, and overall interview performance."
+    },
+    {
+        "src": "event_mock-interview-1.png",
+        "title": "Mock Interview Part 1: Acing Your Interview w/ CTC",
+        "time": "2026-01-14T19:00",
+        "location": "ICS 428",
+        "description": "Get ready to level up your interview skills with our two-part mock interview series in collaboration with CTC! This first event will walk you through how to craft strong, memorable answers to behavioral questions while also sharing practical tips for succeeding in technical interviews. From communicating your experiences to demonstrating problem-solving skills, you will leave feeling more prepared and confident for your next interview."
+    },
+    {
+        "src": "event_sliding-into-the-new-year-2026.png",
+        "title": "Sliding Into the New Year",
+        "time": "2026-01-07T19:00",
+        "location": "DBH 3011",
+        "description": "Come slide into the new year with ICSSC's first event of Winter Quarter, Group Presentation Night! Teams will create a 2-3 minute presentation on any (PG) topic and present to the room. This will be a fun way to reconnect with new and familiar faces after the break. Expect laughs, creativity, and a little friendly chaos!"
+    },
+    {
         "src": "event_leetcode-study-groups-2026.png",
         "title": "LeetCode Study Groups",
         "time": "2026-01-02T19:00",
