@@ -25,8 +25,9 @@ export function Footer() {
 							target="_blank"
 							referrerPolicy="no-referrer"
 							rel="noreferrer"
+							aria-label={label}
 						>
-							<Icon className="size-4" />
+							<Icon className="size-4" aria-hidden="true" />
 						</a>
 					))}
 				</div>

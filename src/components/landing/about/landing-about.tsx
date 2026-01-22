@@ -57,7 +57,7 @@ export function LandingAbout() {
             <div className="flex max-h-60 w-full shrink-0 rounded-md shadow-md lg:max-h-[500px] lg:max-w-[50%]">
                 <img
                     src="/assets/landing/week.jpg"
-                    alt="general meeting"
+                    alt="Students attending an ICSSC general meeting"
                     width={800}
                     height={2000}
                     className="w-full rounded-md object-cover"

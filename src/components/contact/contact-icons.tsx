@@ -15,10 +15,11 @@ export function ContactIcons({ className }: ContactIconsProps) {
 					target="_blank"
 					referrerPolicy="no-referrer"
 					className="group no-underline"
+					aria-label={label}
 				>
 					<Icon
 						className="hover:text-ic-pink-hover size-12 transition duration-300"
-						aria-label={label}
+						aria-hidden="true"
 					/>
 				</a>
 			))}

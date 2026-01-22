@@ -42,6 +42,7 @@ export function MobileNav() {
 				<Button
 					className="size-10 p-0 px-0 py-0 hover:bg-ic-muted/10"
 					variant={"ghost"}
+					aria-label={open ? "Close menu" : "Open menu"}
 				>
 					{open ? (
 						<XIcon className="aspect-square min-h-8 min-w-8 stroke-ic-pink" />

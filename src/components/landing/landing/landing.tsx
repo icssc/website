@@ -13,7 +13,7 @@ export function Landing() {
                     <div className="relative flex h-full min-h-full w-full max-w-full">
                         <img
                             src="/assets/landing/bonfire.jpg"
-                            alt="bonfire"
+                            alt="Students gathered around a bonfire at an ICSSC event"
                             width={1500}
                             height={500}
                             className={cn(

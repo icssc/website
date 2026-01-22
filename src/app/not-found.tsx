@@ -23,7 +23,7 @@ export default function Page() {
 		<PageContainer className="mt-32 flex h-full flex-col items-center justify-center space-y-8">
 			<img
 				src="/assets/anteater-laptop.png"
-				alt="Anteater Laptop"
+				alt="UCI Anteater mascot with laptop"
 				width={300}
 				height={300}
 				ref={imageRef}

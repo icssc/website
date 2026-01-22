@@ -103,7 +103,7 @@ export const LandingEventsCards = ({
                     <div key={item.title} className="relative">
                         <img
                             src={`/assets/landing/${item.src}`}
-                            alt=""
+                            alt={item.title}
                             width={450}
                             height={300}
                             className="aspect-video w-[350px] rounded-md object-cover lg:w-[450px]"

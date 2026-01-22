@@ -8,10 +8,10 @@ export function HeaderContent() {
 
 	return (
 		<div className="mx-auto flex max-w-screen-3xl items-center justify-between px-8 lg:px-16">
-			<a href="/">
+			<a href="/" aria-label="ICSSC Home">
 				<img
 					src="/assets/brand/logo.svg"
-					alt="logo"
+					alt="ICSSC logo"
 					width={40}
 					height={40}
 					className="aspect-square object-cover"
