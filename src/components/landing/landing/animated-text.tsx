@@ -50,7 +50,7 @@ export function AnimatedText({ text, className }: AnimatedNameProps) {
 	};
 
 	return (
-		<div aria-label={text} className={cn(className)}>
+		<div className={cn(className)}>
 			{text.split(" ").map((word, index) => {
 				return (
 					<motion.div

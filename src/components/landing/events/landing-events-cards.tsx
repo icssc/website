@@ -100,7 +100,7 @@ export const LandingEventsCards = ({
                 )}
             >
                 {LANDING_EVENTS_DATA.map((item) => (
-                    <div key={item.title} className="relative">
+                    <li key={item.title} className="relative list-none">
                         <img
                             src={`/assets/landing/${item.src}`}
                             alt={item.title}
@@ -117,7 +117,7 @@ export const LandingEventsCards = ({
 								{item.year}
 							</p>
                         </div>
-                    </div>
+                    </li>
                 ))}
             </ul>
         </div>
