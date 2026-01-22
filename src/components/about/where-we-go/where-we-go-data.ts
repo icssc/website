@@ -13,6 +13,14 @@ export const COMPANIES_DATA: Company[] = [
 		logo: "asana.svg",
 	},
 	{
+		name: "Bloomberg",
+		logo: "bloomberg.svg",
+	},
+	{
+		name: "Databricks",
+		logo: "databricks.svg",
+	},
+	{
 		name: "Google",
 		logo: "google.svg",
 	},
@@ -33,8 +41,16 @@ export const COMPANIES_DATA: Company[] = [
 		logo: "scale-ai.png",
 	},
 	{
+		name: "SpaceX",
+		logo: "spacex.svg",
+	},
+	{
 		name: "Stripe",
 		logo: "stripe.svg",
+	},
+	{
+		name: "Tesla",
+		logo: "tesla.svg",
 	},
 ];
 
