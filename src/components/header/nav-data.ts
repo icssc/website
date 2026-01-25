@@ -1,6 +1,12 @@
-type NavItem = {
+type NavSubItem = {
 	link: string;
 	name: string;
+};
+
+type NavItem = {
+	link?: string;
+	name: string;
+	children?: NavSubItem[];
 };
 
 export const NAV_DATA: NavItem[] = [
@@ -19,6 +25,15 @@ export const NAV_DATA: NavItem[] = [
 	{
 		link: "/projects",
 		name: "Projects",
+	},
+	{
+		name: "Sponsors",
+		children: [
+			{
+				link: "/sponsors/aveva",
+				name: "AVEVA",
+			},
+		],
 	},
 	{
 		link: "/contact",

@@ -2,6 +2,7 @@ import { usePathname } from "next/navigation";
 import { MobileNav } from "@/components/header/mobile-nav";
 import { NAV_DATA } from "@/components/header/nav-data";
 import { cn } from "@/lib/utils";
+import { ChevronDown } from "lucide-react";
 
 export function HeaderContent() {
 	const pathname = usePathname();
@@ -18,20 +19,53 @@ export function HeaderContent() {
 				/>
 			</a>
 
-			<nav aria-label="Main navigation" className="hidden flex-row space-x-8 md:flex">
-				{NAV_DATA.map((item) => (
-					<a
-						key={item.link}
-						href={item.link}
-						className={cn(
-							"relative flex items-center space-x-2 no-underline",
-							pathname === item.link ? "font-medium text-ic-pink" : null,
-							"transition-all hover:text-ic-pink",
-						)}
-					>
-						<span className="text-lg">{item.name}</span>
-					</a>
-				))}
+			<nav
+				aria-label="Main navigation"
+				className="hidden flex-row space-x-8 md:flex"
+			>
+				{NAV_DATA.map((item) =>
+					item.children ? (
+						<div key={item.name} className="group relative">
+							<span
+								className={cn(
+									"relative flex cursor-default items-center space-x-1 transition-all group-hover:text-ic-pink",
+									pathname.startsWith("/sponsors") &&
+										"font-medium text-ic-pink",
+								)}
+							>
+								<span className="text-lg">{item.name}</span>
+								<ChevronDown className="size-4 transition-transform group-hover:rotate-180" />
+							</span>
+							<div className="pointer-events-none absolute left-1/2 top-full -translate-x-1/2 pt-1 opacity-0 transition-opacity group-hover:pointer-events-auto group-hover:opacity-100">
+								{item.children.map((child) => (
+									<a
+										key={child.link}
+										href={child.link}
+										className={cn(
+											"block whitespace-nowrap text-lg no-underline transition-all",
+											pathname === child.link
+												? "font-medium text-ic-pink"
+												: "hover:text-ic-pink",
+										)}
+									>
+										{child.name}
+									</a>
+								))}
+							</div>
+						</div>
+					) : (
+						<a
+							key={item.link}
+							href={item.link}
+							className={cn(
+								"relative flex items-center no-underline transition-all hover:text-ic-pink",
+								pathname === item.link && "font-medium text-ic-pink",
+							)}
+						>
+							<span className="text-lg">{item.name}</span>
+						</a>
+					),
+				)}
 			</nav>
 
 			<MobileNav />

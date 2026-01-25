@@ -11,14 +11,23 @@ import {
 	DialogTrigger,
 } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
-import { MenuIcon, XIcon } from "lucide-react";
+import { MenuIcon, XIcon, ChevronDown } from "lucide-react";
 
 export function MobileNav() {
 	const pathname = usePathname();
 	const [open, setOpen] = useState(false);
+	const [expandedItems, setExpandedItems] = useState<string[]>([]);
 
-	const handleClick = () => {
+	const toggleMenu = () => {
 		setOpen((prev) => !prev);
+	};
+
+	const toggleExpand = (name: string) => {
+		setExpandedItems((prev) =>
+			prev.includes(name)
+				? prev.filter((item) => item !== name)
+				: [...prev, name],
+		);
 	};
 
 	useEffect(() => {
@@ -37,11 +46,11 @@ export function MobileNav() {
 	}, []);
 
 	return (
-		<Dialog open={open} onOpenChange={handleClick}>
+		<Dialog open={open} onOpenChange={toggleMenu}>
 			<DialogTrigger className="flex md:hidden" asChild>
 				<Button
-					className="size-10 p-0 px-0 py-0 hover:bg-ic-muted/10"
-					variant={"ghost"}
+					className="size-10 p-0 hover:bg-ic-muted/10"
+					variant="ghost"
 					aria-label={open ? "Close menu" : "Open menu"}
 				>
 					{open ? (
@@ -60,21 +69,64 @@ export function MobileNav() {
 					<DialogTitle>Mobile Nav</DialogTitle>
 					<DialogDescription>Navigate</DialogDescription>
 				</DialogHeader>
-				<nav aria-label="Mobile navigation" className="flex w-full flex-col items-center gap-y-4">
-					{NAV_DATA.map((item) => (
-						<a
-							key={item.link}
-							href={item.link}
-							className={cn(
-								"relative flex items-center space-x-2 text-ic-white no-underline",
-								pathname === item.link ? "font-medium text-ic-pink" : null,
-								"transition-all hover:text-ic-pink",
-							)}
-							onClick={handleClick}
-						>
-							<span className="text-center text-2xl">{item.name}</span>
-						</a>
-					))}
+				<nav
+					aria-label="Mobile navigation"
+					className="flex w-full flex-col items-center gap-y-4"
+				>
+					{NAV_DATA.map((item) =>
+						item.children ? (
+							<div key={item.name} className="flex flex-col items-center">
+								<button
+									type="button"
+									onClick={() => toggleExpand(item.name)}
+									className={cn(
+										"relative flex items-center space-x-1 text-ic-white no-underline transition-all hover:text-ic-pink",
+										pathname.startsWith("/sponsors") &&
+											"font-medium text-ic-pink",
+									)}
+								>
+									<span className="text-center text-2xl">{item.name}</span>
+									<ChevronDown
+										className={cn(
+											"size-5 transition-transform",
+											expandedItems.includes(item.name) ? "rotate-180" : "",
+										)}
+									/>
+								</button>
+								{expandedItems.includes(item.name) && (
+									<div className="mt-2 flex flex-col items-center gap-y-2">
+										{item.children.map((child) => (
+											<a
+												key={child.link}
+												href={child.link}
+												className={cn(
+													"relative flex items-center space-x-2 text-neutral-400 no-underline transition-all hover:text-ic-pink",
+													pathname === child.link && "font-medium text-ic-pink",
+												)}
+												onClick={toggleMenu}
+											>
+												<span className="text-center text-xl">
+													{child.name}
+												</span>
+											</a>
+										))}
+									</div>
+								)}
+							</div>
+						) : (
+							<a
+								key={item.link}
+								href={item.link}
+								className={cn(
+									"relative flex items-center space-x-2 text-ic-white no-underline transition-all hover:text-ic-pink",
+									pathname === item.link && "font-medium text-ic-pink",
+								)}
+								onClick={toggleMenu}
+							>
+								<span className="text-center text-2xl">{item.name}</span>
+							</a>
+						),
+					)}
 				</nav>
 			</DialogContent>
 		</Dialog>
