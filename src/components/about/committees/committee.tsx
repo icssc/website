@@ -10,12 +10,14 @@ export function Committee({
     image,
     members,
     chairs,
+    leads,
 }: {
     name: string;
     description: string;
     image: string;
     members: string[];
     chairs: string[];
+    leads?: string[];
 }) {
     const [showMore, setShowMore] = useState(false);
     const [isOverflowing, setIsOverflowing] = useState(false);
@@ -58,10 +60,20 @@ export function Committee({
                 </div>
 
                 <div>
-                    <span className="font-semibold">
-                        {chairs.length > 1 ? "Chairs" : "Chair"}:{" "}
+                    <div>
+                        <span className="font-semibold">
+                            {chairs.length > 1 ? "Chairs" : "Chair"}:{" "}
+                        </span>
                         {chairs?.join(", ")}
-                    </span>
+                    </div>
+                    {leads && leads.length > 0 && (
+                        <div>
+                            <span className="font-semibold">
+                                {leads.length > 1 ? "Leads" : "Lead"}:{" "}
+                            </span>
+                            {leads.join(", ")}
+                        </div>
+                    )}
                     <div
                         ref={contentRef}
                         className={cn(

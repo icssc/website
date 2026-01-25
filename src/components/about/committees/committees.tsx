@@ -21,6 +21,7 @@ export function Committees() {
                         image = "/landing/general.jpg",
                         members,
                         chairs,
+                        leads,
                     }) => (
                         <Committee
                             key={name}
@@ -29,6 +30,7 @@ export function Committees() {
                             image={`/assets${image}`}
                             members={members}
                             chairs={chairs}
+                            leads={leads}
                         />
                     )
                 )}

@@ -2,6 +2,7 @@ export type Committee = {
     name: string;
     description: string;
     chairs: string[];
+    leads?: string[];
     members: string[];
     image?: string;
 };
@@ -88,10 +89,19 @@ export const COMMITTEE_DATA: Committee[] = [
         description:
             "Projects builds real development projects for the UCI community, serving thousands of users. Experience different roles in software development like frontend, backend, and UI/UX. Work in a real development team with version control to prepare you for your career.",
         chairs: ["Andrew Wang", "Kevin Wu"],
+        leads: [
+            "Alex Espejo",
+            "Caden Lee",
+            "Ethan Wang",
+            "Jacob Moy",
+            "Kyle Tran",
+            "Lauren Shu",
+            "Lex Truong",
+            "Sanskar Mishra",
+        ],
         members: [
             "Aadi Shanker",
             "Abubakr Elmallah",
-            "Alex Espejo",
             "Alex Zhuang",
             "Alexander Liu",
             "Andy Teh",
@@ -106,7 +116,6 @@ export const COMMITTEE_DATA: Committee[] = [
             "Aurelia Sindhunirmala",
             "Bill Liu",
             "Brendan Lieu",
-            "Caden Lee",
             "Caleb Wong",
             "Charlie Weinberger",
             "Chris Zecheru",
@@ -119,18 +128,17 @@ export const COMMITTEE_DATA: Committee[] = [
             "Dominic Seung",
             "Ellis Liang",
             "Eren Kim",
+            "Eric Tao",
             "Erin Leong",
             "Ethan Chao",
             "Ethan Kosaki",
             "Ethan Tran",
-            "Ethan Wang",
             "Evelyn Garcia",
             "Francis Escares Padua",
             "Grace Yan",
             "Hayden Karp",
             "Isaac Nguyen",
             "Isaac Phoon",
-            "Jacob Moy",
             "Jason Lin",
             "Jason Nguyen",
             "Jay Wu",
@@ -140,9 +148,6 @@ export const COMMITTEE_DATA: Committee[] = [
             "Justin Siek",
             "Kailee Kaocharoen",
             "Kelvin Truong",
-            "Kyle Tran",
-            "Lauren Shu",
-            "Lex Truong",
             "Lindsay Lim",
             "Majd Katabi",
             "Matt Franklin",
@@ -151,13 +156,13 @@ export const COMMITTEE_DATA: Committee[] = [
             "Priyansh Shah",
             "Rebecca Su",
             "Samika Bhatkar",
-            "Sanskar Mishra",
             "Valerie Huynh",
             "Varun Pradeep",
             "Vicky Zhang",
             "Victoria Lee",
             "William Yang",
             "Yitong Liu",
+            "Zackery He",
         ],
         image: "/committees/projects.jpg",
     },
