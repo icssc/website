@@ -1,14 +1,30 @@
+"use client";
+
 import { SectionContainer } from "@/components/shared/section-container";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { Button } from "@/components/ui/button";
 import { ExternalLinkIcon } from "lucide-react";
+import { motion } from "motion/react";
+
+const FADE_UP_ANIMATION = {
+	initial: { opacity: 0, y: 10 },
+	whileInView: { opacity: 1, y: 0 },
+	viewport: { once: true, margin: "-100px" },
+	transition: { duration: 0.4, ease: "easeOut" as const },
+};
 
 export function AvevaCareers() {
 	return (
 		<SectionContainer className="space-y-12 px-0 lg:px-0">
-			<SectionHeading title="Early-Career Opportunities" />
+			<motion.div {...FADE_UP_ANIMATION}>
+				<SectionHeading title="Early-Career Opportunities" />
+			</motion.div>
 
-			<div className="grid gap-12 lg:grid-cols-3 lg:gap-8">
+			<motion.div
+				className="grid gap-12 lg:grid-cols-3 lg:gap-8"
+				{...FADE_UP_ANIMATION}
+				transition={{ ...FADE_UP_ANIMATION.transition, delay: 0.1 }}
+			>
 				<div className="space-y-3">
 					<p className="text-2xl font-semibold">Entry-Level Positions</p>
 					<p className="text-pretty leading-relaxed text-ic-muted">
@@ -40,9 +56,13 @@ export function AvevaCareers() {
 						common for interns to be offered a full-time position.
 					</p>
 				</div>
-			</div>
+			</motion.div>
 
-			<div className="flex justify-center">
+			<motion.div
+				className="flex justify-center"
+				{...FADE_UP_ANIMATION}
+				transition={{ ...FADE_UP_ANIMATION.transition, delay: 0.2 }}
+			>
 				<a
 					href="https://www.aveva.com/en/about/careers/early-careers/"
 					target="_blank"
@@ -54,7 +74,7 @@ export function AvevaCareers() {
 						<ExternalLinkIcon className="size-5" />
 					</Button>
 				</a>
-			</div>
+			</motion.div>
 		</SectionContainer>
 	);
 }

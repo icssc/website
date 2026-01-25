@@ -1,7 +1,10 @@
+"use client";
+
 import { SectionContainer } from "@/components/shared/section-container";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
+import { motion } from "motion/react";
 
 const BENEFITS = [
 	"Competitive salary",
@@ -15,12 +18,25 @@ const BENEFITS = [
 	"Flexible lifestyle benefits (fitness/tuition reimbursement)",
 ];
 
+const FADE_UP_ANIMATION = {
+	initial: { opacity: 0, y: 10 },
+	whileInView: { opacity: 1, y: 0 },
+	viewport: { once: true, margin: "-100px" },
+	transition: { duration: 0.4, ease: "easeOut" as const },
+};
+
 export function AvevaBenefits() {
 	return (
 		<SectionContainer className="space-y-12 px-0 lg:px-0">
-			<SectionHeading title="Working at AVEVA" />
+			<motion.div {...FADE_UP_ANIMATION}>
+				<SectionHeading title="Working at AVEVA" />
+			</motion.div>
 
-			<div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+			<motion.div
+				className="grid gap-12 lg:grid-cols-2 lg:gap-16"
+				{...FADE_UP_ANIMATION}
+				transition={{ ...FADE_UP_ANIMATION.transition, delay: 0.1 }}
+			>
 				<div className="space-y-6">
 					<div className="space-y-1">
 						<p className="text-2xl font-semibold">Benefits</p>
@@ -65,7 +81,7 @@ export function AvevaBenefits() {
 						</div>
 					</div>
 				</div>
-			</div>
+			</motion.div>
 		</SectionContainer>
 	);
 }
