@@ -20,8 +20,8 @@ export function HeaderContent({
 				<Image
 					src="/assets/brand/logo.svg"
 					alt="ICSSC logo"
-					width={40}
-					height={40}
+					width={45}
+					height={45}
 					className="aspect-square object-cover"
 				/>
 			</a>

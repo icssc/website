@@ -29,6 +29,7 @@ export default function Page() {
 
 					<div className="absolute bottom-0 left-1/2 flex h-fit w-full max-w-screen-3xl -translate-x-1/2 px-4 pb-8 lg:px-8">
 						<div className="text-pretty text-[clamp(3rem,8vw,8rem)] font-semibold leading-none tracking-tighter text-ic-white md:text-balance">
+							<h1 className="sr-only">UCI's largest Computer Science community</h1>
 							UCI&apos;s largest{" "}
 							<span className="text-ic-pink">Computer Science</span> community
 						</div>

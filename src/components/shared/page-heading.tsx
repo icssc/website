@@ -14,9 +14,9 @@ export function PageHeading({
 }: PageHeadingProps) {
 	return (
 		<div className={cn("space-y-2", containerClassName)}>
-			<h2 className="text-5xl font-semibold leading-none lg:text-6xl">
+			<h1 className="text-5xl font-semibold leading-none lg:text-6xl">
 				{title}
-			</h2>
+			</h1>
 
 			<p className="text-pretty text-lg text-ic-muted lg:text-xl">{subtitle}</p>
 		</div>

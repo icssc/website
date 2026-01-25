@@ -39,6 +39,7 @@ export function Landing() {
 							</div>
 						</div>
 					</ScreenFitText>
+					<h1 className="sr-only">ICS Student Council</h1>
 				</div>
 			</div>
 		</div>

@@ -26,7 +26,7 @@ export function Footer() {
 							rel="noopener noreferrer"
 							aria-label={label}
 						>
-							<Icon className="size-4" aria-hidden="true" />
+							<Icon className="size-5" aria-hidden="true" />
 						</a>
 					))}
 				</div>
