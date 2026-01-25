@@ -8,45 +8,42 @@ import { PageContainer } from "@/components/shared/page-container";
 import { cn } from "@/lib/utils";
 
 export default function Page() {
-    return (
-        <PageContainer className="max-w-none px-0 py-0 lg:px-0">
-            <div className="mx-auto flex h-[100svh] w-full flex-col items-end overflow-hidden rounded-md p-3">
-                <div className="relative h-full min-h-full w-full min-w-full">
-                    <img
-                        src="/assets/about/general.jpg"
-                        alt="about landing splash"
-                        width={2000}
-                        height={800}
-                        className="h-full w-full rounded-md object-cover"
-                        loading="eager"
-                    />
+	return (
+		<PageContainer className="max-w-none px-0 py-0 lg:px-0">
+			<div className="mx-auto flex h-[100svh] w-full flex-col items-end overflow-hidden rounded-md p-3">
+				<div className="relative h-full min-h-full w-full min-w-full">
+					<img
+						src="/assets/about/general.jpg"
+						alt="about landing splash"
+						width={2000}
+						height={800}
+						className="h-full w-full rounded-md object-cover"
+						loading="eager"
+					/>
 
-                    <div
-                        className={cn(
-                            "absolute inset-0 rounded-md border-black bg-neutral-800 bg-opacity-50 p-3"
-                        )}
-                    />
+					<div
+						className={cn(
+							"absolute inset-0 rounded-md border-black bg-neutral-800 bg-opacity-50 p-3",
+						)}
+					/>
 
-                    <div className="absolute bottom-0 left-1/2 flex h-fit w-full max-w-screen-3xl -translate-x-1/2 px-4 pb-8 lg:px-8">
-                        <div className="text-pretty text-[clamp(3rem,8vw,8rem)] font-semibold leading-none tracking-tighter text-ic-white md:text-balance">
-                            UCI&apos;s largest{" "}
-                            <span className="text-ic-pink">
-                                Computer Science
-                            </span>{" "}
-                            community
-                        </div>
-                    </div>
-                </div>
-            </div>
+					<div className="absolute bottom-0 left-1/2 flex h-fit w-full max-w-screen-3xl -translate-x-1/2 px-4 pb-8 lg:px-8">
+						<div className="text-pretty text-[clamp(3rem,8vw,8rem)] font-semibold leading-none tracking-tighter text-ic-white md:text-balance">
+							UCI&apos;s largest{" "}
+							<span className="text-ic-pink">Computer Science</span> community
+						</div>
+					</div>
+				</div>
+			</div>
 
-            <div className="mx-auto space-y-24">
-                <MissionStatement />
-                <Committees />
-                <BitsAndBytes />
-                <AboutBoard />
-                <AffiliatedClubs />
-                <Awards />
-            </div>
-        </PageContainer>
-    );
+			<div className="mx-auto space-y-24">
+				<MissionStatement />
+				<Committees />
+				<BitsAndBytes />
+				<AboutBoard />
+				<AffiliatedClubs />
+				<Awards />
+			</div>
+		</PageContainer>
+	);
 }

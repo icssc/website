@@ -53,4 +53,3 @@ export const COMPANIES_DATA: Company[] = [
 		logo: "tesla.svg",
 	},
 ];
-

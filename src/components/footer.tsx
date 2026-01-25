@@ -10,11 +10,21 @@ export function Footer() {
 					&#169; {year} ICSSC. All Rights Reserved.
 				</div>
 				<div className="flex space-x-4 items-center">
-					<a href="/privacy-policy" target="_blank" referrerPolicy="no-referrer" rel="noreferrer">
+					<a
+						href="/privacy-policy"
+						target="_blank"
+						referrerPolicy="no-referrer"
+						rel="noreferrer"
+					>
 						<p className="text-sm hidden md:flex">Privacy Policy</p>
 						<p className="text-sm md:hidden">Privacy</p>
 					</a>
-					<a href="/terms-of-service" target="_blank" referrerPolicy="no-referrer" rel="noreferrer">
+					<a
+						href="/terms-of-service"
+						target="_blank"
+						referrerPolicy="no-referrer"
+						rel="noreferrer"
+					>
 						<p className="text-sm hidden md:flex">Terms of Service</p>
 						<p className="text-sm flex md:hidden">Terms</p>
 					</a>

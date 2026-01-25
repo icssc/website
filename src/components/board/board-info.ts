@@ -33,56 +33,56 @@ export const BOARD_INFO: BoardMember[] = [
 	{
 		name: "Sarah Son",
 		position: "Treasurer",
-		image: "/assets/board/2025/sarah-son.jpg"
+		image: "/assets/board/2025/sarah-son.jpg",
 	},
 	{
-		name: "Jeremiah Soe", 
+		name: "Jeremiah Soe",
 		position: "Secretary",
-		image: "/assets/board/2025/jeremiah-soe.jpg"
+		image: "/assets/board/2025/jeremiah-soe.jpg",
 	},
 	{
 		name: "Matthew Gray",
 		position: "Events Co-Chair",
-		image: "/assets/board/2025/matt-gray.jpg"
+		image: "/assets/board/2025/matt-gray.jpg",
 	},
 	{
 		name: "Audrey Lu",
 		position: "Events Co-Chair",
-		image: "/assets/board/2025/audrey-lu.jpg"
+		image: "/assets/board/2025/audrey-lu.jpg",
 	},
 	{
 		name: "Andrew Wang",
 		position: "Projects Co-Chair",
-		image: "/assets/board/2025/andrew-wang.png"
+		image: "/assets/board/2025/andrew-wang.png",
 	},
 	{
 		name: "Kevin Wu",
 		position: "Projects Co-Chair",
-		image: "/assets/board/2025/kevin-wu.jpg"
+		image: "/assets/board/2025/kevin-wu.jpg",
 	},
 	{
 		name: "Andrew Kim",
 		position: "Public Relations Chair",
-		image: "/assets/board/2025/andrew-kim.jpg"
+		image: "/assets/board/2025/andrew-kim.jpg",
 	},
 	{
 		name: "Li Keller",
 		position: "Corporate Outreach Chair",
-		image: "/assets/board/2025/li-keller.jpg"
+		image: "/assets/board/2025/li-keller.jpg",
 	},
 	{
 		name: "Himal Malik",
 		position: "Academic and Alumni Affairs Chair",
-		image: "/assets/board/2025/himal-malik.jpg"
+		image: "/assets/board/2025/himal-malik.jpg",
 	},
 	{
 		name: "Nico Hartman",
 		position: "Graphics Chair",
-		image: "/assets/board/2025/nico-hartman.png"
+		image: "/assets/board/2025/nico-hartman.png",
 	},
 	{
 		name: "Jay Wu",
 		position: "Webmaster",
-		image: "/assets/board/2025/jay-wu.png"
+		image: "/assets/board/2025/jay-wu.png",
 	},
 ];

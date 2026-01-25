@@ -11,13 +11,13 @@ export const AFFILIATED_CLUBS: AffiliatedClub[] = [
 		website: "https://acm-uci.org/",
 	},
 	{
-		name: "Artificial Intelligence @ UCI", 
+		name: "Artificial Intelligence @ UCI",
 		logo: "/assets/clubs/ai.png",
 		website: "https://aiclub.ics.uci.edu/",
 	},
 	{
 		name: "Blockchain at UCI",
-		logo: "/assets/clubs/blockchain.png", 
+		logo: "/assets/clubs/blockchain.png",
 		website: "https://www.blockchainuci.org/",
 	},
 	{
