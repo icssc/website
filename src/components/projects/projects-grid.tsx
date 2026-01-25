@@ -47,7 +47,7 @@ export function ProjectsGrid() {
 									"flex h-full",
 								)}
 								target="_blank"
-								referrerPolicy="no-referrer"
+								rel="noopener noreferrer"
 							>
 								<img
 									src={`/assets${project.image}`}
@@ -71,6 +71,7 @@ export function ProjectsGrid() {
 								<a
 									href={project.githubLink}
 									target="_blank"
+									rel="noopener noreferrer"
 									referrerPolicy="no-referrer"
 								>
 									<SiGithub className="size-5" />

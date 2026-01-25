@@ -25,7 +25,7 @@ export function MissionStatement() {
 			<a
 				href="https://docs.google.com/document/d/e/2PACX-1vSPPEI-zSWtQZ8w_EWMlaGJuTTjg1NC2JvOV_-uZCrAKexLCofAmc81HibsSo-h-YRGQc0tBZcrqf63/pub"
 				target="_blank"
-				referrerPolicy="no-referrer"
+				rel="noopener noreferrer"
 				className="no-underline"
 			>
 				<div className="flex h-12 w-fit items-center justify-center space-x-2 rounded-md bg-ic-pink px-8 text-lg font-medium text-ic-white shadow-md transition hover:bg-ic-pink-hover md:text-xl">

@@ -1,8 +1,8 @@
 import {
+	type IconType,
 	SiDiscord,
 	SiFacebook,
 	SiInstagram,
-	type IconType,
 } from "@icons-pack/react-simple-icons";
 
 type Contact = {

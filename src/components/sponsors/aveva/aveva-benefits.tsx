@@ -3,8 +3,8 @@
 import { SectionContainer } from "@/components/shared/section-container";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { Separator } from "@/components/ui/separator";
-import Image from "next/image";
 import { motion } from "motion/react";
+import Image from "next/image";
 
 const BENEFITS = [
 	"Competitive salary",

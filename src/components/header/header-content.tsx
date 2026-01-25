@@ -1,8 +1,9 @@
-import { usePathname } from "next/navigation";
 import { MobileNav } from "@/components/header/mobile-nav";
 import { NAV_DATA } from "@/components/header/nav-data";
 import { cn } from "@/lib/utils";
 import { ChevronDown } from "lucide-react";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 type HeaderContentProps = {
 	isDarkBackground?: boolean;
@@ -16,7 +17,7 @@ export function HeaderContent({
 	return (
 		<div className="mx-auto flex max-w-screen-3xl items-center justify-between px-8 lg:px-16">
 			<a href="/" aria-label="ICSSC Home">
-				<img
+				<Image
 					src="/assets/brand/logo.svg"
 					alt="ICSSC logo"
 					width={40}

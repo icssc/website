@@ -1,9 +1,9 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "framer-motion";
-import { useState } from "react";
 import { Link as LinkIcon } from "lucide-react";
+import Link from "next/link";
+import { useState } from "react";
 
 type FeatureCardProps = {
 	src: string;
@@ -32,8 +32,8 @@ function FeatureCard({
 			transition={{ duration: 0.5, ease: "easeOut" }}
 		>
 			<div className="relative flex h-52 items-center justify-center overflow-hidden">
-				<div className="absolute inset-0 -z-10 [background-size:20px_20px] [background-image:linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)]"></div>
-				<div className="pointer-events-none absolute inset-0 -z-10 bg-ic-white [mask-image:radial-gradient(circle_at_center,transparent_30%,black_70%)]"></div>
+				<div className="absolute inset-0 -z-10 [background-size:20px_20px] [background-image:linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)]" />
+				<div className="pointer-events-none absolute inset-0 -z-10 bg-ic-white [mask-image:radial-gradient(circle_at_center,transparent_30%,black_70%)]" />
 
 				<motion.img
 					src={src}

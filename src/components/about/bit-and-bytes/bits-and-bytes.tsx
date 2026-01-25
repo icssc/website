@@ -1,6 +1,7 @@
-import Link from "next/link";
 import { SectionContainer } from "@/components/shared/section-container";
 import { SectionHeading } from "@/components/shared/section-heading";
+import Image from "next/image";
+import Link from "next/link";
 
 export function BitsAndBytes() {
 	return (
@@ -16,7 +17,7 @@ export function BitsAndBytes() {
 						students transition to life at UCI through organized socials! Group
 						leaders, aka Bytes, will guide and provide a tight-knit community at
 						UCI for incoming freshmen and transfers, aka Bits.{" "}
-						<Link href={"/bits-and-bytes"} aria-label={`learn more`}>
+						<Link href={"/bits-and-bytes"} aria-label="learn more">
 							Learn more!
 						</Link>
 					</>
@@ -29,7 +30,7 @@ export function BitsAndBytes() {
 			<div className="flex flex-col items-start gap-x-16 gap-y-8 lg:flex-row">
 				<div className="flex flex-col items-center justify-center space-y-8 lg:w-1/2">
 					<div className="flex max-h-48 items-center justify-center overflow-hidden">
-						<img
+						<Image
 							src="/assets/bits-and-bytes/become-a-byte.png"
 							alt="Become a Byte"
 							width={500}
@@ -51,7 +52,7 @@ export function BitsAndBytes() {
 
 				<div className="flex flex-col items-center justify-center space-y-8 lg:w-1/2">
 					<div className="flex max-h-48 items-center justify-center overflow-hidden">
-						<img
+						<Image
 							src="/assets/bits-and-bytes/join-a-family.png"
 							alt="Become a Byte"
 							width={500}

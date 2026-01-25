@@ -21,19 +21,17 @@ export function EventsUpcomingEvents() {
 
 				{/* This is stolen from SectionHeading */}
 				<p className="text-pretty pt-2 text-lg leading-tight text-ic-muted lg:text-xl">
-					<a
-						href="#social-media"
+					<button
+						type="button"
 						className="scroll-smooth text-ic-muted underline hover:opacity-80"
-						// this is probably jank
-						onClick={(e) => {
-							e.preventDefault();
+						onClick={() => {
 							document
 								.getElementById("social-media")
 								?.scrollIntoView({ behavior: "smooth" });
 						}}
 					>
 						Check out our social medias
-					</a>{" "}
+					</button>{" "}
 					for updates on upcoming events!
 				</p>
 			</SectionContainer>

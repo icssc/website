@@ -2,8 +2,8 @@ import { SectionContainer } from "@/components/shared/section-container";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-// import MeetingImage from "@/public/landing/meeting.jpg";
 import { HandshakeIcon, LibraryBigIcon, SunIcon } from "lucide-react";
+import Image from "next/image";
 
 export function LandingAbout() {
 	return (
@@ -51,7 +51,7 @@ export function LandingAbout() {
 			</div>
 
 			<div className="flex max-h-60 w-full shrink-0 rounded-md shadow-md lg:max-h-[500px] lg:max-w-[50%]">
-				<img
+				<Image
 					src="/assets/landing/week.jpg"
 					alt="Students attending an ICSSC general meeting"
 					width={800}

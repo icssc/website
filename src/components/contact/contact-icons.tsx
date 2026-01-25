@@ -13,7 +13,7 @@ export function ContactIcons({ className }: ContactIconsProps) {
 					key={label}
 					href={href}
 					target="_blank"
-					referrerPolicy="no-referrer"
+					rel="noopener noreferrer"
 					className="group no-underline"
 					aria-label={label}
 				>

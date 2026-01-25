@@ -2,6 +2,7 @@ import { PROJECTS_DATA } from "@/components/projects/projects-data";
 import { SectionContainer } from "@/components/shared/section-container";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export function LandingProjectsGrid() {
 	return (
@@ -28,7 +29,7 @@ export function LandingProjectsGrid() {
 						<div key={project.name} className="space-y-4">
 							<div className="group aspect-video overflow-hidden rounded-t-sm bg-neutral-800">
 								<a href="/projects" className="flex h-full">
-									<img
+									<Image
 										src={`/assets${project.image}`}
 										alt={project.name}
 										width={800}

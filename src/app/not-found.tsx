@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useCallback, useEffect, useRef, useState } from "react";
 import { PageContainer } from "@/components/shared/page-container";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 
 export default function Page() {
 	const imageRef = useRef<HTMLImageElement>(null);
@@ -21,7 +22,7 @@ export default function Page() {
 
 	return (
 		<PageContainer className="mt-32 flex h-full flex-col items-center justify-center space-y-8">
-			<img
+			<Image
 				src="/assets/anteater-laptop.png"
 				alt="UCI Anteater mascot with laptop"
 				width={300}

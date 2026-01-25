@@ -1,4 +1,4 @@
-import { BOARD_INFO, BoardMember } from "@/components/board/board-info";
+import { BOARD_INFO, type BoardMember } from "@/components/board/board-info";
 import { PastBoard } from "@/components/board/past-board";
 import { PageContainer } from "@/components/shared/page-container";
 import { PageHeading } from "@/components/shared/page-heading";

@@ -15,7 +15,7 @@ export default function Page() {
 				<a
 					href={`mailto:${CONTACT_EMAIL}`}
 					target="_blank"
-					referrerPolicy="no-referrer"
+					rel="noopener noreferrer"
 					className="no-underline"
 				>
 					<div className="hover:bg-ic-pink-hover mx-auto flex h-12 w-fit items-center justify-center rounded-full bg-ic-pink px-8 text-2xl font-medium text-ic-white shadow-md transition">

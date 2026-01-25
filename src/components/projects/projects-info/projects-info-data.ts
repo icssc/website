@@ -1,4 +1,4 @@
-import { SiGithub, type IconType } from "@icons-pack/react-simple-icons";
+import { type IconType, SiGithub } from "@icons-pack/react-simple-icons";
 import { GraduationCapIcon, HeartIcon, type LucideIcon } from "lucide-react";
 
 type ProjectInfo = {

@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
 import { NAV_DATA } from "@/components/header/nav-data";
 import { Button } from "@/components/ui/button";
 import {
@@ -11,7 +9,9 @@ import {
 	DialogTrigger,
 } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
-import { MenuIcon, XIcon, ChevronDown } from "lucide-react";
+import { ChevronDown, MenuIcon, XIcon } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export function MobileNav() {
 	const pathname = usePathname();

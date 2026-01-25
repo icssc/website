@@ -3,7 +3,7 @@
 import { AnimatedText } from "@/components/landing/landing/animated-text";
 import { ScreenFitText } from "@/components/landing/landing/screen-fit-text";
 import { cn } from "@/lib/utils";
-import bonfireImage from "@/public/landing/bonfire.jpg";
+import Image from "next/image";
 
 export function Landing() {
 	return (
@@ -11,13 +11,13 @@ export function Landing() {
 			<div className="relative h-full w-full overflow-hidden p-3">
 				<div className="relative flex h-full min-h-full w-full flex-col justify-end rounded-md bg-black">
 					<div className="relative flex h-full min-h-full w-full max-w-full">
-						<img
+						<Image
 							src="/assets/landing/bonfire.jpg"
 							alt="Students gathered around a bonfire at an ICSSC event"
 							width={1500}
 							height={500}
 							className={cn("h-full w-full rounded-md object-cover")}
-							loading="eager"
+							priority
 						/>
 						<div
 							className={cn(

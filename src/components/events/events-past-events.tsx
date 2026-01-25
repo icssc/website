@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
 import { EVENTS_DATA } from "@/components/events/events-data";
 import { SectionContainer } from "@/components/shared/section-container";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 import { EventCard } from "./event-card";
 

@@ -1,6 +1,6 @@
-import { usePathname } from "next/navigation";
 import { HeaderContent } from "@/components/header/header-content";
 import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
 
 export function HeaderStatic() {
 	const pathname = usePathname();

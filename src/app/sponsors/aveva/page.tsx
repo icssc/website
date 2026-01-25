@@ -1,7 +1,7 @@
-import { AvevaBenefits } from "@/components/sponsors/aveva/aveva-benefits";
-import { AvevaCareers } from "@/components/sponsors/aveva/aveva-careers";
 import { PageContainer } from "@/components/shared/page-container";
 import { PageHeading } from "@/components/shared/page-heading";
+import { AvevaBenefits } from "@/components/sponsors/aveva/aveva-benefits";
+import { AvevaCareers } from "@/components/sponsors/aveva/aveva-careers";
 
 export default function Page() {
 	return (

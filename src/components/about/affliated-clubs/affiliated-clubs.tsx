@@ -25,7 +25,7 @@ export function AffiliatedClubs() {
 						<a
 							href={club.website ?? ""}
 							target="_blank"
-							referrerPolicy="no-referrer"
+							rel="noopener noreferrer"
 							className={cn(
 								club.website ? "cursor-pointer" : "pointer-events-none",
 							)}

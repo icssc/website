@@ -1,7 +1,7 @@
-import Image from "next/image";
 import { COMPANIES_DATA } from "@/components/about/where-we-go/where-we-go-data";
 import { SectionContainer } from "@/components/shared/section-container";
 import { SectionHeading } from "@/components/shared/section-heading";
+import Image from "next/image";
 
 export function WhereWeGo() {
 	return (

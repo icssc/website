@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import {
 	Dialog,
 	DialogContent,
@@ -9,6 +8,7 @@ import {
 } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
 import { ClockIcon, MapPinIcon } from "lucide-react";
+import { useState } from "react";
 
 interface EventCardProps {
 	title: string;
@@ -66,12 +66,13 @@ export function EventCard({
 				</div>
 
 				<div className="col-span-1 flex flex-col items-start space-y-2 md:col-span-3 lg:col-span-1">
-					<h3
+					<button
+						type="button"
 						className="text-pretty text-left text-3xl font-semibold underline transition-opacity hover:opacity-80 cursor-pointer lg:pointer-events-none lg:cursor-default lg:no-underline"
 						onClick={() => setIsOpen(true)}
 					>
 						{title}
-					</h3>
+					</button>
 
 					<p className={cn("line-clamp-6 text-pretty text-left")}>
 						{description}

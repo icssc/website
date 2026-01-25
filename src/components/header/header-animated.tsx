@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { HeaderContent } from "@/components/header/header-content";
 import { cn } from "@/lib/utils";
 import {
@@ -7,6 +6,7 @@ import {
 	useMotionValueEvent,
 	useScroll,
 } from "motion/react";
+import { useState } from "react";
 
 export function HeaderAnimated() {
 	const [visible, setVisible] = useState(false);

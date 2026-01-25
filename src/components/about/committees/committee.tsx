@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { useEffect, useRef, useState } from "react";
 
 export function Committee({
 	name,
@@ -35,7 +35,7 @@ export function Committee({
 		checkOverflow();
 		window.addEventListener("resize", checkOverflow);
 		return () => window.removeEventListener("resize", checkOverflow);
-	}, [members, showMore]);
+	}, []);
 
 	return (
 		<div className="flex h-full flex-col justify-between space-y-4">
@@ -55,7 +55,7 @@ export function Committee({
 						src={image}
 						width={800}
 						height={450}
-						alt={`Image of the ${name} committee`}
+						alt={`${name} committee`}
 					/>
 				</div>
 

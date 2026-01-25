@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useCallback, useEffect, useState } from "react";
 import { LANDING_EVENTS_DATA } from "@/components/landing/events/landing-events-data";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
+import React, { useCallback, useEffect, useState } from "react";
 
 export const LandingEventsCards = ({
 	direction = "left",
@@ -89,7 +90,7 @@ export const LandingEventsCards = ({
 			>
 				{LANDING_EVENTS_DATA.map((item) => (
 					<li key={item.title} className="relative list-none">
-						<img
+						<Image
 							src={`/assets/landing/${item.src}`}
 							alt={item.title}
 							width={450}

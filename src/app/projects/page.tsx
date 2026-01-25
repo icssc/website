@@ -25,7 +25,7 @@ function Subtitle() {
 			<a
 				href="https://www.github.com/icssc"
 				target="_blank"
-				referrerPolicy="no-referrer"
+				rel="noopener noreferrer"
 			>
 				Github
 			</a>

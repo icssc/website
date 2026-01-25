@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { PAST_BOARD_INFO } from "@/components/board/past-board-info";
 import { SectionContainer } from "@/components/shared/section-container";
 import { SectionHeading } from "@/components/shared/section-heading";
@@ -8,6 +7,7 @@ import {
 	AccordionItem,
 	AccordionTrigger,
 } from "@/components/ui/accordion";
+import Image from "next/image";
 
 export function PastBoard() {
 	return (

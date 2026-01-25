@@ -1,12 +1,12 @@
 "use client";
 
+import { motion } from "framer-motion";
+import { ClockIcon, MapPinIcon } from "lucide-react";
 import { SectionHeading } from "../shared/section-heading";
 import {
 	BIT_AND_BYTES_EVENTS,
 	type BitsAndBytesEvent,
 } from "./bits-and-bytes-event-data";
-import { ClockIcon, MapPinIcon } from "lucide-react";
-import { motion } from "framer-motion";
 
 const itemVariants = {
 	hidden: { opacity: 0, y: 16 },

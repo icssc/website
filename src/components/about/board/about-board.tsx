@@ -19,7 +19,7 @@ export function AboutBoard() {
 				<a
 					href="https://docs.google.com/document/d/e/2PACX-1vRyMWoGcQdoROu6-NhLiUrv4oAc1Bj-ixiVfBYGGRax6U4XGaAsePzQ4tXyiVoxBFITMM5Na_DeA_74/pub"
 					target="_blank"
-					referrerPolicy="no-referrer"
+					rel="noopener noreferrer"
 				>
 					our constitution
 				</a>
