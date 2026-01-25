@@ -28,7 +28,7 @@ export const LANDING_EVENTS_DATA: LandingEvent[] = [
         year: 2025
     },
     {
-        src: "ics-prom.png", 
+        src: "ics-prom.jpg",
         title: "ICS Prom",
         year: 2025
     },
