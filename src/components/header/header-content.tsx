@@ -4,7 +4,13 @@ import { NAV_DATA } from "@/components/header/nav-data";
 import { cn } from "@/lib/utils";
 import { ChevronDown } from "lucide-react";
 
-export function HeaderContent() {
+type HeaderContentProps = {
+	isDarkBackground?: boolean;
+};
+
+export function HeaderContent({
+	isDarkBackground = false,
+}: HeaderContentProps) {
 	const pathname = usePathname();
 
 	return (
@@ -36,21 +42,27 @@ export function HeaderContent() {
 								<span className="text-lg">{item.name}</span>
 								<ChevronDown className="size-4 transition-transform group-hover:rotate-180" />
 							</span>
-							<div className="pointer-events-none absolute left-1/2 top-full -translate-x-1/2 pt-1 opacity-0 transition-opacity group-hover:pointer-events-auto group-hover:opacity-100">
-								{item.children.map((child) => (
-									<a
-										key={child.link}
-										href={child.link}
-										className={cn(
-											"block whitespace-nowrap text-lg no-underline transition-all",
-											pathname === child.link
-												? "font-medium text-ic-pink"
-												: "hover:text-ic-pink",
-										)}
-									>
-										{child.name}
-									</a>
-								))}
+							<div className="pointer-events-none absolute left-1/2 top-full -translate-x-1/2 pt-2 opacity-0 transition-opacity group-hover:pointer-events-auto group-hover:opacity-100">
+								<div
+									className={cn(
+										isDarkBackground &&
+											"rounded-md bg-ic-black px-4 py-2 shadow-lg",
+									)}
+								>
+									{item.children.map((child) => (
+										<a
+											key={child.link}
+											href={child.link}
+											className={cn(
+												"block whitespace-nowrap text-lg no-underline transition-all hover:text-ic-pink",
+												isDarkBackground && "text-ic-white",
+												pathname === child.link && "font-medium text-ic-pink",
+											)}
+										>
+											{child.name}
+										</a>
+									))}
+								</div>
 							</div>
 						</div>
 					) : (

@@ -49,7 +49,7 @@ export function HeaderAnimated() {
 					"mx-auto",
 				)}
 			>
-				<HeaderContent />
+				<HeaderContent isDarkBackground={true} />
 			</motion.div>
 		</AnimatePresence>
 	);
