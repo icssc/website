@@ -49,11 +49,7 @@ export function LandingProjectsGrid() {
 									<p>{project.name}</p>
 								</div>
 
-								<div
-									className={cn(
-										"text-pretty text-base leading-tight text-ic-muted",
-									)}
-								>
+								<div className={cn("text-pretty text-base text-ic-muted")}>
 									{project.description}
 								</div>
 							</div>

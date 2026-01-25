@@ -20,7 +20,7 @@ export function EventsUpcomingEvents() {
 				/>
 
 				{/* This is stolen from SectionHeading */}
-				<p className="text-pretty pt-2 text-lg leading-tight text-ic-muted lg:text-xl">
+				<p className="text-pretty pt-2 text-lg text-ic-muted lg:text-xl">
 					<button
 						type="button"
 						className="scroll-smooth text-ic-muted underline hover:opacity-80"

@@ -42,9 +42,7 @@ export function Committee({
 			<div className="space-y-4">
 				<div className="space-y-1">
 					<p className="text-2xl font-semibold lg:text-3xl">{name}</p>
-					<p className="text-pretty leading-tight text-ic-muted">
-						{description}
-					</p>
+					<p className="text-pretty text-ic-muted">{description}</p>
 				</div>
 			</div>
 

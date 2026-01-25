@@ -71,6 +71,9 @@
 	body {
 		@apply bg-background text-foreground text-ic-black;
 	}
+	p {
+		line-height: 1.6 !important;
+	}
 	a {
 		@apply underline underline-offset-2;
 	}

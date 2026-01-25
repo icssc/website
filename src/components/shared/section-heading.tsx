@@ -28,7 +28,7 @@ export function SectionHeading({
 			{subtitle ? (
 				<p
 					className={cn(
-						"text-pretty text-lg leading-tight text-ic-muted lg:text-xl",
+						"text-pretty text-lg text-ic-muted lg:text-xl",
 						subtitleClassName,
 					)}
 				>

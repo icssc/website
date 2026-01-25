@@ -77,11 +77,7 @@ export function ProjectsGrid() {
 									<SiGithub className="size-5" />
 								</a>
 							</div>
-							<div
-								className={cn(
-									"text-pretty text-base leading-tight text-ic-muted",
-								)}
-							>
+							<div className={cn("text-pretty text-base text-ic-muted")}>
 								{project.description}
 							</div>
 						</div>

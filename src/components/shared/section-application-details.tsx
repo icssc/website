@@ -17,7 +17,7 @@ export function SectionApplicationDetails({
 	return (
 		<p
 			className={cn(
-				"text-pretty py-4 font-semibold leading-tight text-ic-muted lg:text-xl",
+				"text-pretty py-4 font-semibold text-ic-muted lg:text-xl",
 				className,
 			)}
 		>
