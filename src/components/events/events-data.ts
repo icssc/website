@@ -9,6 +9,70 @@ type Event = {
 
 export const EVENTS_DATA: Event[] = [
 	{
+		src: "event_family-feud.png",
+		title: "ICS Family Feud",
+		time: "2026-03-04T19:00",
+		location: "DBH 6011",
+		description:
+			"We asked 85 ICS students...the top answers are on the board. Join us for ICS Family Feud, our last general meeting of the quarter, hosted by our very own local Steve Harvey! Teams will go head-to-head to guess the most popular answers to ICS-related questions. Get ready for a fun night of friendly competition, fast buzzers, and full game show energy. Survey says...we hope to see you there!",
+	},
+	{
+		src: "event_research-panel.png",
+		title: "Research Panel",
+		time: "2026-02-25T19:00",
+		location: "DBH 6011",
+		description:
+			"Join us for a research panel featuring faculty members and current graduate students as they share insights into their research, academic journeys, and what research looks like at different stages of higher education. Panelists will discuss how they got involved in research, what they look for in undergraduate researchers, and practical steps you can take to get started.",
+	},
+	{
+		src: "event_ics-club-fair.png",
+		title: "ICS Club Fair",
+		time: "2026-02-18T19:00",
+		location: "DBH 6011",
+		description:
+			"It's never too late to get involved and connect with the ICS community! Whether you're joining your first club or looking to get more involved, stop by the ICS Club Fair to explore and learn about 14 different clubs! Participating clubs include: ACM, AI, BiT, Blockchain, CareTech, CTC, Cyber, Data, Design, Hack, ICSSC, QC, VGDC, and WICS.d",
+	},
+	{
+		src: "event_corporate-tour-google.png",
+		title: "Google Corporate Tour",
+		time: "2026-02-27T13:00",
+		location: "Google LA",
+		description:
+			"Our corporate tour at Google in LA! The tour will consist of insights from software engineers and product managers, conversations with former interns, and an interactive Q&A session. This is a great opportunity to learn about career paths at Google and connect with industry professionals.",
+	},
+	{
+		src: "event_braingames-2026.png",
+		title: "Brain Games",
+		time: "2026-02-21T11:00",
+		location: "Doheny Beach ABCD",
+		description:
+			"ICSSC proudly presents Brain Games, our social competition featuring a variety of fun puzzles and games! Teams of 2-4 people are challenged to use creativity and logic to solve challenges while making new friends. This year, our games include recreation station, black box testing, wiki-racing, and code blocks. Join us for exciting games, a free catered lunch, and $200 worth of prizes for the top three teams!",
+	},
+	{
+		src: "event_designer-developer-collaboration-workshop.png",
+		title: "How Designers & Developers Collaborate w/ DAUCI",
+		time: "2026-02-11T17:00",
+		location: "SE2 1304",
+		description:
+			"In collaboration with Design at UCI, this joint workshop will walk through the workflow between designers and developers, highlighting where they overlap and differ, how to communicate design decisions to engineers, and best practices for collaboration. Bring your laptop for an interactive activity on Figma!",
+	},
+	{
+		src: "event_browser-extension-workshop.png",
+		title: "Browser Extensions 101",
+		time: "2026-02-04T19:00",
+		location: "DBH 6011",
+		description:
+			"Ever wondered how your ad blocker or password manager works? Or thought about making your own extension? Join us for Browser Extensions 101, where you'll learn the basics of building one yourself. No prior experience required, just curiosity and interest!",
+	},
+	{
+		src: "event_sip-n-scribble.png",
+		title: "Sip & Scribble",
+		time: "2026-01-28T19:00",
+		location: "DBH 6011",
+		description:
+			"Get into the winter quarter vibe with our free hot cocoa bar (with toppings!) and team up with friends to play Pictionary: Computer Science Edition!",
+	},
+	{
 		src: "event_mock-interview-2.png",
 		title: "Mock Interview Part 2",
 		time: "2026-01-21T19:00",
