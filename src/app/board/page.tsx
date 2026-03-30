@@ -1,4 +1,5 @@
 import { BOARD_INFO, type BoardMember } from "@/components/board/board-info";
+import { Candidates } from "@/components/board/candidates";
 import { PastBoard } from "@/components/board/past-board";
 import { PageContainer } from "@/components/shared/page-container";
 import { PageHeading } from "@/components/shared/page-heading";
@@ -12,6 +13,8 @@ export default function Page() {
 				title="Our Board"
 				subtitle="ICSSC board members help make our events and initiatives possible. This page recognizes board members past and present."
 			/>
+
+			<Candidates />
 
 			<SectionContainer className="space-y-8 px-0 lg:px-0">
 				<SectionHeading title="2025-2026" />
