@@ -87,7 +87,7 @@ function CandidateCard({ candidate }: { candidate: Candidate }) {
 export function Candidates() {
 	return (
 		<SectionContainer className="space-y-8 px-0 lg:px-0">
-			<SectionHeading title="2025-2026 Candidates" />
+			<SectionHeading title="2026-2027 Executive Candidates" />
 
 			<div className="flex flex-wrap justify-center gap-8 lg:gap-12">
 				{CANDIDATES.map((c) => (
