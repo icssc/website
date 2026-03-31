@@ -11,7 +11,7 @@ export const CANDIDATES: Candidate[] = [
 		name: "Pranavi Gollanapalli",
 		position: "Co-President",
 		runningMate: "Jeremiah Soe",
-		image: "/assets/board/2026/candidates/pranavi-gollanapalli.png",
+		image: "/assets/board/2026/candidates/pranavi-gollanapalli.jpg",
 		statement:
 			"Hi everyone! My name is Pranavi, and I'm a 3rd-year CS and BIM major. I was formerly part of the PR committee and I currently serve as the External Vice President of ICSSC!\n\nOver the last year, I've had the privilege to lead events like the ICS Bonfire and Club Fair, be a mentor in the Bits & Bytes program, and most importantly, be a friend to the many incredible people who make ICSSC what it is today. Like many, I joined this club to meet new people and get ahead in my career—but as I approach my last year, I've realized this club has given me far more than I ever expected. Through the last 3 years in ICSSC, I've found my closest friends, mentors, tutors, professors, and a true sense of community.\n\nAs co-presidents, Jeremiah and I hope to give back by creating the same experience we had with ICSSC to the current and incoming students of ICS—one where everyone feels supported, inspired, and empowered to grow socially and technically amongst their friends. Looking ahead, we envision ICSSC as more than just a club or student council, but as the cornerstone of student success in ICS.\n\nWe hope we have your vote so we can bring you even more events, opportunities, and memories in the years to come! :))",
 	},
@@ -33,7 +33,7 @@ export const CANDIDATES: Candidate[] = [
 	{
 		name: "Grace Yan",
 		position: "External Vice President",
-		image: "/assets/board/2026/candidates/grace-yan.png",
+		image: "/assets/board/2026/candidates/grace-yan.jpg",
 		statement:
 			"Hi! I'm Grace, a 2nd year CS major. I've been a developer on the AntAlmanac team for 2 years, and I'd like to run for EVP to create more inter-club events and opportunities for people to connect with other clubs and bring the ICS community closer together.",
 	},
