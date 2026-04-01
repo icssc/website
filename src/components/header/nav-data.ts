@@ -7,6 +7,7 @@ type NavItem = {
 	link?: string;
 	name: string;
 	children?: NavSubItem[];
+	notify?: string;
 };
 
 export const NAV_DATA: NavItem[] = [
@@ -17,6 +18,7 @@ export const NAV_DATA: NavItem[] = [
 	{
 		link: "/board",
 		name: "Board",
+		notify: "See our 26-27 Exec Candidates!",
 	},
 	{
 		link: "/events",

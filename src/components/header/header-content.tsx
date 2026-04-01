@@ -1,5 +1,6 @@
 import { MobileNav } from "@/components/header/mobile-nav";
 import { NAV_DATA } from "@/components/header/nav-data";
+import { useNavNotifyDismissed } from "@/components/header/use-nav-notify";
 import { cn } from "@/lib/utils";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
@@ -13,6 +14,7 @@ export function HeaderContent({
 	isDarkBackground = false,
 }: HeaderContentProps) {
 	const pathname = usePathname();
+	const boardNotifyDismissed = useNavNotifyDismissed("/board");
 
 	return (
 		<div className="mx-auto flex max-w-screen-3xl items-center justify-between px-8 lg:px-16">
@@ -71,11 +73,22 @@ export function HeaderContent({
 							key={item.link}
 							href={item.link}
 							className={cn(
-								"relative flex items-center no-underline transition-all hover:text-ic-pink",
+								"group relative flex items-center no-underline transition-all hover:text-ic-pink",
 								pathname === item.link && "font-medium text-ic-pink",
 							)}
 						>
 							<span className="text-lg">{item.name}</span>
+							{item.notify && !boardNotifyDismissed && (
+								<>
+									<span className="absolute -right-2.5 -top-0.5 flex size-2">
+										<span className="absolute size-full animate-ping rounded-full bg-red-400 opacity-75" />
+										<span className="relative size-2 rounded-full bg-red-500" />
+									</span>
+									<span className="pointer-events-none absolute left-1/2 top-full mt-2 -translate-x-1/2 whitespace-nowrap rounded-md bg-ic-black px-3 py-1.5 text-xs font-medium text-white opacity-0 transition-opacity group-hover:opacity-100">
+										{item.notify}
+									</span>
+								</>
+							)}
 						</a>
 					),
 				)}

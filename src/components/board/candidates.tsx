@@ -63,7 +63,7 @@ function CandidateCard({ candidate }: { candidate: Candidate }) {
 								alt={candidate.name}
 								width={200}
 								height={200}
-								className="h-48 w-48 shrink-0 self-center rounded-md object-cover shadow-lg sm:self-start"
+								className="size-48 shrink-0 self-center rounded-md object-cover shadow-lg sm:self-start"
 							/>
 						)}
 						<div className="space-y-3">

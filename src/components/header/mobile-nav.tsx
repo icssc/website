@@ -1,4 +1,5 @@
 import { NAV_DATA } from "@/components/header/nav-data";
+import { useNavNotifyDismissed } from "@/components/header/use-nav-notify";
 import { Button } from "@/components/ui/button";
 import {
 	Dialog,
@@ -17,6 +18,7 @@ export function MobileNav() {
 	const pathname = usePathname();
 	const [open, setOpen] = useState(false);
 	const [expandedItems, setExpandedItems] = useState<string[]>([]);
+	const boardNotifyDismissed = useNavNotifyDismissed("/board");
 
 	const toggleMenu = () => {
 		setOpen((prev) => !prev);
@@ -118,12 +120,25 @@ export function MobileNav() {
 								key={item.link}
 								href={item.link}
 								className={cn(
-									"relative flex items-center space-x-2 text-ic-white no-underline transition-all hover:text-ic-pink",
+									"relative flex flex-col items-center text-ic-white no-underline transition-all hover:text-ic-pink",
 									pathname === item.link && "font-medium text-ic-pink",
 								)}
 								onClick={toggleMenu}
 							>
-								<span className="text-center text-2xl">{item.name}</span>
+								<span className="relative text-center text-2xl">
+									{item.name}
+									{item.notify && !boardNotifyDismissed && (
+										<span className="absolute -right-3 -top-0.5 flex size-2.5">
+											<span className="absolute size-full animate-ping rounded-full bg-red-400 opacity-75" />
+											<span className="relative size-2.5 rounded-full bg-red-500" />
+										</span>
+									)}
+								</span>
+								{item.notify && !boardNotifyDismissed && (
+									<span className="mt-1 text-xs font-medium text-red-400">
+										{item.notify}
+									</span>
+								)}
 							</a>
 						),
 					)}
