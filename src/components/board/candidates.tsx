@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { CANDIDATES, type Candidate } from "@/components/board/candidate-info";
-import { VoteButton } from "@/components/board/vote-button";
 import { SectionContainer } from "@/components/shared/section-container";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
@@ -88,13 +87,12 @@ function CandidateCard({ candidate }: { candidate: Candidate }) {
 export function Candidates() {
 	return (
 		<SectionContainer className="space-y-8 px-0 lg:px-0">
-			<SectionHeading title="2026-2027 Executive Candidates" />
+			<SectionHeading title="2026-2027 Incoming Executive Board" />
 			<div className="flex flex-wrap justify-center gap-8 lg:gap-12">
 				{CANDIDATES.map((c) => (
 					<CandidateCard key={c.name} candidate={c} />
 				))}
 			</div>
-			<VoteButton />
 		</SectionContainer>
 	);
 }

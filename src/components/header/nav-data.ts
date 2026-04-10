@@ -18,7 +18,7 @@ export const NAV_DATA: NavItem[] = [
 	{
 		link: "/board",
 		name: "Board",
-		notify: "See our 26-27 Exec Candidates!",
+		notify: "Meet the incoming executive board!",
 	},
 	{
 		link: "/events",
