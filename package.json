@@ -36,6 +36,17 @@
 		"tailwind-merge": "^2.5.4",
 		"tailwindcss-animate": "^1.0.7"
 	},
+	"pnpm": {
+		"overrides": {
+			"@opennextjs/aws": "3.4.2"
+		},
+		"onlyBuiltDependencies": [
+			"@biomejs/biome",
+			"esbuild",
+			"sharp",
+			"workerd"
+		]
+	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
 		"@opennextjs/aws": "^3.4.2",
