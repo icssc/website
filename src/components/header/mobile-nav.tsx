@@ -116,15 +116,17 @@ export function MobileNav() {
 								)}
 							</div>
 						) : (
-							<a
-								key={item.link}
-								href={item.link}
-								className={cn(
-									"relative flex flex-col items-center text-ic-white no-underline transition-all hover:text-ic-pink",
-									pathname === item.link && "font-medium text-ic-pink",
-								)}
-								onClick={toggleMenu}
-							>
+						<a
+							key={item.link}
+							href={item.link}
+							target={item.link?.startsWith("http") ? "_blank" : undefined}
+							rel={item.link?.startsWith("http") ? "noopener noreferrer" : undefined}
+							className={cn(
+								"relative flex flex-col items-center text-ic-white no-underline transition-all hover:text-ic-pink",
+								pathname === item.link && "font-medium text-ic-pink",
+							)}
+							onClick={toggleMenu}
+						>
 								<span className="relative text-center text-2xl">
 									{item.name}
 									{item.notify && !boardNotifyDismissed && (

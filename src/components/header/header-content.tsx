@@ -69,14 +69,16 @@ export function HeaderContent({
 							</div>
 						</div>
 					) : (
-						<a
-							key={item.link}
-							href={item.link}
-							className={cn(
-								"group relative flex items-center no-underline transition-all hover:text-ic-pink",
-								pathname === item.link && "font-medium text-ic-pink",
-							)}
-						>
+					<a
+						key={item.link}
+						href={item.link}
+						target={item.link?.startsWith("http") ? "_blank" : undefined}
+						rel={item.link?.startsWith("http") ? "noopener noreferrer" : undefined}
+						className={cn(
+							"group relative flex items-center no-underline transition-all hover:text-ic-pink",
+							pathname === item.link && "font-medium text-ic-pink",
+						)}
+					>
 							<span className="text-lg">{item.name}</span>
 							{item.notify && !boardNotifyDismissed && (
 								<>

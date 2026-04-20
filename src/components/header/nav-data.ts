@@ -29,6 +29,10 @@ export const NAV_DATA: NavItem[] = [
 		name: "Projects",
 	},
 	{
+		link: "https://icssc.link/newsletter",
+		name: "Newsletter",
+	},
+	{
 		name: "Sponsors",
 		children: [
 			{
