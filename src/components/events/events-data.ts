@@ -9,6 +9,46 @@ type Event = {
 
 export const EVENTS_DATA: Event[] = [
 	{
+		src: "event_financial-literacy-workshop-2026.png",
+		title: "Financial Literacy Workshop",
+		time: "2026-04-22T19:00",
+		location: "DBH 6011",
+		description:
+			"Learn how to take control of your money and reach your financial goals at our Financial Literacy Workshop! Our guest speaker from Fidelity will discuss how to create a realistic budget, what steps you can take to boost your credit score, and how investing can help you build financial independence. We'll end with a game and prize, but everyone will gain priceless financial advice!",
+	},
+	{
+		src: "event_waddle-and-wildflowers-2026.png",
+		title: "Waddle & Wildflowers",
+		time: "2026-04-15T19:00",
+		location: "DBH 6011",
+		description:
+			"Florals, for spring? Join us for Waddle & Wildflowers to craft groundbreaking pipe cleaner bouquets and style the next runway rubber duck for rubber duck debugging! That's all.",
+	},
+	{
+		src: "event_ice-skating-2026.png",
+		title: "Ice Skating Fundraiser",
+		time: "2026-04-12T14:00",
+		location: "Great Park Ice",
+		description:
+			"Are you freezing outside? Does your skin feel tight? Is your coat inside? Join CareTech, Cyber, ICSSC, and U See Eyes for a joint ice skating fundraiser at Great Park Ice!",
+	},
+	{
+		src: "event_egg-hunt-debugging-2026.png",
+		title: "Egg Hunt Debugging",
+		time: "2026-04-08T19:00",
+		location: "DBH 6011",
+		description:
+			"Join us for Egg Hunt Debugging, where the classic egg hunt meets code, and pastels meet programming! Search for eggs hidden in DBH filled with sweet code snippets, then piece them together to solve the problem. Come test your egg hunting and debugging skills with a little spring madness!",
+	},
+	{
+		src: "event_board-election-speeches-2026.png",
+		title: "Executive Candidate Speeches",
+		time: "2026-04-01T19:00",
+		location: "DBH 6011",
+		description:
+			"It's the start of Spring Quarter and election season for next year's board! Join us for Executive Candidate Speeches to hear each candidate's vision and goals for President, Internal Vice President, and External Vice President. Voting will open immediately after, so be sure to make your voice count!",
+	},
+	{
 		src: "event_family-feud.png",
 		title: "ICS Family Feud",
 		time: "2026-03-04T19:00",
