@@ -9,11 +9,16 @@ export function useNavNotifyDismissed(path: string) {
 
 	useEffect(() => {
 		const key = `${STORAGE_KEY}:${path}`;
-		if (pathname === path) {
-			localStorage.setItem(key, "1");
-			setDismissed(true);
-		} else {
-			setDismissed(localStorage.getItem(key) === "1");
+		try {
+			if (pathname === path) {
+				localStorage.setItem(key, "1");
+				setDismissed(true);
+			} else {
+				setDismissed(localStorage.getItem(key) === "1");
+			}
+		} catch {
+			// Fallback to showing notification when storage is unavailable.
+			setDismissed(pathname === path);
 		}
 	}, [pathname, path]);
 

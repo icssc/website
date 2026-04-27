@@ -38,7 +38,6 @@ export const PROJECTS_DATA: Project[] = [
 	{
 		name: "ZotMeal",
 		githubLink: "https://github.com/icssc/ZotMeal",
-		projectLink: "",
 		description: "UCI Dining Hall menus and information",
 		image: "/projects/zotmeal.jpg",
 	},

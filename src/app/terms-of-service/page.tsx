@@ -794,11 +794,11 @@ export default function Page() {
 				Policy:{" "}
 				<strong>
 					<a
-						href="https://studentcouncil.ics.uci.edu/privacy-policy"
+						href="https://www.icssc.club/privacy-policy"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						https://studentcouncil.ics.uci.edu/privacy-policy
+						https://www.icssc.club/privacy-policy
 					</a>
 				</strong>
 				. By using the Services, you agree to be bound by our Privacy Policy,
@@ -1114,11 +1114,11 @@ export default function Page() {
 				us at <a href="mailto:icssc@uci.edu">icssc@uci.edu</a>. If you have any
 				questions regarding privacy, please read our Privacy Policy:{" "}
 				<a
-					href="https://studentcouncil.ics.uci.edu/privacy-policy"
+					href="https://www.icssc.club/privacy-policy"
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					https://studentcouncil.ics.uci.edu/privacy-policy
+					https://www.icssc.club/privacy-policy
 				</a>
 				.
 			</p>

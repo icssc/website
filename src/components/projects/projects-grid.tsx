@@ -38,25 +38,32 @@ export function ProjectsGrid() {
 						}}
 					>
 						<div className="group aspect-video overflow-hidden rounded-t-md bg-neutral-800">
-							<a
-								href={project.projectLink ?? ""}
-								className={cn(
-									project.projectLink
-										? "peer cursor-pointer"
-										: "pointer-events-none",
-									"flex h-full",
-								)}
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<img
-									src={`/assets${project.image}`}
-									alt={project.name}
-									width={800}
-									height={800}
-									className={cn("h-full w-full object-cover object-top")}
-								/>
-							</a>
+							{project.projectLink ? (
+								<a
+									href={project.projectLink}
+									className="peer flex h-full cursor-pointer"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<img
+										src={`/assets${project.image}`}
+										alt={project.name}
+										width={800}
+										height={800}
+										className={cn("h-full w-full object-cover object-top")}
+									/>
+								</a>
+							) : (
+								<div className="flex h-full">
+									<img
+										src={`/assets${project.image}`}
+										alt={project.name}
+										width={800}
+										height={800}
+										className={cn("h-full w-full object-cover object-top")}
+									/>
+								</div>
+							)}
 						</div>
 
 						<div>
