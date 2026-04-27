@@ -54,7 +54,7 @@ export function ProjectsGrid() {
 									/>
 								</a>
 							) : (
-								<div className="flex h-full" aria-hidden="true">
+								<div className="flex h-full">
 									<img
 										src={`/assets${project.image}`}
 										alt={project.name}
