@@ -9,8 +9,8 @@ import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 function StatementText({ text }: { text: string }) {
 	return (
 		<>
-			{text.split("\n\n").map((p) => (
-				<p key={p.slice(0, 40)}>{p}</p>
+			{text.split("\n\n").map((paragraph, index) => (
+				<p key={`${index}-${paragraph.slice(0, 40)}`}>{paragraph}</p>
 			))}
 		</>
 	);
