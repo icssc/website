@@ -7,82 +7,83 @@ export type BoardMember = {
 
 export const BOARD_INFO: BoardMember[] = [
 	{
-		name: "Anna Lee",
-		position: "Co-President",
-		email: "chaeeul3@uci.edu",
-		image: "/assets/board/2025/anna-lee.jpg",
-	},
-	{
-		name: "Ashley Zhou",
-		position: "Co-President",
-		email: "ashlejz1@uci.edu",
-		image: "/assets/board/2025/ashley-zhou.png",
-	},
-	{
-		name: "Ethan Wang",
-		position: "Internal Vice President",
-		email: "ethannw@uci.edu",
-		image: "/assets/board/2025/ethan-wang.jpg",
-	},
-	{
 		name: "Pranavi Gollanapalli",
-		position: "External Vice President",
-		email: "pgollana@uci.edu",
-		image: "/assets/board/2025/pranavi-gollanapalli.png",
-	},
-	{
-		name: "Sarah Son",
-		position: "Treasurer",
-		image: "/assets/board/2025/sarah-son.jpg",
+		position: "Co-President",
+		image: "/assets/board/2026/pranavi-gollanapalli.png",
 	},
 	{
 		name: "Jeremiah Soe",
+		position: "Co-President",
+		image: "/assets/board/2026/jeremiah-soe.jpg",
+	},
+	{
+		name: "Anna Chen",
+		position: "Internal Vice President",
+		image: "/assets/board/2026/anna-chen.jpg",
+	},
+	{
+		name: "Grace Yan",
+		position: "External Vice President",
+		image: "/assets/board/2026/grace-yan.jpg",
+	},
+	{
+		name: "Bharathi Kaliraj Shanmugapriya",
 		position: "Secretary",
-		image: "/assets/board/2025/jeremiah-soe.jpg",
+		image: "/assets/board/2026/bharathi-kaliraj.jpg",
 	},
 	{
-		name: "Matthew Gray",
-		position: "Events Co-Chair",
-		image: "/assets/board/2025/matt-gray.jpg",
+		name: "Christy Lee",
+		position: "Treasurer",
+		image: "/assets/board/2026/christy-lee.jpg",
 	},
 	{
-		name: "Audrey Lu",
-		position: "Events Co-Chair",
-		image: "/assets/board/2025/audrey-lu.jpg",
-	},
-	{
-		name: "Andrew Wang",
-		position: "Projects Co-Chair",
-		image: "/assets/board/2025/andrew-wang.png",
-	},
-	{
-		name: "Kevin Wu",
-		position: "Projects Co-Chair",
-		image: "/assets/board/2025/kevin-wu.jpg",
-	},
-	{
-		name: "Andrew Kim",
-		position: "Public Relations Chair",
-		image: "/assets/board/2025/andrew-kim.jpg",
-	},
-	{
-		name: "Li Keller",
-		position: "Corporate Outreach Chair",
-		image: "/assets/board/2025/li-keller.jpg",
-	},
-	{
-		name: "Himal Malik",
-		position: "Academic and Alumni Affairs Chair",
-		image: "/assets/board/2025/himal-malik.jpg",
-	},
-	{
-		name: "Nico Hartman",
-		position: "Graphics Chair",
-		image: "/assets/board/2025/nico-hartman.png",
-	},
-	{
-		name: "Jay Wu",
+		name: "Ethan Chao",
 		position: "Webmaster",
-		image: "/assets/board/2025/jay-wu.png",
+		image: "/assets/board/2026/ethan-chao.jpg",
+	},
+	{
+		name: "Molly Neary",
+		position: "Academic and Alumni Affairs Co-Chair",
+		image: "/assets/board/2026/molly-neary.jpeg",
+	},
+	{
+		name: "Kaylie Gupta",
+		position: "Academic and Alumni Affairs Co-Chair",
+		image: "/assets/board/2026/kaylie-gupta.jpeg",
+	},
+	{
+		name: "Vaishnavi Raghu",
+		position: "Corporate Outreach Chair",
+		image: "/assets/board/2026/vaishnavi-raghu.JPG",
+	},
+	{
+		name: "Dominic Hubschmitt",
+		position: "Events Co-Chair",
+		image: "/assets/board/2026/dom-hubschmitt.jpg",
+	},
+	{
+		name: "Julianna Alderete",
+		position: "Events Co-Chair",
+		image: "/assets/board/2026/julianna-alderete.jpg",
+	},
+	{
+		name: "Anna Li",
+		position: "Graphics Co-Chair",
+		image: "/assets/board/2026/anna-li.jpg",
+	},
+	{
+		name: "Jordan Shin",
+		position: "Graphics Co-Chair",
+		image: "/assets/board/2026/jordan-shin.jpg",
+	},
+	{
+		name: "Caden Lee",
+		position: "Projects Chair",
+		image: "/assets/board/2026/caden-lee.jpg",
+	},
+	{
+		name: "Kayla Zhang",
+		position: "Public Relations Chair",
+		image: "/assets/board/2026/kayla-zhang.jpg",
 	},
 ];

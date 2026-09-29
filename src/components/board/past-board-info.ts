@@ -5,6 +5,89 @@ type Board = {
 
 export const PAST_BOARD_INFO: Board[] = [
 	{
+		year: "2025-2026",
+		positions: [
+			{
+				title: "Co-President",
+				name: "Anna Lee",
+				image: "/assets/board/2025/anna-lee.jpg",
+			},
+			{
+				title: "Co-President",
+				name: "Ashley Zhou",
+				image: "/assets/board/2025/ashley-zhou.png",
+			},
+			{
+				title: "Internal Vice President",
+				name: "Ethan Wang",
+				image: "/assets/board/2025/ethan-wang.jpg",
+			},
+			{
+				title: "External Vice President",
+				name: "Pranavi Gollanapalli",
+				image: "/assets/board/2025/pranavi-gollanapalli.png",
+			},
+			{
+				title: "Treasurer",
+				name: "Sarah Son",
+				image: "/assets/board/2025/sarah-son.JPG",
+			},
+			{
+				title: "Secretary",
+				name: "Jeremiah Soe",
+				image: "/assets/board/2025/jeremiah-soe.jpg",
+			},
+			{
+				title: "Public Relations Chair",
+				name: "Andrew Kim",
+				image: "/assets/board/2025/andrew-kim.jpg",
+			},
+			{
+				title: "Events Co-Chair",
+				name: "Matthew Gray",
+				image: "/assets/board/2025/matt-gray.JPG",
+			},
+			{
+				title: "Events Co-Chair",
+				name: "Audrey Lu",
+				image: "/assets/board/2025/audrey-lu.jpg",
+			},
+			{
+				title: "Projects Co-Chair",
+				name: "Andrew Wang",
+				image: "/assets/board/2025/andrew-wang.png",
+			},
+			{
+				title: "Projects Co-Chair",
+				name: "Kevin Wu",
+				image: "/assets/board/2025/kevin-wu.jpg",
+			},
+			{
+				title: "Corporate Outreach Chair",
+				name: "Li Keller",
+				image: "/assets/board/2025/li-keller.jpg",
+			},
+			{
+				title: "Academic and Alumni Affairs Chair",
+				name: "Himal Malik",
+				image: "/assets/board/2025/himal-malik.jpg",
+			},
+			{
+				title: "Graphics Chair",
+				name: "Nico Hartman",
+				image: "/assets/board/2025/nico-hartman.png",
+			},
+			{
+				title: "Webmaster",
+				name: "Jay Wu",
+				image: "/assets/board/2025/jay-wu.png",
+			},
+		],
+	},
+
+
+
+	{
 		year: "2024-2025",
 		positions: [
 			{
