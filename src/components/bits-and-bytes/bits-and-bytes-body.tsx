@@ -57,7 +57,7 @@ function FeatureCard({
 						<motion.span
 							whileHover={{ scale: 1.025 }}
 							transition={{ duration: 0.2, ease: "easeOut" }}
-							className="inline-block"
+							className="inline-block underline underline-offset-4"
 						>
 							{title}
 						</motion.span>
@@ -83,7 +83,7 @@ const FEATURES: FeatureCardProps[] = [
 		description:
 			"Bytes have the opportunity to give back by being mentors, role models, and friends to their bits. Bytes are encouraged to share their professional experiences, academic advice, and social know-how!",
 		imageClassName: "-mt-8",
-		href: "https://forms.gle/dn9J7CJdZ9jggB5f6",
+		href: "https://icssc.link/bytes-apps",
 	},
 	{
 		src: "/assets/bits-and-bytes/join-a-family.png",
@@ -92,7 +92,7 @@ const FEATURES: FeatureCardProps[] = [
 		description:
 			"In a Bits & Byte Fam, there are 2 bytes with 2-6 bits each! Bytes focus on creating a great experience, Bits focus on having fun!",
 		imageClassName: "-mt-14",
-		href: "https://forms.gle/VeGZbMkWPNnko32s6",
+		href: "https://icssc.link/bits-app",
 	},
 ];
 

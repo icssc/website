@@ -40,7 +40,9 @@ export function BitsAndBytes() {
 					</div>
 
 					<div className="space-y-2 text-center">
-						<p className="text-3xl font-semibold">Become a Byte</p>
+						<Link href="https://icssc.link/bytes-apps">
+							<p className="text-3xl font-semibold">Become a Byte</p>
+						</Link>
 						<p className="text-pretty">
 							Bytes have the opportunity to give back by being mentors, role
 							models, and friends to their bits. Bytes are encouraged to share
@@ -62,7 +64,9 @@ export function BitsAndBytes() {
 					</div>
 
 					<div className="space-y-2 text-center">
+					<Link href="https://icssc.link/bytes-apps">
 						<p className="text-3xl font-semibold">Join a Family</p>
+					</Link>
 						<p className="text-pretty">
 							In a Bits &#38; Byte Fam, there are 2 bytes with 2-6 bits each!
 							Bytes focus on creating a great experience, Bits focus on having
