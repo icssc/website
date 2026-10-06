@@ -14,7 +14,7 @@ export default function Page() {
 			/>
 
 			<SectionContainer className="space-y-8 px-0 lg:px-0">
-				<SectionHeading title="2025-2026" />
+				<SectionHeading title="2026-2027" />
 				<div className="flex flex-wrap justify-center gap-12">
 					{BOARD_INFO.filter((item) => !!item.image).map(
 						({ name, position, image }: BoardMember) => (
