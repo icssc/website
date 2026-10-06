@@ -30,7 +30,7 @@ export const BIT_AND_BYTES_EVENTS: BitsAndBytesEvent[] = [
 	*/
 	{
 		title: "Bits & Bytes Group Reveal",
-		time: "2025-10-21T19:00",
+		time: "2026-10-21T19:00",
 		location: "ICS 428",
 		description:
 			"The wait is over—come find out your Bits & Bytes family for the year! Meet your bytes, celebrate with your co-bits, and team up to compete in fun activities against the other families.",

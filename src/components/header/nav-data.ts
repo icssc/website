@@ -16,9 +16,13 @@ export const NAV_DATA: NavItem[] = [
 		name: "About",
 	},
 	{
+		link: "/bits-and-bytes",
+		name: "Bits & Bytes",
+		notify: "Join Bits & Bytes!",
+	},
+	{
 		link: "/board",
 		name: "Board",
-		notify: "Meet the incoming executive board!",
 	},
 	{
 		link: "/events",
@@ -31,15 +35,6 @@ export const NAV_DATA: NavItem[] = [
 	{
 		link: "https://icssc.link/newsletter",
 		name: "Newsletter",
-	},
-	{
-		name: "Sponsors",
-		children: [
-			{
-				link: "/sponsors/aveva",
-				name: "AVEVA",
-			},
-		],
 	},
 	{
 		link: "/contact",
