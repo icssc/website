@@ -1,4 +1,4 @@
-type Event = {
+export type Event = {
 	src?: string;
 	title: string;
 	description: string;
@@ -1033,3 +1033,17 @@ export const EVENTS_DATA: Event[] = [
 		aspectRatio: "1/1",
 	},
 ];
+
+function eventTime(time: string) {
+	return new Date(time).getTime();
+}
+
+export function getUpcomingEvents(now = Date.now()) {
+	return EVENTS_DATA.filter((item) => now < eventTime(item.time)).sort(
+		(a, b) => eventTime(a.time) - eventTime(b.time),
+	);
+}
+
+export function getPastEvents(now = Date.now()) {
+	return EVENTS_DATA.filter((item) => now > eventTime(item.time));
+}

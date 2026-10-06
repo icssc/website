@@ -1,37 +1,22 @@
-"use client";
-
 import { EventCard } from "@/components/events/event-card";
-import { EVENTS_DATA } from "@/components/events/events-data";
+import type { Event } from "@/components/events/events-data";
 import { SectionContainer } from "@/components/shared/section-container";
 import { SectionHeading } from "@/components/shared/section-heading";
 
-export function EventsUpcomingEvents() {
-	const upcomingEvents = EVENTS_DATA.filter(
-		(item) => Date.now() < new Date(item.time).getTime(),
-	).sort((a, b) => new Date(a.time).getTime() - new Date(b.time).getTime());
-
-	if (!upcomingEvents.length) {
+export function EventsUpcomingEvents({ events }: { events: Event[] }) {
+	if (!events.length) {
 		return (
 			<SectionContainer className="flex flex-col justify-center md:items-center md:text-center">
-				<SectionHeading
-					title="No Upcoming Events"
-					// subtitle="Check out our social medias for updates on upcoming events!"
-					// subtitleClassName="pt-8"
-				/>
+				<SectionHeading title="No Upcoming Events" />
 
 				{/* This is stolen from SectionHeading */}
 				<p className="text-pretty pt-2 text-lg text-ic-muted lg:text-xl">
-					<button
-						type="button"
-						className="scroll-smooth text-ic-muted underline hover:opacity-80"
-						onClick={() => {
-							document
-								.getElementById("social-media")
-								?.scrollIntoView({ behavior: "smooth" });
-						}}
+					<a
+						href="#social-media"
+						className="text-ic-muted underline hover:opacity-80"
 					>
 						Check out our social medias
-					</button>{" "}
+					</a>{" "}
 					for updates on upcoming events!
 				</p>
 			</SectionContainer>
@@ -43,7 +28,7 @@ export function EventsUpcomingEvents() {
 			<SectionHeading title="Upcoming Events" />
 
 			<div className="flex flex-col items-start gap-y-12">
-				{upcomingEvents.map((event) => (
+				{events.map((event) => (
 					<EventCard
 						key={event.title + event.time}
 						{...event}

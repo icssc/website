@@ -1,6 +1,6 @@
 "use client";
 
-import { EVENTS_DATA } from "@/components/events/events-data";
+import type { Event } from "@/components/events/events-data";
 import { SectionContainer } from "@/components/shared/section-container";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { Button } from "@/components/ui/button";
@@ -28,17 +28,13 @@ function formatRelativeTime(date: Date) {
 	return `${diffSeconds} second${diffSeconds > 1 ? "s" : ""} ago`;
 }
 
-export function EventsPastEvents() {
+export function EventsPastEvents({ events }: { events: Event[] }) {
 	const [displayCount, setDisplayCount] = useState(3);
 
-	const pastEvents = EVENTS_DATA.filter(
-		(item) => Date.now() > new Date(item.time).getTime(),
-	);
-
-	const displayEvents = pastEvents.slice(0, displayCount);
+	const displayEvents = events.slice(0, displayCount);
 
 	const handleShowMore = () => {
-		setDisplayCount(Math.min(displayCount + 5, pastEvents.length));
+		setDisplayCount(Math.min(displayCount + 5, events.length));
 	};
 
 	return (
@@ -60,7 +56,7 @@ export function EventsPastEvents() {
 				))}
 			</div>
 
-			{displayCount < pastEvents.length && (
+			{displayCount < events.length && (
 				<div className="mt-8 flex items-center justify-center gap-4 text-xl text-ic-white">
 					<Button
 						variant="link"
@@ -72,7 +68,7 @@ export function EventsPastEvents() {
 					<Button
 						variant="link"
 						className="text-xl text-ic-white underline"
-						onClick={() => setDisplayCount(pastEvents.length)}
+						onClick={() => setDisplayCount(events.length)}
 					>
 						Show All
 					</Button>
