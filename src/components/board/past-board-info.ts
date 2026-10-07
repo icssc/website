@@ -30,7 +30,7 @@ export const PAST_BOARD_INFO: Board[] = [
 			{
 				title: "Treasurer",
 				name: "Sarah Son",
-				image: "/assets/board/2025/sarah-son.JPG",
+				image: "/assets/board/2025/sarah-son.png",
 			},
 			{
 				title: "Secretary",
@@ -45,7 +45,7 @@ export const PAST_BOARD_INFO: Board[] = [
 			{
 				title: "Events Co-Chair",
 				name: "Matthew Gray",
-				image: "/assets/board/2025/matt-gray.JPG",
+				image: "/assets/board/2025/matthew-gray.jpg",
 			},
 			{
 				title: "Events Co-Chair",
