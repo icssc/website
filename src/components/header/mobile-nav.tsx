@@ -20,8 +20,8 @@ export function MobileNav() {
 	const [expandedItems, setExpandedItems] = useState<string[]>([]);
 	const boardNotifyDismissed = useNavNotifyDismissed("/board");
 
-	const toggleMenu = () => {
-		setOpen((prev) => !prev);
+	const closeMenu = () => {
+		setOpen(false);
 	};
 
 	const toggleExpand = (name: string) => {
@@ -48,7 +48,7 @@ export function MobileNav() {
 	}, []);
 
 	return (
-		<Dialog open={open} onOpenChange={toggleMenu}>
+		<Dialog open={open} onOpenChange={setOpen}>
 			<DialogTrigger className="flex md:hidden" asChild>
 				<Button
 					className="size-10 p-0 hover:bg-ic-muted/10"
@@ -105,7 +105,7 @@ export function MobileNav() {
 													"relative flex items-center space-x-2 text-neutral-400 no-underline transition-all hover:text-ic-pink",
 													pathname === child.link && "font-medium text-ic-pink",
 												)}
-												onClick={toggleMenu}
+												onClick={closeMenu}
 											>
 												<span className="text-center text-xl">
 													{child.name}
@@ -125,7 +125,7 @@ export function MobileNav() {
 								"relative flex flex-col items-center text-ic-white no-underline transition-all hover:text-ic-pink",
 								pathname === item.link && "font-medium text-ic-pink",
 							)}
-							onClick={toggleMenu}
+							onClick={closeMenu}
 						>
 								<span className="relative text-center text-2xl">
 									{item.name}

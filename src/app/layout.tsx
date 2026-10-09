@@ -10,10 +10,12 @@ import { Inter } from "next/font/google";
 
 export const metadata: Metadata = {
 	title: "ICS Student Council",
-	description: "",
+	description:
+		"The ICS Student Council at UC Irvine supports students through events, projects, and community initiatives.",
 	openGraph: {
 		title: "ICS Student Council",
-		description: "",
+		description:
+			"The ICS Student Council at UC Irvine supports students through events, projects, and community initiatives.",
 		url: "https://www.icssc.club",
 		// images: [
 		//     {
