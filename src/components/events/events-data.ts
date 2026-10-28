@@ -9,6 +9,54 @@ export type Event = {
 
 export const EVENTS_DATA: Event[] = [
 	{
+		src: "event_charades-night-2026.jpg",
+		title: "Charades Night",
+		time: "2026-10-28T19:00",
+		location: "DBH 6011",
+		description:
+			"Think you can act it out without saying a word? Come join us for a fun, competitive night of charades featuring UCI/ICS, pop culture, and Halloween-themed prompts! Bring your friends, split into teams, and see who can guess the most. 🎃 There will also be candy for everyone, with extra candy for the winning team! 👻🍫",
+	},
+	{
+		src: "event_spacex-networking-2026.jpg",
+		title: "SpaceX Networking",
+		time: "2026-10-23T13:00",
+		location: "ICS 209",
+		description:
+			"Ever wondered what it’s like to work at SpaceX? Come meet Software and Electrical Engineers from SpaceX for an afternoon of networking, career insights, and candid conversations. Connect one-on-one with engineers, learn about their journeys, and get your questions answered directly by industry professionals.",
+	},
+	{
+		src: "event_networking-night-2026.jpg",
+		title: "Networking Night",
+		time: "2026-10-22T18:00",
+		location: "UCI Student Center @ Doheny Beach",
+		description:
+			"Your next career connection starts here! Want to meet tech professionals and recruiters without the awkward small talk? ICSSC and BiT’s Networking Night is bringing industry professionals straight to YOU for an evening of interactive games, speed networking, and real conversations!",
+	},
+	{
+		src: "event_resume-review-2026.jpg",
+		title: "Resume Review",
+		time: "2026-10-14T19:00",
+		location: "DBH 1600",
+		description:
+			"Join ICSSC alums and legends Kevin and Jay Wu, who’ve worked at Stripe, Google, Cloudflare, and Scale AI, for a resume workshop 📝! They’ll break down what makes a resume stand out, how to effectively communicate your experience, and the common pitfalls that can keep a strong resume from getting noticed.",
+	},
+	{
+		src: "event_meet-the-bytes-2026.jpg",
+		title: "Meet the Bytes",
+		time: "2026-10-07T19:00",
+		location: "ICS 428",
+		description:
+			"ICSSC’s year-long mentorship program pairs mentors (bytes) with small groups of new ICS students (bits) 🤖 👥. Come out and meet our Bytes this Wednesday so that you can find the Byte best fitted to support you as a Bit! 🤝 Take this chance to meet new friends and stay connected with the ICS community through events that promote academic success and community bonding.",
+	},
+	{
+		src: "event_meet-the-board-2026.jpg",
+		title: "Meet the Board & Committees",
+		time: "2026-09-30T19:00",
+		location: "DBH 6011",
+		description:
+			"It's that time of the year again for our FIRST GENERAL MEETING‼️ Want to learn more about ICSSC, its leadership, and its committees? Come out this Wednesday to meet our board members and learn how 👉YOU👈 can get involved in a committee this year! We'll be hosting a presentation on the structure of our org and offering some time to speak individually to our board members. Shortly after the meeting, we'll also be opening our committee applications for the year - don't miss it!",
+	},
+	{
 		src: "event_financial-literacy-workshop-2026.png",
 		title: "Financial Literacy Workshop",
 		time: "2026-04-22T19:00",
@@ -1038,12 +1086,21 @@ function eventTime(time: string) {
 	return new Date(time).getTime();
 }
 
+// Events stay "upcoming" until the end of the day they happen on
+function isUpcoming(time: string, now: number) {
+	const endOfDay = new Date(time);
+	endOfDay.setHours(24, 0, 0, 0);
+	return now < endOfDay.getTime();
+}
+
 export function getUpcomingEvents(now = Date.now()) {
-	return EVENTS_DATA.filter((item) => now < eventTime(item.time)).sort(
+	return EVENTS_DATA.filter((item) => isUpcoming(item.time, now)).sort(
 		(a, b) => eventTime(a.time) - eventTime(b.time),
 	);
 }
 
 export function getPastEvents(now = Date.now()) {
-	return EVENTS_DATA.filter((item) => now > eventTime(item.time));
+	return EVENTS_DATA.filter((item) => !isUpcoming(item.time, now)).sort(
+		(a, b) => eventTime(b.time) - eventTime(a.time),
+	);
 }

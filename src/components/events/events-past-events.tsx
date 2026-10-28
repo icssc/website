@@ -29,7 +29,7 @@ function formatRelativeTime(date: Date) {
 }
 
 export function EventsPastEvents({ events }: { events: Event[] }) {
-	const [displayCount, setDisplayCount] = useState(3);
+	const [displayCount, setDisplayCount] = useState(5);
 
 	const displayEvents = events.slice(0, displayCount);
 

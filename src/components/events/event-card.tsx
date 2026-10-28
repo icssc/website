@@ -48,7 +48,7 @@ export function EventCard({
 
 	return (
 		<>
-			<div className="grid grid-cols-1 gap-8 border-t-2 py-4 pt-8 md:grid-cols-5 lg:grid-cols-3">
+			<div className="grid w-full grid-cols-1 gap-8 border-t-2 py-4 pt-8 md:grid-cols-5 lg:grid-cols-3">
 				<div className="flex flex-col items-start space-y-4 md:col-span-2 lg:col-span-1 text-left">
 					<p className="text-nowrap text-xl font-bold">{formattedDate}</p>
 
