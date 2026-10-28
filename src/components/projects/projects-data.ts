@@ -8,11 +8,18 @@ type Project = {
 
 export const PROJECTS_DATA: Project[] = [
 	{
-		name: "AntAlmanac",
+		name: "AntAlmanac Scheduler",
 		githubLink: "https://github.com/icssc/AntAlmanac",
 		projectLink: "https://antalmanac.com/",
 		description: "A course exploration and scheduling tool for UCI students",
-		image: "/projects/antalmanac.jpg",
+		image: "/projects/aa-scheduler.jpg",
+	},
+		{
+		name: "AntAlmanac Planner",
+		githubLink: "https://github.com/icssc/peterportal-client",
+		projectLink: "https://peterportal.org/",
+		description: "Course discovery and planning for UCI students",
+		image: "/projects/aa-planner.jpg",
 	},
 	{
 		name: "ZotMeet",
@@ -21,15 +28,8 @@ export const PROJECTS_DATA: Project[] = [
 		description: "Time Sync & Study Room Scheduler",
 		image: "/projects/zotmeet.jpg",
 	},
+
 	/*
-	{
-		name: "PeterPortal",
-		githubLink: "https://github.com/icssc/peterportal-client",
-		projectLink: "https://peterportal.org/",
-		description: "Course discovery and planning for UCI students",
-		image: "/projects/peterportal.jpg",
-	},
-	
 	{
 		name: "Zotistics",
 		githubLink: "https://www.github.com/icssc/Zotistics-beta-23",
@@ -43,7 +43,7 @@ export const PROJECTS_DATA: Project[] = [
 		githubLink: "https://github.com/icssc/peterplate",
 		projectLink: "",
 		description: "UCI Dining Hall menus and information",
-		image: "/projects/zotmeal.jpg",
+		image: "/projects/peterplate.jpg",
 	},
 	{
 		name: "Anteater API",
