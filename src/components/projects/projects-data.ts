@@ -15,12 +15,13 @@ export const PROJECTS_DATA: Project[] = [
 		image: "/projects/antalmanac.jpg",
 	},
 	{
-		name: "Anteater API",
-		githubLink: "https://github.com/icssc/anteater-api",
-		projectLink: "https://anteaterapi.com/reference",
-		description: "API providing easy access to public data from UC Irvine",
-		image: "/projects/aapi.jpg",
+		name: "ZotMeet",
+		githubLink: "https://www.github.com/icssc/ZotMeet",
+		projectLink: "https://zotmeet.com/",
+		description: "Time Sync & Study Room Scheduler",
+		image: "/projects/zotmeet.jpg",
 	},
+	/*
 	{
 		name: "PeterPortal",
 		githubLink: "https://github.com/icssc/peterportal-client",
@@ -28,6 +29,7 @@ export const PROJECTS_DATA: Project[] = [
 		description: "Course discovery and planning for UCI students",
 		image: "/projects/peterportal.jpg",
 	},
+	
 	{
 		name: "Zotistics",
 		githubLink: "https://www.github.com/icssc/Zotistics-beta-23",
@@ -35,20 +37,22 @@ export const PROJECTS_DATA: Project[] = [
 		description: "UCI's premier grade distribution analysis tool",
 		image: "/projects/zotistics.jpg",
 	},
+	*/
 	{
-		name: "ZotMeal",
-		githubLink: "https://github.com/icssc/ZotMeal",
+		name: "PeterPlate",
+		githubLink: "https://github.com/icssc/peterplate",
 		projectLink: "",
 		description: "UCI Dining Hall menus and information",
 		image: "/projects/zotmeal.jpg",
 	},
 	{
-		name: "ZotMeet",
-		githubLink: "https://www.github.com/icssc/ZotMeet",
-		projectLink: "https://zotmeet.com/",
-		description: "Efficient meeting scheduling + study room availabilities",
-		image: "/projects/zotmeet.jpg",
+		name: "Anteater API",
+		githubLink: "https://github.com/icssc/anteater-api",
+		projectLink: "https://anteaterapi.com/reference",
+		description: "API providing easy access to public data from UC Irvine",
+		image: "/projects/aapi.jpg",
 	},
+	/*
 	{
 		name: "ZotNFound",
 		githubLink: "https://github.com/icssc/ZotNFound",
@@ -56,6 +60,7 @@ export const PROJECTS_DATA: Project[] = [
 		description: "Lost and Found for UCI students",
 		image: "/projects/zotnfound.jpg",
 	},
+	*/
 	{
 		name: "ICSSC Fellowship",
 		githubLink: "https://github.com/icssc/fellowship",
