@@ -19,12 +19,7 @@ export function LandingProjectsGrid() {
 					"grid-cols-1 sm:grid-cols-2 xl:grid-cols-3",
 				)}
 			>
-				{PROJECTS_DATA.filter(
-					(p) =>
-						p.name === "AntAlmanac" ||
-						p.name === "Anteater API" ||
-						p.name === "PeterPortal",
-				).map((project) => {
+				{PROJECTS_DATA.slice(0, 3).map((project) => {
 					return (
 						<div key={project.name} className="space-y-4">
 							<div className="group aspect-video overflow-hidden rounded-t-sm bg-neutral-800">

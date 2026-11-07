@@ -8,13 +8,6 @@ type Project = {
 
 export const PROJECTS_DATA: Project[] = [
 	{
-		name: "AntAlmanac Scheduler",
-		githubLink: "https://github.com/icssc/AntAlmanac",
-		projectLink: "https://antalmanac.com/",
-		description: "A course exploration and scheduling tool for UCI students",
-		image: "/projects/aa-scheduler.jpg",
-	},
-		{
 		name: "AntAlmanac Planner",
 		githubLink: "https://github.com/icssc/peterportal-client",
 		projectLink: "https://peterportal.org/",
@@ -22,11 +15,18 @@ export const PROJECTS_DATA: Project[] = [
 		image: "/projects/aa-planner.jpg",
 	},
 	{
-		name: "ZotMeet",
-		githubLink: "https://www.github.com/icssc/ZotMeet",
-		projectLink: "https://zotmeet.com/",
-		description: "Time Sync & Study Room Scheduler",
-		image: "/projects/zotmeet.jpg",
+		name: "AntAlmanac Scheduler",
+		githubLink: "https://github.com/icssc/AntAlmanac",
+		projectLink: "https://antalmanac.com/",
+		description: "A course exploration and scheduling tool for UCI students",
+		image: "/projects/aa-scheduler.jpg",
+	},
+	{
+		name: "Anteater API",
+		githubLink: "https://github.com/icssc/anteater-api",
+		projectLink: "https://anteaterapi.com/reference",
+		description: "API providing easy access to public data from UC Irvine",
+		image: "/projects/aapi.jpg",
 	},
 
 	/*
@@ -46,11 +46,11 @@ export const PROJECTS_DATA: Project[] = [
 		image: "/projects/peterplate.jpg",
 	},
 	{
-		name: "Anteater API",
-		githubLink: "https://github.com/icssc/anteater-api",
-		projectLink: "https://anteaterapi.com/reference",
-		description: "API providing easy access to public data from UC Irvine",
-		image: "/projects/aapi.jpg",
+		name: "ZotMeet",
+		githubLink: "https://www.github.com/icssc/ZotMeet",
+		projectLink: "https://zotmeet.com/",
+		description: "Time Sync & Study Room Scheduler",
+		image: "/projects/zotmeet.jpg",
 	},
 	/*
 	{
