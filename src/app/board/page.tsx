@@ -1,5 +1,6 @@
 import { BOARD_INFO, type BoardMember } from "@/components/board/board-info";
 import { PastBoard } from "@/components/board/past-board";
+import { SiLinkedin } from "@icons-pack/react-simple-icons";
 import { PageContainer } from "@/components/shared/page-container";
 import { PageHeading } from "@/components/shared/page-heading";
 import { SectionContainer } from "@/components/shared/section-container";
@@ -17,7 +18,7 @@ export default function Page() {
 				<SectionHeading title="2026-2027" />
 				<div className="flex flex-wrap justify-center gap-12">
 					{BOARD_INFO.filter((item) => !!item.image).map(
-						({ name, position, image }: BoardMember) => (
+						({ name, position, image, linkedin }: BoardMember) => (
 							<div
 								className="flex w-50 flex-col items-center space-y-4 lg:w-60"
 								key={name + position}
@@ -42,6 +43,18 @@ export default function Page() {
 									<p className="text-lg font-semibold leading-none text-ic-black">
 										{name}
 									</p>
+
+									{linkedin && (
+										<a
+											href={linkedin}
+											target="_blank"
+											rel="noopener noreferrer"
+											aria-label={`${name} on LinkedIn`}
+											className="inline-flex pt-2 text-ic-muted transition-colors hover:text-[#0A66C2]"
+										>
+											<SiLinkedin size={20} />
+										</a>
+									)}
 								</div>
 							</div>
 						),

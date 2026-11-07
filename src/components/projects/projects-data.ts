@@ -8,18 +8,18 @@ type Project = {
 
 export const PROJECTS_DATA: Project[] = [
 	{
-		name: "AntAlmanac Planner",
-		githubLink: "https://github.com/icssc/peterportal-client",
-		projectLink: "https://peterportal.org/",
-		description: "Course discovery and planning for UCI students",
-		image: "/projects/aa-planner.jpg",
-	},
-	{
 		name: "AntAlmanac Scheduler",
 		githubLink: "https://github.com/icssc/AntAlmanac",
 		projectLink: "https://antalmanac.com/",
 		description: "A course exploration and scheduling tool for UCI students",
 		image: "/projects/aa-scheduler.jpg",
+	},
+	{
+		name: "AntAlmanac Planner",
+		githubLink: "https://github.com/icssc/peterportal-client",
+		projectLink: "https://peterportal.org/",
+		description: "Course discovery and planning for UCI students",
+		image: "/projects/aa-planner.jpg",
 	},
 	{
 		name: "Anteater API",
