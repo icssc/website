@@ -9,6 +9,14 @@ export type Event = {
 
 export const EVENTS_DATA: Event[] = [
 	{
+		src: "event_brain-games-2026.jpg",
+		title: "Brain Games",
+		time: "2026-11-14T11:00",
+		location: "Student Center Moss Cove AB",
+		description:
+			"Think you have the biggest brain? 🧠🧐 Test your knowledge at Brain Games, our social competition featuring a variety of fun puzzles and games 🧩! Teams of 2-4 people are challenged to use creativity and logic to solve ICS-related challenges while making new friends. Join us for exciting games, free catered lunch 🍝, and ~$200 in prizes for the top 3 teams 🏆!",
+	},
+	{
 		src: "event_charades-night-2026.jpg",
 		title: "Charades Night",
 		time: "2026-10-28T19:00",
@@ -134,7 +142,7 @@ export const EVENTS_DATA: Event[] = [
 		time: "2026-02-21T11:00",
 		location: "Doheny Beach ABCD",
 		description:
-			"ICSSC proudly presents Brain Games, our social competition featuring a variety of fun puzzles and games! Teams of 2-4 people are challenged to use creativity and logic to solve challenges while making new friends. This year, our games include recreation station, black box testing, wiki-racing, and code blocks. Join us for exciting games, a free catered lunch, and $200 worth of prizes for the top three teams!",
+			"ICSSC proudly presents Brain Games, our social competition featuring a variety of fun puzzles and games! Teams of 2-4 people are challenged to use creativity and logic to solve challenges while making new friends."
 	},
 	{
 		src: "event_designer-developer-collaboration-workshop.png",
