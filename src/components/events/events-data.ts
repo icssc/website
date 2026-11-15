@@ -9,6 +9,14 @@ export type Event = {
 
 export const EVENTS_DATA: Event[] = [
 	{
+		src: "event_internshp-panel_26.png",
+		title: "Internship Panel",
+		time:"2026-11-18T19:00",
+		location:"Donald Bren Hall 6011",
+		description:
+			"Want to know how to land and thrive in a top tech internship? 💼 Join us for our Internship Panel, where students who have interned at leading companies like Google, Amazon, Capital One, and more will share their experiences. Panelists will discuss the application process 📄"
+	},
+	{
 		src: "event_brain-games-2026.jpg",
 		title: "Brain Games",
 		time: "2026-11-14T11:00",
