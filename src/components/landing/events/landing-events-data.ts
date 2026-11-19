@@ -6,6 +6,31 @@ export type LandingEvent = {
 
 export const LANDING_EVENTS_DATA: LandingEvent[] = [
 	{
+		src: "internship-panel.jpg",
+		title: "Internship Panel",
+		year: 2026,
+	},
+	{
+		src: "brain-games.jpg",
+		title: "Brain Games",
+		year: 2026,
+	},
+	{
+		src: "dasuci-workshop.jpg",
+		title: "DASUCI x ICSSC Workshop",
+		year: 2026,
+	},
+	{
+		src: "banquet.jpg",
+		title: "ICSSC Banquet",
+		year: 2026,
+	},
+	{
+		src: "ics-prom.jpg",
+		title: "ICS Prom",
+		year: 2026,
+	},
+	{
 		src: "general-meeting.jpg",
 		title: "General Meeting",
 		year: 2025,
@@ -15,7 +40,6 @@ export const LANDING_EVENTS_DATA: LandingEvent[] = [
 		title: "Bits & Bytes Mixer",
 		year: 2025,
 	},
-
 	{
 		src: "la-daytrip.jpg",
 		title: "LA Day Trip",
@@ -25,30 +49,5 @@ export const LANDING_EVENTS_DATA: LandingEvent[] = [
 		src: "rollerskating.jpg",
 		title: "Roller Skating Fundraiser",
 		year: 2025,
-	},
-	{
-		src: "ics-prom.jpg",
-		title: "ICS Prom",
-		year: 2025,
-	},
-	{
-		src: "braingames.jpg",
-		title: "Brain Games",
-		year: 2024,
-	},
-	{
-		src: "halloween.jpg",
-		title: "Halloween Social",
-		year: 2024,
-	},
-	{
-		src: "workshop.jpg",
-		title: "Workshop",
-		year: 2024,
-	},
-	{
-		src: "webjam.jpg",
-		title: "WebJam",
-		year: 2023,
 	},
 ];
