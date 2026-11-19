@@ -20,6 +20,49 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Webmaster notes: events
+
+All events live in `src/components/events/events-data.ts`, one `ClubEvent` per event (see `events-types.ts`). Each event gets a page at `/events/<slug>` automatically.
+
+### Adding an event
+
+Add an entry to `EVENTS_DATA`:
+
+```ts
+{
+	slug: "brain-games-fall-2026",          // unique, lowercase, dashes only
+	title: "Brain Games",
+	start: "2026-11-14T11:00:00-08:00",     // -07:00 during daylight time (Mar–Nov), -08:00 otherwise
+	end: "2026-11-14T16:30:00-08:00",       // optional
+	location: "Student Center Moss Cove AB",
+	quarter: "Fall 2026",                   // drives the filter chips on /events
+	description: "…",
+	poster: { src: "/assets/events/event_brain-games-2026.jpg", alt: "Brain Games poster" },
+},
+```
+
+Events move from "Upcoming" to "Past events" on their own once they're over.
+
+### Adding photos after an event
+
+We don't pull from Google Photos automatically (Google removed API access to shared albums), so photos are a small curated set committed to the repo.
+
+1. Pick **4–12** good photos from the event's Google Photos album and download them into any folder.
+2. Run the optimizer with that folder and the event's slug:
+
+   ```bash
+   pnpm photos:optimize ~/Downloads/brain-games brain-games-fall-2026
+   ```
+
+   This writes resized copies (max 1600px, plus 480px thumbnails) to `public/assets/events/<slug>/` and prints a `photos: [...]` snippet.
+3. Paste the snippet into the event in `events-data.ts`, improve the `alt` text if you can, and add the album's share link:
+
+   ```ts
+   albumUrl: "https://photos.app.goo.gl/…",
+   ```
+
+The first 3 photos show in the quick-view on `/events`; all of them show in the gallery on the event's page.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

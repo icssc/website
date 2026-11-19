@@ -35,6 +35,24 @@
 		--chart-4: 43 74% 66%;
 		--chart-5: 27 87% 67%;
 		--radius: 0.5rem;
+
+		/* Events redesign tokens */
+		--color-bg-dark: #1f1f1f;
+		--color-surface-dark: #2b2b2b;
+		--color-surface-dark-2: #3a3a3a;
+		--color-border-dark: #555;
+		--color-text-on-dark: #f4f4f4;
+		--color-muted-on-dark: #bdbdbd;
+		--color-bg-light: #fafafa;
+		--color-text: #222;
+		--color-muted: #555;
+		--color-accent: #f29bbb;
+		--color-accent-strong: #b8436e;
+		--color-placeholder-light: #e6e6e6;
+		--radius-card: 14px;
+		--radius-pill: 999px;
+		--space-grid-gap: 28px;
+		--container: 1200px;
 	}
 	.dark {
 		--background: 0 0% 3.9%;
@@ -89,5 +107,32 @@
 
 	.flex-between {
 		@apply flex items-center justify-between;
+	}
+
+	/* Events: 1200px content width with 32px gutters (20px on phones) */
+	.ev-container {
+		margin-inline: auto;
+		width: 100%;
+		max-width: calc(var(--container) + 64px);
+		padding-inline: 32px;
+	}
+	@media (max-width: 639px) {
+		.ev-container {
+			padding-inline: 20px;
+		}
+	}
+
+	.ev-eyebrow {
+		@apply text-sm font-semibold uppercase tracking-[0.08em] text-ev-accent-strong;
+	}
+
+	/* Disable translate/scale motion for users who ask for less of it */
+	@media (prefers-reduced-motion: reduce) {
+		.ev-motion {
+			transition: none !important;
+			transform: none !important;
+			--tw-enter-scale: 1 !important;
+			--tw-exit-scale: 1 !important;
+		}
 	}
 }

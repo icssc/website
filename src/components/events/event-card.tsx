@@ -1,130 +1,49 @@
-"use client";
-
-import {
-	Dialog,
-	DialogContent,
-	DialogHeader,
-	DialogTitle,
-} from "@/components/ui/dialog";
-import { cn } from "@/lib/utils";
-import { ClockIcon, MapPinIcon } from "lucide-react";
-import { useState } from "react";
+import { EventPoster } from "@/components/events/event-poster";
+import type { ClubEvent } from "@/components/events/events-types";
+import { getDateBadge, hasPhotos } from "@/components/events/events-utils";
+import { ImageIcon } from "lucide-react";
 
 interface EventCardProps {
-	title: string;
-	description: string;
-	time: string;
-	location: string;
-	src?: string;
-	aspectRatio?: string;
-	timeFormat?: (date: Date) => string;
-	isDarkMode?: boolean;
+	event: ClubEvent;
+	onOpen: (event: ClubEvent) => void;
+	priority?: boolean;
 }
 
-export function EventCard({
-	title,
-	description,
-	time,
-	location,
-	src,
-	aspectRatio = "4/5",
-	timeFormat,
-	isDarkMode = false,
-}: EventCardProps) {
-	const [isOpen, setIsOpen] = useState(false);
-
-	const formattedDate = new Date(time).toLocaleDateString(undefined, {
-		month: "long",
-		day: "numeric",
-		weekday: "long",
-	});
-
-	const formattedTime = timeFormat
-		? timeFormat(new Date(time))
-		: new Date(time).toLocaleTimeString(undefined, {
-				hour: "numeric",
-				minute: "2-digit",
-			});
+export function EventCard({ event, onOpen, priority }: EventCardProps) {
+	const badge = getDateBadge(event);
+	const showPhotos = hasPhotos(event) || Boolean(event.albumUrl);
 
 	return (
-		<>
-			<div className="grid w-full grid-cols-1 gap-8 border-t-2 py-4 pt-8 md:grid-cols-5 lg:grid-cols-3">
-				<div className="flex flex-col items-start space-y-4 md:col-span-2 lg:col-span-1 text-left">
-					<p className="text-nowrap text-xl font-bold">{formattedDate}</p>
+		<button
+			type="button"
+			data-event-card={event.slug}
+			onClick={() => onOpen(event)}
+			className="ev-motion group flex h-full w-full flex-col overflow-hidden rounded-card bg-ev-surface-dark text-left text-ev-text-on-dark transition [transition-duration:180ms] ease-out hover:-translate-y-1 hover:shadow-[0_14px_30px_rgba(0,0,0,.45)] focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-[3px] focus-visible:outline-ev-accent"
+		>
+			<span className="relative block aspect-[4/5] w-full bg-ev-surface-dark-2">
+				<EventPoster event={event} priority={priority} />
 
-					<div className="flex flex-wrap items-center gap-2">
-						<span className="flex items-center gap-1">
-							<ClockIcon className="size-5" />
-							{formattedTime}
-						</span>
+				<span className="absolute left-3 top-3 flex min-w-[48px] flex-col items-center rounded-pill bg-ev-bg-light px-3 py-2 text-[13px] font-bold uppercase leading-tight text-ev-text shadow-sm">
+					<span>{badge.month}</span>
+					<span>{badge.day}</span>
+				</span>
 
-						<span className="flex items-center gap-1">
-							<MapPinIcon className="size-5" />
-							{location}
-						</span>
-					</div>
-				</div>
+				{showPhotos && (
+					<span className="absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-pill bg-[rgba(20,20,20,.82)] px-3 py-1.5 text-[13px] font-semibold text-ev-text-on-dark">
+						<ImageIcon className="size-4" aria-hidden />
+						Photos
+					</span>
+				)}
+			</span>
 
-				<div className="col-span-1 flex flex-col items-start space-y-2 md:col-span-3 lg:col-span-1">
-					<button
-						type="button"
-						className="text-pretty text-left text-3xl font-semibold underline transition-opacity hover:opacity-80 cursor-pointer lg:pointer-events-none lg:cursor-default lg:no-underline"
-						onClick={() => setIsOpen(true)}
-					>
-						{title}
-					</button>
-
-					<p className={cn("line-clamp-6 text-pretty text-left")}>
-						{description}
-					</p>
-				</div>
-
-				<div className="hidden justify-end lg:flex">
-					<div className="w-full max-w-xs">
-						{src && (
-							<img
-								src={`/assets/events/${src}`}
-								alt={title}
-								className="h-auto max-h-[400px] w-full object-cover"
-								style={{ aspectRatio }}
-								width={320}
-								height={400}
-							/>
-						)}
-					</div>
-				</div>
-			</div>
-
-			<Dialog open={isOpen} onOpenChange={setIsOpen}>
-				<DialogContent
-					className={cn(
-						"max-w-md rounded-lg border-none p-5",
-						isDarkMode ? "bg-ic-black" : "bg-inherit",
-					)}
-					xClassname="stroke-ic-pink"
-				>
-					<DialogHeader>
-						<DialogTitle
-							className={cn(
-								"text-left text-2xl",
-								isDarkMode && "text-ic-muted-dark",
-							)}
-						>
-							{title}
-						</DialogTitle>
-					</DialogHeader>
-
-					<div className="relative w-full" style={{ aspectRatio }}>
-						{src && (
-							<img
-								src={`/assets/events/${src}`}
-								alt={title}
-								className="absolute inset-0 h-full w-full rounded-md object-cover shadow-md"
-							/>
-						)}
-					</div>
-				</DialogContent>
-			</Dialog>
-		</>
+			<span className="block px-[18px] pb-5 pt-4">
+				<span className="line-clamp-2 text-xl font-bold leading-tight">
+					{event.title}
+				</span>
+				<span className="mt-1.5 block truncate text-sm text-ev-muted-on-dark">
+					{event.location}
+				</span>
+			</span>
+		</button>
 	);
 }

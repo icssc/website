@@ -63,8 +63,25 @@ const config: Config = {
 						dark: "#d4d4d4", // text-neutral-300
 					},
 				},
+				// Events redesign tokens (defined in globals.css)
+				ev: {
+					"bg-dark": "var(--color-bg-dark)",
+					"surface-dark": "var(--color-surface-dark)",
+					"surface-dark-2": "var(--color-surface-dark-2)",
+					"border-dark": "var(--color-border-dark)",
+					"text-on-dark": "var(--color-text-on-dark)",
+					"muted-on-dark": "var(--color-muted-on-dark)",
+					"bg-light": "var(--color-bg-light)",
+					text: "var(--color-text)",
+					muted: "var(--color-muted)",
+					accent: "var(--color-accent)",
+					"accent-strong": "var(--color-accent-strong)",
+					"placeholder-light": "var(--color-placeholder-light)",
+				},
 			},
 			borderRadius: {
+				card: "var(--radius-card)",
+				pill: "var(--radius-pill)",
 				lg: "var(--radius)",
 				md: "calc(var(--radius) - 2px)",
 				sm: "calc(var(--radius) - 4px)",

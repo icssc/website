@@ -9,6 +9,8 @@ import { GeistSans } from "geist/font/sans";
 import { Inter } from "next/font/google";
 
 export const metadata: Metadata = {
+	// Resolves relative Open Graph image URLs (e.g. event posters) to absolute ones
+	metadataBase: new URL("https://www.icssc.club"),
 	title: "ICS Student Council",
 	description: "",
 	openGraph: {
