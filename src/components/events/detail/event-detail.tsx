@@ -8,7 +8,7 @@ import { EventStatusPill } from "@/components/events/detail/event-status-pill";
 import { EventPoster } from "@/components/events/event-poster";
 import { buttonStyles } from "@/components/events/events-styles";
 import type { ClubEvent } from "@/components/events/events-types";
-import { formatEventWhen, hasPhotos } from "@/components/events/events-utils";
+import { formatEventWhen, hasRecap } from "@/components/events/events-utils";
 import Link from "next/link";
 import { Suspense } from "react";
 
@@ -49,7 +49,7 @@ export function EventDetail({ event, prev, next }: EventDetailProps) {
 							</p>
 
 							<div className="mt-8 flex flex-wrap gap-3">
-								{hasPhotos(event) && (
+								{hasRecap(event) && (
 									<a href="#gallery" className={buttonStyles.accentFilled}>
 										See photos
 									</a>

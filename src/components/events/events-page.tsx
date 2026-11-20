@@ -100,7 +100,11 @@ export function EventsPage() {
 
 	return (
 		<>
-			<EventsUpcoming events={upcoming} onOpen={handleOpen} />
+			<EventsUpcoming
+				events={upcoming}
+				onOpen={handleOpen}
+				recapHref={recapHref}
+			/>
 
 			<section
 				aria-labelledby="past-events-heading"
@@ -128,6 +132,7 @@ export function EventsPage() {
 									<EventCard
 										event={event}
 										onOpen={handleOpen}
+										recapHref={recapHref}
 										priority={i < 4}
 									/>
 								</li>

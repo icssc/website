@@ -68,6 +68,14 @@ export function hasPhotos(event: ClubEvent) {
 	return (event.photos?.length ?? 0) > 0;
 }
 
+/**
+ * Events with an album (or curated photos) have a recap worth visiting:
+ * their cards link straight to /events/<slug> instead of opening the modal.
+ */
+export function hasRecap(event: ClubEvent) {
+	return Boolean(event.albumUrl) || hasPhotos(event);
+}
+
 export function getSummary(event: ClubEvent, max = 160) {
 	if (event.summary) return event.summary;
 	const text = event.description.replace(/\s+/g, " ").trim();

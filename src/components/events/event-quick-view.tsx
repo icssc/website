@@ -3,7 +3,11 @@
 import { EventPoster } from "@/components/events/event-poster";
 import { buttonStyles } from "@/components/events/events-styles";
 import type { ClubEvent } from "@/components/events/events-types";
-import { formatEventWhen, hasPhotos } from "@/components/events/events-utils";
+import {
+	formatEventWhen,
+	hasPhotos,
+	hasRecap,
+} from "@/components/events/events-utils";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { ExternalLinkIcon, XIcon } from "lucide-react";
 import Link from "next/link";
@@ -137,22 +141,27 @@ function QuickViewBody({
 					</div>
 				)}
 
-				<div className="mt-auto flex flex-wrap gap-3 pt-6">
-					<Link href={recapHref} className={buttonStyles.darkFilled}>
-						Full recap
-					</Link>
-					{event.albumUrl && (
-						<a
-							href={event.albumUrl}
-							target="_blank"
-							rel="noopener noreferrer"
-							className={buttonStyles.outlineLight}
-						>
-							<ExternalLinkIcon className="size-4" aria-hidden />
-							Open Google Photos album
-						</a>
-					)}
-				</div>
+				{/* Recap buttons only for events with an album/photos. (Their cards
+				    link straight to the detail page, so this shows only when the
+				    modal is opened from an old ?event= link.) */}
+				{hasRecap(event) && (
+					<div className="mt-auto flex flex-wrap gap-3 pt-6">
+						<Link href={recapHref} className={buttonStyles.darkFilled}>
+							Full recap
+						</Link>
+						{event.albumUrl && (
+							<a
+								href={event.albumUrl}
+								target="_blank"
+								rel="noopener noreferrer"
+								className={buttonStyles.outlineLight}
+							>
+								<ExternalLinkIcon className="size-4" aria-hidden />
+								Open Google Photos album
+							</a>
+						)}
+					</div>
+				)}
 			</div>
 		</>
 	);

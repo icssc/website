@@ -45,7 +45,19 @@ Events move from "Upcoming" to "Past events" on their own once they're over.
 
 ### Adding photos after an event
 
-We don't pull from Google Photos automatically (Google removed API access to shared albums), so photos are a small curated set committed to the repo.
+Photos are a small set (up to 12) committed to the repo, so pages never depend on Google at runtime.
+
+**Easiest: pull them from the album.** Add the event's public share link as `albumUrl` in `events-data.ts`, then run:
+
+```bash
+pnpm photos:fetch
+```
+
+This takes 12 photos spread across the album for every event that has an `albumUrl` but no photos yet, resizes them into `public/assets/events/<slug>/`, and writes the `photos` list into `events-data.ts`. To redo one event, or take a different number: `pnpm photos:fetch brain-games-fall-2026 --count 9`. Swap out any photo you don't like by replacing its file (keep the name).
+
+This reads the album's public page, not an official API, so it can break if Google changes that page. If it does, use the manual route:
+
+**Manual:**
 
 1. Pick **4–12** good photos from the event's Google Photos album and download them into any folder.
 2. Run the optimizer with that folder and the event's slug:

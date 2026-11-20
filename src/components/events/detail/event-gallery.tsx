@@ -7,6 +7,7 @@ import {
 	ChevronLeftIcon,
 	ChevronRightIcon,
 	ExternalLinkIcon,
+	ImagesIcon,
 	XIcon,
 } from "lucide-react";
 import { useRef, useState } from "react";
@@ -60,14 +61,41 @@ export function EventGallery({ event }: { event: ClubEvent }) {
 						>
 							Photos
 						</h2>
-						<p className="mt-2 text-ev-muted">
-							{photos.length > 0
-								? "Pulled from the event's Google Photos album."
-								: "Photos are in our Google Photos album."}
-						</p>
 					</div>
-					{albumButton}
+					{photos.length > 0 && albumButton}
 				</div>
+
+				{/* Album only (no curated photos yet): a prominent link out */}
+				{photos.length === 0 && event.albumUrl && (
+					<a
+						href={event.albumUrl}
+						target="_blank"
+						rel="noopener noreferrer"
+						className="group flex flex-wrap items-center justify-between gap-6 rounded-card border border-ev-placeholder-light bg-white p-6 no-underline transition-colors hover:border-ev-text focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-[3px] focus-visible:outline-ev-accent-strong sm:p-8"
+					>
+						<span className="flex items-center gap-5">
+							<span className="flex size-14 shrink-0 items-center justify-center rounded-full bg-ev-bg-dark text-ev-accent">
+								<ImagesIcon className="size-7" aria-hidden />
+							</span>
+							<span>
+								<span className="block text-xl font-bold text-ev-text">
+									See every photo from {event.title}
+								</span>
+								<span className="mt-1 block text-ev-muted">
+									The full album lives on Google Photos.
+								</span>
+							</span>
+						</span>
+						<span className={buttonStyles.darkFilled}>
+							Open album
+							<ExternalLinkIcon className="size-4" aria-hidden />
+							<span className="sr-only">
+								{" "}
+								(opens Google Photos in a new tab)
+							</span>
+						</span>
+					</a>
+				)}
 
 				{photos.length > 0 && (
 					<ul className="[column-gap:14px] [columns:3_260px]">

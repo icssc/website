@@ -4,9 +4,14 @@ import type { ClubEvent } from "@/components/events/events-types";
 interface EventsUpcomingProps {
 	events: ClubEvent[];
 	onOpen: (event: ClubEvent) => void;
+	recapHref: (event: ClubEvent) => string;
 }
 
-export function EventsUpcoming({ events, onOpen }: EventsUpcomingProps) {
+export function EventsUpcoming({
+	events,
+	onOpen,
+	recapHref,
+}: EventsUpcomingProps) {
 	return (
 		<section className="border-b border-ev-placeholder-light bg-ev-bg-light pb-12 pt-10">
 			<div className="ev-container">
@@ -17,7 +22,12 @@ export function EventsUpcoming({ events, onOpen }: EventsUpcomingProps) {
 						<ul className="mt-5 grid auto-cols-[minmax(260px,calc((100%_-_56px)_/_3))] grid-flow-col gap-[var(--space-grid-gap)] overflow-x-auto pb-3 pt-1">
 							{events.map((event) => (
 								<li key={event.slug}>
-									<EventCard event={event} onOpen={onOpen} priority />
+									<EventCard
+										event={event}
+										onOpen={onOpen}
+										recapHref={recapHref}
+										priority
+									/>
 								</li>
 							))}
 						</ul>
