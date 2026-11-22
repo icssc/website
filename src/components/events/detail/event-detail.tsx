@@ -2,13 +2,14 @@ import {
 	EventBackLink,
 	EventBackLinkFallback,
 } from "@/components/events/detail/event-back-link";
-import { EventGallery } from "@/components/events/detail/event-gallery";
+// import { EventGallery } from "@/components/events/detail/event-gallery";
 import { EventShareButton } from "@/components/events/detail/event-share-button";
 import { EventStatusPill } from "@/components/events/detail/event-status-pill";
 import { EventPoster } from "@/components/events/event-poster";
-import { buttonStyles } from "@/components/events/events-styles";
+// import { buttonStyles } from "@/components/events/events-styles";
 import type { ClubEvent } from "@/components/events/events-types";
-import { formatEventWhen, hasRecap } from "@/components/events/events-utils";
+import { formatEventWhen } from "@/components/events/events-utils";
+// import { hasRecap } from "@/components/events/events-utils";
 import Link from "next/link";
 import { Suspense } from "react";
 
@@ -49,11 +50,13 @@ export function EventDetail({ event, prev, next }: EventDetailProps) {
 							</p>
 
 							<div className="mt-8 flex flex-wrap gap-3">
+								{/* Photos temporarily hidden — restore with <EventGallery> below.
 								{hasRecap(event) && (
 									<a href="#gallery" className={buttonStyles.accentFilled}>
 										See photos
 									</a>
 								)}
+								*/}
 								<EventShareButton title={event.title} />
 							</div>
 						</div>
@@ -61,7 +64,9 @@ export function EventDetail({ event, prev, next }: EventDetailProps) {
 				</div>
 			</section>
 
+			{/* Photo grid + "Open full album" link temporarily hidden.
 			<EventGallery event={event} />
+			*/}
 
 			<nav
 				aria-label="More events"
