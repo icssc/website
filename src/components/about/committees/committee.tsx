@@ -8,6 +8,8 @@ export function Committee({
 	name,
 	description,
 	image,
+	imagePosition = "object-center",
+	imageFit = "cover",
 	members,
 	chairs,
 	leads,
@@ -15,6 +17,8 @@ export function Committee({
 	name: string;
 	description: string;
 	image: string;
+	imagePosition?: string;
+	imageFit?: "cover" | "contain";
 	members: string[];
 	chairs: string[];
 	leads?: string[];
@@ -49,7 +53,14 @@ export function Committee({
 			<div className="flex flex-col space-y-4">
 				<div>
 					<img
-						className="aspect-video max-h-96 w-full rounded-md bg-ic-black object-cover object-center shadow-md"
+						className={cn(
+							"aspect-video max-h-96 w-full rounded-md shadow-md",
+							// "contain" leaves empty space beside the photo, so give it a soft matte instead of black
+							imageFit === "contain"
+								? "bg-neutral-200 object-contain"
+								: "bg-ic-black object-cover",
+							imagePosition,
+						)}
 						src={image}
 						width={800}
 						height={450}

@@ -19,6 +19,8 @@ export function Committees() {
 						name,
 						description,
 						image = "/landing/general.jpg",
+						imagePosition,
+						imageFit,
 						members,
 						chairs,
 						leads,
@@ -28,6 +30,8 @@ export function Committees() {
 							name={name}
 							description={description}
 							image={`/assets${image}`}
+							imagePosition={imagePosition}
+							imageFit={imageFit}
 							members={members}
 							chairs={chairs}
 							leads={leads}
