@@ -4,11 +4,7 @@ export const SPONSORS = [
 		image: "/sponsors/aveva.png",
 	},
 	{
-		title: "Northrop Grumman",
-		image: "/sponsors/northrop-grumman.png",
-	},
-	{
-		title: "Obsidian Entertainment",
-		image: "/sponsors/obsidian.webp",
+		title: "UCI Student Programming Funding Board",
+		image: "/sponsors/spfb-logo.png",
 	},
 ];
