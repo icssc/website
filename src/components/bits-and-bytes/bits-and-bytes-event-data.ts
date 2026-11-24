@@ -35,4 +35,18 @@ export const BIT_AND_BYTES_EVENTS: BitsAndBytesEvent[] = [
 		description:
 			"The wait is over—come find out your Bits & Bytes family for the year! Meet your bytes, celebrate with your co-bits, and team up to compete in fun activities against the other families.",
 	},
+	{
+		title: "Zoo Day Trip",
+		time: "2026-10-24T10:00",
+		location: "OC Zoo & Old Towne Orange",
+		description:
+			"Bits and Bytes families and ICSSC internal members take a mini day trip to the OC Zoo! Afterwards, everyone explores the Old Towne Orange Historic District for shopping and lunch!",
+	},
+	{
+		title: "Kahoot Night",
+		time: "2026-11-05T18:00",
+		location: "ICS 428",
+		description:
+			"Which fam knows the most childhood shows? The 2026-27 theme for Bits & Bytes is Childhood Shows! Families will create Kahoots about their shows, and the fam with the most points earns extra points!",
+	},
 ];

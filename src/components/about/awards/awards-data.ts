@@ -5,6 +5,10 @@ type Award = {
 
 export const AWARDS_DATA: Award[] = [
 	{
+		title: "Outstanding Graphic Design",
+		description: "Anteater Awards 2025",
+	},
+	{
 		title: "Most Outstanding Social/Support Organization",
 		description: "Anteater Awards 2011",
 	},

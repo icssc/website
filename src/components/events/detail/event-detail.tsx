@@ -22,7 +22,7 @@ interface EventDetailProps {
 export function EventDetail({ event, prev, next }: EventDetailProps) {
 	return (
 		<>
-			<section className="bg-ev-bg-dark pb-14 pt-8 text-ev-text-on-dark">
+			<section className="bg-ev-bg-dark pb-14 pt-8 text-ev-text-on-dark mt-16">
 				<div className="ev-container">
 					<Suspense fallback={<EventBackLinkFallback />}>
 						<EventBackLink />

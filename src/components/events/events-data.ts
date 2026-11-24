@@ -6,6 +6,20 @@ import type { ClubEvent } from "@/components/events/events-types";
  */
 export const EVENTS_DATA: ClubEvent[] = [
 	{
+		slug: "blind-gingerbread-decorating-fall-2026",
+		title: "Blind Gingerbread Decorating",
+		start: "2026-12-02T19:00:00-08:00",
+		end: "2026-12-02T20:00:00-08:00",
+		location: "DBH 6011",
+		quarter: "Fall 2026",
+		description:
+			"Blind Gingerbread Decorating! 🎄 Join us in DBH 6011 to decorate gingerbread houses, blindfolded.",
+		poster: {
+			src: "/assets/events/event_blind-gingerbread-decorating-2026.jpg",
+			alt: "Blind Gingerbread Decorating poster: Dec 2, 7-8PM, DBH 6011",
+		},
+	},
+	{
 		slug: "internship-panel-fall-2026",
 		title: "Internship Panel",
 		start: "2026-11-18T19:00:00-08:00",

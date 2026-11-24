@@ -12,7 +12,7 @@ export function AffiliatedClubs() {
 			<SectionHeading
 				title="Affiliated Clubs"
 				subtitle="ICS Affiliated Clubs provide additional opportunities to
-                    connect with the school of ICS and fellow peers"
+                    connect with the school of ICS and fellow peers."
 				subtitleClassName="text-ic-muted-dark"
 			/>
 
