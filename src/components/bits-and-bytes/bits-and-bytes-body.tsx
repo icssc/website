@@ -90,7 +90,7 @@ const FEATURES: FeatureCardProps[] = [
 		alt: "Join a Family",
 		title: "Join a Family",
 		description:
-			"In a Bits & Byte Fam, there are 2 bytes with 2-6 bits each! Bytes focus on creating a great experience, Bits focus on having fun!",
+			"In a Bits & Byte Fam, there are 2-3 bytes with 2-6 bits each! Bytes focus on creating a great experience, Bits focus on having fun!",
 		imageClassName: "-mt-14",
 		href: "https://icssc.link/bits-app",
 	},

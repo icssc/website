@@ -68,7 +68,7 @@ export function BitsAndBytes() {
 						<p className="text-3xl font-semibold">Join a Family</p>
 					</Link>
 						<p className="text-pretty">
-							In a Bits &#38; Byte Fam, there are 2 bytes with 2-6 bits each!
+							In a Bits &#38; Byte Fam, there are 2-3 bytes with 2-6 bits each!
 							Bytes focus on creating a great experience, Bits focus on having
 							fun!
 						</p>
